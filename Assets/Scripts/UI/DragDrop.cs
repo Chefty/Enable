@@ -10,8 +10,9 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     private CanvasGroup canvasGroup;
     private Vector3 initialPosition;
     private RectTransform parentRectTransform;
-    private Image abilityIcon;
+    public Image abilityIcon;
     private Vector2 mousePos;
+    public Ability ability;
 
     private void Awake() {
         canvasGroup = GetComponent<CanvasGroup>();
@@ -39,10 +40,20 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         }
         
         if (eventData.pointerDrag.gameObject.CompareTag("InventoryAbility") &&
-            !RectTransformUtility.RectangleContainsScreenPoint(parentRectTransform, canvas.transform.TransformPoint(mousePos))) {
+            !RectTransformUtility.RectangleContainsScreenPoint(parentRectTransform, transform.position)) {
+            abilityIcon.sprite = null;
             abilityIcon.enabled = false;
-            Debug.Log("OUT! -- " + parentRectTransform.gameObject.name);
+            
+            //Drop ability
+            GameManager.Instance.DumpAbility(ability);
+            ability = null;
         }
         transform.position = initialPosition;
+    }
+
+    public void SetAbility(Ability ability) {
+        this.ability = ability;
+        abilityIcon.sprite = ability.AbilityIcon;
+        abilityIcon.enabled = true;
     }
 }

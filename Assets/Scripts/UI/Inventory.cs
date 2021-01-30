@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Linq;
 
-public class Inventory : MonoBehaviour
-{
+public class Inventory : MonoBehaviour {
+
+    private Canvas canvas;
     [SerializeField] GameObject player;
-    [SerializeField] private List<GameObject> abilityItems;
+    [SerializeField] private List<DragDrop> abilityItems;
     private Camera mainCamera;
 
     private void Awake() {
-        foreach (Transform child in transform)
-            abilityItems.Add(child.gameObject);
+        abilityItems = GetComponentsInChildren<DragDrop>().ToList();
         mainCamera = Camera.main;
+        canvas = GetComponentInParent<Canvas>();
     }
 
     private void Update() {
@@ -33,9 +35,18 @@ public class Inventory : MonoBehaviour
     IEnumerator ShowHideAbilitiesInventory(bool isShowing) {
 
         for (int i = 0; i < abilityItems.Count; i++) {
-            abilityItems[i].SetActive(isShowing);
+            canvas.enabled = isShowing;
         }
 
         yield return null;
+    }
+
+    public void AddAbility(Ability ability) {
+        for (int i = 0; i < abilityItems.Count; i++) {
+            if (abilityItems[i].ability == null) {
+                abilityItems[i].SetAbility(ability);
+                break;
+            }
+        }
     }
 }

@@ -6,7 +6,7 @@ using System;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
+    public Inventory inventory;
     public Transform Player;
 
     public int MaxAmountOfAbilities;
@@ -20,51 +20,17 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Start() {
+        for (int i = 0; i < PlayerAbilities.Count; i++) {
+            inventory.AddAbility(PlayerAbilities[i]);
+        }
+    }
+
     private void Update()
     {
         for (int i = 0; i < PlayerAbilities.Count; i++)
         {
             PlayerAbilities[i].RunAction();
-        }
-
-        // TODO use UI input instead
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            SwapAbility();
-        }
-
-        // TODO Use UI input instead
-        if (Input.GetKeyUp(KeyCode.Alpha1))
-        {
-            DumpAbility(1);
-        }
-        if (Input.GetKeyUp(KeyCode.Alpha2))
-        {
-            DumpAbility(2);
-        }
-        if (Input.GetKeyUp(KeyCode.Alpha3))
-        {
-            DumpAbility(3);
-        }
-        if (Input.GetKeyUp(KeyCode.Alpha4))
-        {
-            DumpAbility(4);
-        }
-        if (Input.GetKeyUp(KeyCode.Alpha5))
-        {
-            DumpAbility(5);
-        }
-        if (Input.GetKeyUp(KeyCode.Alpha6))
-        {
-            DumpAbility(6);
-        }
-        if (Input.GetKeyUp(KeyCode.Alpha7))
-        {
-            DumpAbility(7);
-        }
-        if (Input.GetKeyUp(KeyCode.Alpha8))
-        {
-            DumpAbility(8);
         }
     }
 
@@ -97,9 +63,8 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
-    public void SwapAbility()
+    public void SwapAbility(Ability dumpedAbility)
     {
-        Ability dumpedAbility = PlayerAbilities.First();
         Ability newAbility = _currentTile.TileOwnAbility;
 
         _currentTile.TileOwnAbility = dumpedAbility;
@@ -111,9 +76,9 @@ public class GameManager : MonoBehaviour
         newAbility.AbilityTaken();
     }
 
-    public void DumpAbility(int number)
+    public void DumpAbility(Ability ability)
     {
-        if (PlayerAbilities.Count < number)
+        if (!PlayerAbilities.Contains(ability))
         {
             return;
         }
@@ -125,11 +90,10 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        tile.TileOwnAbility = PlayerAbilities[number - 1];
+        tile.TileOwnAbility = ability;
         tile.DisplayAbility();
 
-        PlayerAbilities.RemoveAt(number - 1);
-
+        PlayerAbilities.Remove(ability);
     }
 
     public Tile GetTile(Vector3 pos)

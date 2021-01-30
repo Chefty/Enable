@@ -4738,6 +4738,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 798530819}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &800437400 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 206549325141540228, guid: 705cec17835613f4d81f5cbf08f411a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 6089841671097324018}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40cea12351d18e04d93895c4cb42fc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &801234447
 GameObject:
   m_ObjectHideFlags: 0
@@ -6333,6 +6345,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513052495156742740, guid: d3580b9e23b696549975936027839042,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513052495156742740, guid: d3580b9e23b696549975936027839042,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3580b9e23b696549975936027839042, type: 3}
@@ -10577,6 +10599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcc4c3936bea0594cb5b8a21a4c9fa83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: {fileID: 800437400}
   Player: {fileID: 2067965555}
   MaxAmountOfAbilities: 4
   PlayerAbilities:
@@ -11238,12 +11261,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2060403177}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2067965551 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6089841672896788381, guid: 705cec17835613f4d81f5cbf08f411a9,
-    type: 3}
-  m_PrefabInstance: {fileID: 6089841671097324018}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2067965555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6089841672896788353, guid: 705cec17835613f4d81f5cbf08f411a9,
@@ -11745,36 +11762,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 206549324763124919, guid: 705cec17835613f4d81f5cbf08f411a9,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 986918973}
+    - target: {fileID: 206549324763124919, guid: 705cec17835613f4d81f5cbf08f411a9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 206549324763124922, guid: 705cec17835613f4d81f5cbf08f411a9,
         type: 3}
       propertyPath: m_Sources.Array.data[0].sourceTransform
       value: 
       objectReference: {fileID: 986918974}
-    - target: {fileID: 206549324763124923, guid: 705cec17835613f4d81f5cbf08f411a9,
+    - target: {fileID: 206549325178984190, guid: 705cec17835613f4d81f5cbf08f411a9,
         type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.39591387
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 206549324763124923, guid: 705cec17835613f4d81f5cbf08f411a9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.59533376
-      objectReference: {fileID: 0}
-    - target: {fileID: 206549324763124923, guid: 705cec17835613f4d81f5cbf08f411a9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.42394903
-      objectReference: {fileID: 0}
-    - target: {fileID: 206549324763124923, guid: 705cec17835613f4d81f5cbf08f411a9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5559651
-      objectReference: {fileID: 0}
-    - target: {fileID: 206549325141540228, guid: 705cec17835613f4d81f5cbf08f411a9,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2067965551}
     - target: {fileID: 6089841672896788353, guid: 705cec17835613f4d81f5cbf08f411a9,
         type: 3}
       propertyPath: m_LocalPosition.x
