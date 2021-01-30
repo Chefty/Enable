@@ -70,7 +70,14 @@ public class GameManager : MonoBehaviour
 
     public bool GetTileAccessibility(Vector3 pos)
     {
-        return GetTile(pos).CheckTileAccessibility();
+        Tile tile = GetTile(pos);
+
+        if (tile != null)
+        {
+            return tile.CheckTileAccessibility();
+        }
+
+        return false;
     }
 
     public bool AddAbility(Ability newAbility)

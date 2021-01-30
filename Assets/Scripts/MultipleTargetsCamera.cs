@@ -10,7 +10,6 @@ public class MultipleTargetsCamera : MonoBehaviour
 {
     public List<Transform> Targets;
     public float PlayerWeight;
-    public float POIWeight;
     public Vector3 offset;
     public float smoothTime;
     public float minZoom = 40f;
@@ -67,6 +66,7 @@ public class MultipleTargetsCamera : MonoBehaviour
         Vector3 centerPoint = GetCenterPoint();
         Vector3 newPosition = centerPoint + offset;
 
+        transform.LookAt(centerPoint);
         transform.position = Vector3.SmoothDamp(transform.position, newPosition, ref velocity, smoothTime);
     }
 
