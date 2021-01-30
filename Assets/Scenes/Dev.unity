@@ -6109,7 +6109,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -6154,12 +6154,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Targets:
   - {fileID: 2067965555}
-  PlayerWeight: 1
   offset: {x: -10, y: 10, z: -10}
   smoothTime: 1
-  minZoom: 40
-  maxZoom: 30
-  ZoomLimiter: 50
+  CurrentZoom: 5
+  NextZoom: 5
 --- !u!1 &1051068454
 GameObject:
   m_ObjectHideFlags: 0
@@ -10519,6 +10517,8 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 55
+  _currentTile: {fileID: 0}
+  _prevTile: {fileID: 0}
 --- !u!4 &1913548940
 Transform:
   m_ObjectHideFlags: 0
@@ -11034,8 +11034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690664e4a4d042a4fac1b9e791cd2be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GenericTilePrefab: {fileID: 7323348331165477405, guid: 1cf1697abff6caf41b825dae80c1ff0a,
-    type: 3}
+  PlaceHolderPrefab: {fileID: 0}
   Size: {x: 10, y: 10}
 --- !u!4 &2051959226
 Transform:
