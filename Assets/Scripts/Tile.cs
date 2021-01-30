@@ -29,8 +29,9 @@ public class Tile : MonoBehaviour
         }
     }
 
-    public bool CheckTileAccessibility()
+    public virtual bool CheckTileAccessibility()
     {
+        print("Walking next on tile " + name);
         return true;
     }
 
@@ -53,7 +54,7 @@ public class Tile : MonoBehaviour
         }
     }
 
-    public void DebugDisplay()
+    public virtual void DebugDisplay()
     {
         var rend = GetComponent<MeshRenderer>();
 

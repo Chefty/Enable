@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CreateCubeGrid : MonoBehaviour
 {
+    public Tile GenericTilePrefab;
     public Vector2 Size;
 
     [ContextMenu("CreateGrid")]
@@ -16,7 +17,7 @@ public class CreateCubeGrid : MonoBehaviour
         {
             for (int y = 0; y < Size.y; y++)
             {
-                Transform cube = GameObject.CreatePrimitive(PrimitiveType.Cube).transform;
+                Transform cube = Instantiate(GenericTilePrefab, origin).transform;
 
                 cube.position = new Vector3(x, 0f, y);
                 cube.name = x.ToString() + "_" + y.ToString();

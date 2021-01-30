@@ -15,7 +15,7 @@ public class WalkDown : Ability
     {
         if (Input.GetKeyUp(ActionKeycode))
         {
-            Vector3 newpos = GameManager.Instance.Player.position + (Vector3.up);
+            Vector3 newpos = GameManager.Instance.Player.position + (Vector3.back);
 
             if (GameManager.Instance.GetTileAccessibility(newpos))
             {

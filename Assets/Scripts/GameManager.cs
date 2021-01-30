@@ -1,6 +1,7 @@
-﻿using System.Collections;
+﻿using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -59,8 +60,8 @@ public class GameManager : MonoBehaviour
 
     public bool GetTileAccessibility(Vector3 pos)
     {
+        return GetTile(pos).CheckTileAccessibility();
         // TODO code accessibility
-        return true;
     }
 
     public bool AddAbility(Ability newAbility)
@@ -113,5 +114,17 @@ public class GameManager : MonoBehaviour
         }
 
         return null;
+    }
+
+    public bool DoesPlayerPosessAbility(Type type)
+    {
+        var ability = PlayerAbilities.Where(x => x.GetType() == type);
+
+        if (ability != null)
+        {
+            return true;
+        }
+
+        return false;
     }
 }
