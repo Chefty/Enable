@@ -6,8 +6,8 @@ using UnityEngine;
 public abstract class Ability : ScriptableObject
 {
     public GameObject PlaceHolderProps;
-    public KeyCode ActionKeycode;
     public Sprite AbilityIcon;
+    public KeyCode ActionKeycode;
 
     private GameObject _ownProps;
 

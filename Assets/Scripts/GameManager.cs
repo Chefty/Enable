@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private Tile GetTile(Vector3 pos)
+    public Tile GetTile(Vector3 pos)
     {
         RaycastHit m_Hit;
 
