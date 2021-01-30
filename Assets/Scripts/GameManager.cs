@@ -54,6 +54,12 @@ public class GameManager : MonoBehaviour
             {
                 PlayerAbilities.Add(newAbility);
 
+                //TODO pas ouf à refacto
+                _currentTile.TileOwnAbility.AbilityTaken();
+                _currentTile.TileOwnAbility = null;
+
+                _currentTile.DebugDisplay();
+
                 // did take the ability
                 return true;
             }

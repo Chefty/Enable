@@ -44,7 +44,8 @@ public class Tile : MonoBehaviour
     {
         GameManager.Instance.SetCurrentTile(this);
 
-        if (TileOwnAbility != null)
+        //Not taking ability automatically for now
+        /*if (TileOwnAbility != null)
         {
             if (GameManager.Instance.AddAbility(TileOwnAbility))
             {
@@ -53,7 +54,7 @@ public class Tile : MonoBehaviour
 
                 DebugDisplay();
             }
-        }
+        }*/
     }
 
     public virtual void DebugDisplay()
