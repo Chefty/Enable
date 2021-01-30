@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Linq;
+using DG.Tweening;
 
 public class Inventory : MonoBehaviour {
     [SerializeField] private GameObject UI;
     [SerializeField] private DragDrop SwapDragDrop;
-    private Canvas playerCanvas;
+    private CanvasGroup playerCanvasGroup;
     [SerializeField] GameObject player;
     [SerializeField] private List<DragDrop> abilityItems;
     private Camera mainCamera;
@@ -16,40 +17,28 @@ public class Inventory : MonoBehaviour {
     private void Awake() {
         abilityItems = GetComponentsInChildren<DragDrop>().ToList();
         mainCamera = Camera.main;
-        playerCanvas = GetComponentInParent<Canvas>();
-    }
-
-    private void Update() {
-        var camToPlayerDist = Vector3.Distance(mainCamera.transform.position, player.transform.position);
-        
-        var mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, camToPlayerDist);
-        mousePosition = mainCamera.ScreenToWorldPoint(mousePosition);
-
-        camToPlayerDist = Vector3.Distance(mousePosition, player.transform.position);
-
-        if (camToPlayerDist <= 5f)
-            StartCoroutine(ShowHideAbilitiesInventory(true));
-        else
-            StartCoroutine(ShowHideAbilitiesInventory(false));
+        playerCanvasGroup = GetComponentInParent<CanvasGroup>();
     }
 
     public void ShowHideSwapUI(bool isShowing, Ability swapableAbility)
     {
-        UI.gameObject.SetActive(isShowing);
-
         if (swapableAbility != null)
         {
-            print("ShowHideSwapUI " + swapableAbility.name);
             SwapDragDrop.SetAbility(swapableAbility);
         }
+
+        StartCoroutine(ShowHidePlayerInterface(isShowing));
     }
 
-    IEnumerator ShowHideAbilitiesInventory(bool isShowing) {
-
-        for (int i = 0; i < abilityItems.Count; i++) {
-            playerCanvas.enabled = isShowing;
+    private IEnumerator ShowHidePlayerInterface(bool isShowing) {
+        if (isShowing) {
+            UI.transform.DOMoveY(2, .25f).WaitForCompletion();
+            UI.transform.DOScale(Vector3.one, .5f);    
         }
-
+        else {
+            UI.transform.DOScale(new Vector3(0, player.transform.localScale.y / 2, 0), .25f).WaitForCompletion();
+            UI.transform.DOMoveY(0, .5f);
+        }
         yield return null;
     }
 

@@ -16,7 +16,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
     private void Awake() {
         canvasGroup = GetComponent<CanvasGroup>();
-        initialPosition = transform.position;
+        initialPosition = transform.localPosition;
         parentRectTransform = transform.parent.GetComponent<RectTransform>();
         abilityIcon = GetComponent<Image>();
     }
@@ -27,8 +27,13 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     }
 
     public void OnDrag(PointerEventData eventData) {
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, Input.mousePosition, canvas.worldCamera, out mousePos);
-        transform.position = canvas.transform.TransformPoint(mousePos);
+        if (gameObject.CompareTag("TileAbility")) { //World Space UI
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, Input.mousePosition, canvas.worldCamera, out mousePos);
+            transform.position = canvas.transform.TransformPoint(mousePos);
+        }
+        else { //Screenspace UI
+            transform.position = Input.mousePosition;
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
@@ -53,9 +58,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             GameManager.Instance.DumpAbility(ability);
             ability = null;
         }
-        transform.position = initialPosition;
-
-        Debug.Log("TAAAAAAYOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
+        GetComponent<RectTransform>().localPosition = initialPosition;
     }
 
     public void SetAbility(Ability newability) {
@@ -69,7 +72,6 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         this.ability = newability;
         abilityIcon.sprite = newability.AbilityIcon;
         abilityIcon.enabled = true;
-        print("[AFTER]" + this.ability.name);
-        GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
+        GetComponent<RectTransform>().localPosition = initialPosition;
     }
 }
