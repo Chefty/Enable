@@ -39,7 +39,7 @@ public class Inventory : MonoBehaviour {
 
         if (swapableAbility != null)
         {
-        print("ShowHideSwapUI " + swapableAbility.name);
+            print("ShowHideSwapUI " + swapableAbility.name);
             SwapDragDrop.SetAbility(swapableAbility);
         }
     }

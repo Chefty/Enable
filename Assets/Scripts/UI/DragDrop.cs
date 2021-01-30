@@ -21,6 +21,11 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         abilityIcon = GetComponent<Image>();
     }
 
+    private void OnEnable() {
+        canvasGroup.alpha = 1f;
+        canvasGroup.blocksRaycasts = true;
+    }
+
     public void OnDrag(PointerEventData eventData) {
         RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, Input.mousePosition, canvas.worldCamera, out mousePos);
         transform.position = canvas.transform.TransformPoint(mousePos);
@@ -49,6 +54,8 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             ability = null;
         }
         transform.position = initialPosition;
+
+        Debug.Log("TAAAAAAYOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
     }
 
     public void SetAbility(Ability newability) {
@@ -63,5 +70,6 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         abilityIcon.sprite = newability.AbilityIcon;
         abilityIcon.enabled = true;
         print("[AFTER]" + this.ability.name);
+        GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
     }
 }

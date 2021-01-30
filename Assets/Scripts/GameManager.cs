@@ -60,6 +60,8 @@ public class GameManager : MonoBehaviour
 
                 _currentTile.DebugDisplay();
 
+                CheckForCurrentTileAbility();
+
                 // did take the ability
                 return true;
             }
