@@ -8,7 +8,7 @@ public class MapDebugDisplay : MonoBehaviour
     [ContextMenu("UpdateMapRenderers")]
     public void UpdateMapRenderers()
     {
-        var Tiles = GameObject.FindObjectsOfType<Tile>();
+        var Tiles = GameObject.FindObjectsOfType<PlaceHolderTile>();
 
         for (int i = 0; i < Tiles.Length; i++)
         {
