@@ -10,10 +10,7 @@ public class Tile : MonoBehaviour
 
     private void Start()
     {
-        if (TileOwnAbility != null)
-        {
-            TileOwnAbility.SpawnProps(transform, transform.position + Vector3.up);
-        }
+        DisplayAbility();
 
         TriggerCollider = gameObject.AddComponent<BoxCollider>();
 
@@ -21,7 +18,15 @@ public class Tile : MonoBehaviour
         TriggerCollider.isTrigger = true;
         TriggerCollider.size = transform.localScale;
 
-        DebugDisplay();
+    }
+
+    public void DisplayAbility()
+    {
+        if (TileOwnAbility != null)
+        {
+             TileOwnAbility.SpawnProps(transform, transform.position + Vector3.up);
+            DebugDisplay();
+        }
     }
 
     public bool CheckTileAccessibility()
@@ -38,16 +43,30 @@ public class Tile : MonoBehaviour
     {
         if (TileOwnAbility != null)
         {
-            GameManager.Instance.AddAbility(TileOwnAbility);
+            if (GameManager.Instance.AddAbility(TileOwnAbility))
+            {
+                TileOwnAbility.AbilityTaken();
+                TileOwnAbility = null;
+
+                DebugDisplay();
+            }
         }
     }
 
     public void DebugDisplay()
     {
+        var rend = GetComponent<MeshRenderer>();
+
         if (TileOwnAbility != null)
         {
-            GetComponent<MeshRenderer>().sharedMaterial.color =
-                TileOwnAbility.PlaceHolderProps.GetComponent<MeshRenderer>().sharedMaterial.color;
+            Material mat = new Material(rend.sharedMaterial);
+            mat.SetColor("_Color", TileOwnAbility.PlaceHolderProps.GetComponent<MeshRenderer>().sharedMaterial.GetColor("_Color"));
+
+            rend.sharedMaterial = mat;                
+        }
+        else
+        {
+            rend.sharedMaterial.SetColor("_Color", Color.white);
         }
     }
 }

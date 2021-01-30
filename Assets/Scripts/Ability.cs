@@ -7,15 +7,29 @@ public abstract class Ability : ScriptableObject
 {
     public GameObject PlaceHolderProps;
     public KeyCode ActionKeycode;
+    public Sprite AbilityIcon;
 
     private GameObject _ownProps;
 
     public abstract void RunAction();
     public abstract void ActionForTile();
+
     public void SpawnProps(Transform tile, Vector3 pos)
     {
-        _ownProps = Instantiate(PlaceHolderProps, tile);
+        if (_ownProps == null)
+        {
+            _ownProps = Instantiate(PlaceHolderProps, tile);
+        }
+        else
+        {
+            _ownProps.SetActive(true);
+        }
 
         _ownProps.transform.position = pos;
+    }
+
+    public void AbilityTaken()
+    {
+        _ownProps.SetActive(false);
     }
 }

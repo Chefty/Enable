@@ -3106,7 +3106,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &628687646
 GameObject:
@@ -5045,6 +5045,7 @@ GameObject:
   - component: {fileID: 986918974}
   - component: {fileID: 986918973}
   - component: {fileID: 986918972}
+  - component: {fileID: 986918975}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5117,6 +5118,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 16.8, y: 39.18, z: 0}
+--- !u!114 &986918975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986918971}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68d40e8a512d6d948bb31c68b1a9f300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Targets:
+  - {fileID: 2067965555}
+  PlayerWeight: 1
+  POIWeight: 0
+  offset: {x: 0, y: 0, z: 0}
+  smoothTime: 0
+  minZoom: 40
+  maxZoom: 10
+  ZoomLimiter: 50
 --- !u!1 &990439429
 GameObject:
   m_ObjectHideFlags: 0
@@ -8326,7 +8348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca75cb93919e1640bf7f77415a23b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileOwnAbility: {fileID: 11400000, guid: ae72105c28af49c4494f1a9a54357efe, type: 2}
+  TileOwnAbility: {fileID: 0}
 --- !u!1 &1576208732
 GameObject:
   m_ObjectHideFlags: 0
@@ -8647,7 +8669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca75cb93919e1640bf7f77415a23b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileOwnAbility: {fileID: 0}
+  TileOwnAbility: {fileID: 11400000, guid: 096b95044210bb34dab0c1bc745f8552, type: 2}
 --- !u!1 &1596627112
 GameObject:
   m_ObjectHideFlags: 0
@@ -9363,7 +9385,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0, g: 0, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1703656882
 GameObject:
@@ -9578,7 +9600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca75cb93919e1640bf7f77415a23b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileOwnAbility: {fileID: 0}
+  TileOwnAbility: {fileID: 11400000, guid: ae72105c28af49c4494f1a9a54357efe, type: 2}
 --- !u!1 &1774615687
 GameObject:
   m_ObjectHideFlags: 0
@@ -9792,7 +9814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca75cb93919e1640bf7f77415a23b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileOwnAbility: {fileID: 11400000, guid: b8f24510c37dbd24db239313751a53f4, type: 2}
+  TileOwnAbility: {fileID: 0}
 --- !u!1 &1812482867
 GameObject:
   m_ObjectHideFlags: 0
@@ -10468,6 +10490,12 @@ MonoBehaviour:
   MaxAmountOfAbilities: 8
   PlayerAbilities:
   - {fileID: 11400000, guid: 5f6d2e0b89e9ed14fb4443b59c61ba04, type: 2}
+  - {fileID: 11400000, guid: ae72105c28af49c4494f1a9a54357efe, type: 2}
+  - {fileID: 11400000, guid: 096b95044210bb34dab0c1bc745f8552, type: 2}
+  - {fileID: 11400000, guid: b8f24510c37dbd24db239313751a53f4, type: 2}
+  mask:
+    serializedVersion: 2
+    m_Bits: 55
 --- !u!4 &1913548940
 Transform:
   m_ObjectHideFlags: 0
