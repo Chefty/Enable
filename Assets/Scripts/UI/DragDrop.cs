@@ -51,9 +51,17 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         transform.position = initialPosition;
     }
 
-    public void SetAbility(Ability ability) {
-        this.ability = ability;
-        abilityIcon.sprite = ability.AbilityIcon;
+    public void SetAbility(Ability newability) {
+
+        if (this.ability != null)
+        {
+            print("[GONAME][SetAbility][before][after]" + gameObject.name + " " + this.ability.name + " " + newability.name);
+        }
+        print("[GONAME][SetAbility][before][after] NULL " + gameObject.name + " " + newability.name);
+
+        this.ability = newability;
+        abilityIcon.sprite = newability.AbilityIcon;
         abilityIcon.enabled = true;
+        print("[AFTER]" + this.ability.name);
     }
 }

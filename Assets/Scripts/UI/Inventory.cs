@@ -6,8 +6,9 @@ using UnityEngine.EventSystems;
 using System.Linq;
 
 public class Inventory : MonoBehaviour {
-
-    private Canvas canvas;
+    [SerializeField] private GameObject UI;
+    [SerializeField] private DragDrop SwapDragDrop;
+    private Canvas playerCanvas;
     [SerializeField] GameObject player;
     [SerializeField] private List<DragDrop> abilityItems;
     private Camera mainCamera;
@@ -15,7 +16,7 @@ public class Inventory : MonoBehaviour {
     private void Awake() {
         abilityItems = GetComponentsInChildren<DragDrop>().ToList();
         mainCamera = Camera.main;
-        canvas = GetComponentInParent<Canvas>();
+        playerCanvas = GetComponentInParent<Canvas>();
     }
 
     private void Update() {
@@ -32,10 +33,21 @@ public class Inventory : MonoBehaviour {
             StartCoroutine(ShowHideAbilitiesInventory(false));
     }
 
+    public void ShowHideSwapUI(bool isShowing, Ability swapableAbility)
+    {
+        UI.gameObject.SetActive(isShowing);
+
+        if (swapableAbility != null)
+        {
+        print("ShowHideSwapUI " + swapableAbility.name);
+            SwapDragDrop.SetAbility(swapableAbility);
+        }
+    }
+
     IEnumerator ShowHideAbilitiesInventory(bool isShowing) {
 
         for (int i = 0; i < abilityItems.Count; i++) {
-            canvas.enabled = isShowing;
+            playerCanvas.enabled = isShowing;
         }
 
         yield return null;

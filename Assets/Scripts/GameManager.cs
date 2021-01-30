@@ -63,17 +63,21 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
-    public void SwapAbility(Ability dumpedAbility)
+    public void SwapAbility(Ability UIAbility)
     {
         Ability newAbility = _currentTile.TileOwnAbility;
 
-        _currentTile.TileOwnAbility = dumpedAbility;
+        print("[SwapAbility][UIAbility][newAbility]" + UIAbility.name + " " + newAbility.name);
+
+        _currentTile.TileOwnAbility = UIAbility;
         _currentTile.DisplayAbility();
 
-        PlayerAbilities.Remove(dumpedAbility);
+        PlayerAbilities.Remove(UIAbility);
         PlayerAbilities.Add(newAbility);
 
         newAbility.AbilityTaken();
+
+        CheckForCurrentTileAbility();
     }
 
     public void DumpAbility(Ability ability)
@@ -126,5 +130,24 @@ public class GameManager : MonoBehaviour
     public void SetCurrentTile(Tile newTile)
     {
         _currentTile = newTile;
+
+        CheckForCurrentTileAbility();
+    }
+
+    private void CheckForCurrentTileAbility()
+    {
+        // if any ability available on the cell
+        // display swipe UI
+        if (_currentTile.TileOwnAbility != null)
+        {
+            print("CheckForCurrentTileAbility true " + _currentTile.TileOwnAbility);
+            inventory.ShowHideSwapUI(true, _currentTile.TileOwnAbility);
+        }
+        else
+        {
+            print("CheckForCurrentTileAbility false");
+
+            inventory.ShowHideSwapUI(false, null);
+        }
     }
 }

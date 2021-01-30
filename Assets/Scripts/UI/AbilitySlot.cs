@@ -20,12 +20,20 @@ public class AbilitySlot : MonoBehaviour, IDropHandler {
         if (eventData.pointerDrag == null)
             return;
         else if (eventData.pointerDrag.gameObject.CompareTag("TileAbility")) {
-            abilityIcon.enabled = true;
-            abilityIcon.sprite = eventData.pointerDrag.GetComponent<Image>().sprite;
-            if (tmpAbilityIcon)
-                eventData.pointerDrag.GetComponent<Image>().sprite = tmpAbilityIcon;
-            else
-                eventData.pointerDrag.GetComponent<Image>().enabled = false;
+            //abilityIcon.enabled = true;
+            //abilityIcon.sprite = eventData.pointerDrag.GetComponent<Image>().sprite;
+            //if (tmpAbilityIcon)
+            //    eventData.pointerDrag.GetComponent<Image>().sprite = tmpAbilityIcon;
+            //else
+            //    eventData.pointerDrag.GetComponent<Image>().enabled = false;
+
+            var tileUI = eventData.pointerDrag.GetComponent<DragDrop>();
+            var PlayerUI = GetComponentInChildren<DragDrop>();
+
+            print("[OnDrop]->[tileUI][PlayerUI]" + tileUI.name + " " + PlayerUI.name);
+            //var ContainedAbility = PlayerUI.ability;
+            GameManager.Instance.SwapAbility(PlayerUI.ability);
+            PlayerUI.SetAbility(tileUI.ability);
         }
     }
 }
