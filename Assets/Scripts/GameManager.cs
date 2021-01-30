@@ -118,11 +118,12 @@ public class GameManager : MonoBehaviour
 
     public bool DoesPlayerPosessAbility(Type type)
     {
-        var ability = PlayerAbilities.Where(x => x.GetType() == type);
-
-        if (ability != null)
+        for (int i = 0; i < PlayerAbilities.Count; i++)
         {
-            return true;
+            if (PlayerAbilities[i].GetType() == type)
+            {
+                return true;
+            }
         }
 
         return false;
