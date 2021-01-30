@@ -15,7 +15,12 @@ public class WalkLeft : Ability
     {
         if (Input.GetKeyUp(ActionKeycode))
         {
-            GameManager.Instance.Player.transform.position += Vector3.left;
+            Vector3 newpos = GameManager.Instance.Player.position + (Vector3.left);
+
+            if (GameManager.Instance.GetTileAccessibility(newpos))
+            {
+                GameManager.Instance.Player.transform.position += Vector3.left;
+            }
         }
     }
 }

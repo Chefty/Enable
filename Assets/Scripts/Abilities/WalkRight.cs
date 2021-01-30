@@ -15,7 +15,12 @@ public class WalkRight : Ability
     {
         if (Input.GetKeyUp(ActionKeycode))
         {
-            GameManager.Instance.Player.transform.position += Vector3.right;
+            Vector3 newpos = GameManager.Instance.Player.position + (Vector3.right);
+
+            if (GameManager.Instance.GetTileAccessibility(newpos))
+            {
+                GameManager.Instance.Player.transform.position += Vector3.right;
+            }
         }
     }
 }

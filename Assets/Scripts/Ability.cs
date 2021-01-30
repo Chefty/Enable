@@ -8,7 +8,8 @@ public abstract class Ability : ScriptableObject
     public GameObject PlaceHolderProps;
     public KeyCode ActionKeycode;
 
-    GameObject _ownProps;
+    private GameObject _ownProps;
+
     public abstract void RunAction();
     public abstract void ActionForTile();
     public void SpawnProps(Transform tile, Vector3 pos)

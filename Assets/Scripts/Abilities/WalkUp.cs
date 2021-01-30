@@ -15,7 +15,12 @@ public class WalkUp : Ability
     {
         if (Input.GetKeyUp(ActionKeycode))
         {
-            GameManager.Instance.Player.transform.position += Vector3.forward;
+            Vector3 newpos = GameManager.Instance.Player.position + (Vector3.forward);
+
+            if (GameManager.Instance.GetTileAccessibility(newpos))
+            {
+                GameManager.Instance.Player.transform.position += Vector3.forward;
+            }
         }
     }
 }
