@@ -7,10 +7,10 @@ using System.Linq;
 using DG.Tweening;
 
 public class Inventory : MonoBehaviour {
-    [SerializeField] private GameObject UI;
-    [SerializeField] private DragDrop SwapDragDrop;
+    [SerializeField] private GameObject UI = null;
+    [SerializeField] private DragDrop SwapDragDrop = null;
     private CanvasGroup playerCanvasGroup;
-    [SerializeField] GameObject player;
+    [SerializeField] GameObject player = null;
     [SerializeField] private List<DragDrop> abilityItems;
     private Camera mainCamera;
 
