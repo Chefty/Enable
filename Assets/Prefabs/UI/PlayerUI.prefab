@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2189468802910329102}
   - component: {fileID: 5818445016427623398}
   - component: {fileID: 4023362322643036202}
+  - component: {fileID: 3793099228586372886}
   m_Layer: 0
   m_Name: AbilityIcon
   m_TagString: InventoryAbility
@@ -90,6 +91,18 @@ MonoBehaviour:
   canvas: {fileID: 4771295977734398536}
   abilityIcon: {fileID: 0}
   ability: {fileID: 0}
+--- !u!225 &3793099228586372886
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190095853450522909}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2205035074565911195
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +498,7 @@ GameObject:
   - component: {fileID: 4771295978462535967}
   - component: {fileID: 4771295978462535966}
   - component: {fileID: 4771295978462535965}
+  - component: {fileID: 6476356248259854609}
   m_Layer: 0
   m_Name: AbilityIcon
   m_TagString: InventoryAbility
@@ -563,6 +577,18 @@ MonoBehaviour:
   canvas: {fileID: 4771295977734398536}
   abilityIcon: {fileID: 0}
   ability: {fileID: 0}
+--- !u!225 &6476356248259854609
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4771295978462535963}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4771295978560790986
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,6 +733,7 @@ GameObject:
   - component: {fileID: 4771295978724594291}
   - component: {fileID: 4771295978724594290}
   - component: {fileID: 4771295978724594289}
+  - component: {fileID: 2763062569360126566}
   m_Layer: 0
   m_Name: AbilityIcon
   m_TagString: InventoryAbility
@@ -785,6 +812,18 @@ MonoBehaviour:
   canvas: {fileID: 4771295977734398536}
   abilityIcon: {fileID: 0}
   ability: {fileID: 0}
+--- !u!225 &2763062569360126566
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4771295978724594191}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4771295979080847279
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,6 +836,7 @@ GameObject:
   - component: {fileID: 4771295979080847250}
   - component: {fileID: 4771295979080847249}
   - component: {fileID: 4771295979080847251}
+  - component: {fileID: 2096380500947833253}
   m_Layer: 0
   m_Name: AbilityIcon
   m_TagString: InventoryAbility
@@ -875,6 +915,18 @@ MonoBehaviour:
   canvas: {fileID: 4771295977734398536}
   abilityIcon: {fileID: 0}
   ability: {fileID: 0}
+--- !u!225 &2096380500947833253
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4771295979080847279}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4771295979186539385
 GameObject:
   m_ObjectHideFlags: 0
