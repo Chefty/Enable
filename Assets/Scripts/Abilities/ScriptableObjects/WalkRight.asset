@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7418705d8c7f66d488066c2a31e7ecb0, type: 3}
   m_Name: WalkRight
   m_EditorClassIdentifier: 
-  PlaceHolderProps: {fileID: 0}
+  PlaceHolderProps: {fileID: 5099337818622356804, guid: 9e89956891797144cb1890f709228874,
+    type: 3}
   ActionKeycode: 275

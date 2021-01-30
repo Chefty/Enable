@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc3545fbca08c0045a233c534312a29b, type: 3}
   m_Name: WalkDown
   m_EditorClassIdentifier: 
-  PlaceHolderProps: {fileID: 0}
+  PlaceHolderProps: {fileID: 6149179426058736902, guid: 1965dc61d9c39aa49a3586cea68ec2a3,
+    type: 3}
   ActionKeycode: 274

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1eb190c11e0bad4e9c3f58b1ce7d629, type: 3}
   m_Name: WalkUp
   m_EditorClassIdentifier: 
-  PlaceHolderProps: {fileID: 0}
+  PlaceHolderProps: {fileID: 2049771985316688209, guid: c61d4138f7ec4ea419375a2253dbb9b2,
+    type: 3}
   ActionKeycode: 273
