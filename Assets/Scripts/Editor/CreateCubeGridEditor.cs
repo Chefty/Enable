@@ -12,7 +12,7 @@ public class CreateCubeGridEditor : Editor
 
         DrawDefaultInspector();
 
-        if (GUILayout.Button("Create placeholder map"))
+        if (GUILayout.Button("Create new placeholder map"))
         {
             myTarget.CreateGrid();
         }
