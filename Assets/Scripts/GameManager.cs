@@ -13,15 +13,27 @@ public class GameManager : MonoBehaviour
     public List<Ability> PlayerAbilities;
     public LayerMask mask;
 
-    Tile _currentTile;
+    public Tile _currentTile;
+    public Tile _prevTile;
 
     private void Awake()
     {
         Instance = this;
     }
 
-    private void Start() {
-        for (int i = 0; i < PlayerAbilities.Count; i++) {
+    private void Start()
+    {
+        if (inventory == null)
+        {
+            Debug.LogError("Please fill the Inventory variable in GameManager.");
+        }
+        if (Player == null)
+        {
+            Debug.LogError("Please fill the Player variable in GameManager.");
+        }
+
+        for (int i = 0; i < PlayerAbilities.Count; i++)
+        {
             inventory.AddAbility(PlayerAbilities[i]);
         }
     }
@@ -137,6 +149,7 @@ public class GameManager : MonoBehaviour
 
     public void SetCurrentTile(Tile newTile)
     {
+        _prevTile = _currentTile;
         _currentTile = newTile;
 
         CheckForCurrentTileAbility();
