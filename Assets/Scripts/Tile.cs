@@ -42,6 +42,8 @@ public class Tile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        GameManager.Instance.SetCurrentTile(this);
+
         if (TileOwnAbility != null)
         {
             if (GameManager.Instance.AddAbility(TileOwnAbility))

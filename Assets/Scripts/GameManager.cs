@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public List<Ability> PlayerAbilities;
     public LayerMask mask;
 
+    Tile _currentTile;
+
     private void Awake()
     {
         Instance = this;
@@ -24,6 +26,14 @@ public class GameManager : MonoBehaviour
         {
             PlayerAbilities[i].RunAction();
         }
+
+        // TODO use UI input instead
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            SwapAbility();
+        }
+
+        // TODO Use UI input instead
         if (Input.GetKeyUp(KeyCode.Alpha1))
         {
             DumpAbility(1);
@@ -61,7 +71,6 @@ public class GameManager : MonoBehaviour
     public bool GetTileAccessibility(Vector3 pos)
     {
         return GetTile(pos).CheckTileAccessibility();
-        // TODO code accessibility
     }
 
     public bool AddAbility(Ability newAbility)
@@ -79,6 +88,20 @@ public class GameManager : MonoBehaviour
 
         // didn't take the ability
         return false;
+    }
+
+    public void SwapAbility()
+    {
+        Ability dumpedAbility = PlayerAbilities.First();
+        Ability newAbility = _currentTile.TileOwnAbility;
+
+        _currentTile.TileOwnAbility = dumpedAbility;
+        _currentTile.DisplayAbility();
+
+        PlayerAbilities.Remove(dumpedAbility);
+        PlayerAbilities.Add(newAbility);
+
+        newAbility.AbilityTaken();
     }
 
     public void DumpAbility(int number)
@@ -127,5 +150,10 @@ public class GameManager : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void SetCurrentTile(Tile newTile)
+    {
+        _currentTile = newTile;
     }
 }
