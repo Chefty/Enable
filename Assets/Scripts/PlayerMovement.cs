@@ -14,7 +14,8 @@ public class PlayerMovement : MonoBehaviour
 {
     private Animator animator;
     private float timeIdle = 0f;
-    private eState currentState;
+    public eState currentState;
+    public eState secondState;
     private Vector3 targetPosition;
     private Vector3 targetRotation;
     public bool isLerping = false;
@@ -41,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
             case eState.unhappy:
             case eState.idea:
-                StartCoroutine(ActionCO(currentState));
+                StartCoroutine(ActionCO());
                 break;
             case eState.swim:
                 //nothing yet
@@ -51,20 +52,26 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void WalkAction(Vector3 walkDirection) {
-        
-        currentState = eState.walk;
+    public void Action(Vector3 direction, eState newState, eState newState2 = eState.idle) {
+
+        currentState = newState;
+
+        if (newState2 != eState.idle) {
+            animator.SetBool(secondState.ToString(), false);
+            secondState = newState2;
+        }
+
+        Debug.Log("STATE: " + currentState.ToString() + secondState.ToString());
 
         if (!isLerping && !animator.GetCurrentAnimatorStateInfo(0).IsName(eState.walk.ToString())) {
-            targetPosition += walkDirection;
-            targetRotation = walkDirection;
-            StartCoroutine(ActionCO(currentState));
+            targetPosition += direction;
+            targetRotation = direction;
+            StartCoroutine(ActionCO());
             StartCoroutine(MovePlayerLerpCO(targetPosition, targetRotation, timeToMove));
         }
     }
 
-    private IEnumerator ActionCO(eState state) {
-        currentState = state;
+    private IEnumerator ActionCO() {
         
         if (currentState == eState.walk) { //trigger animation
             animator.SetTrigger(currentState.ToString());
@@ -73,10 +80,17 @@ public class PlayerMovement : MonoBehaviour
         else { //boolean animation
             animator.SetBool(currentState.ToString(), true);
 
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForSeconds(.5f);
 
             animator.SetBool(currentState.ToString(), false);
-            currentState = eState.idle;
+
+            //Second state animation if necessary
+            if (secondState != eState.idle) {
+                currentState = secondState;
+                animator.SetBool(currentState.ToString(), true);
+            }
+            else
+                currentState = eState.idle;
             timeIdle = 0f;
         }
     }
@@ -96,6 +110,5 @@ public class PlayerMovement : MonoBehaviour
         transform.localPosition = targetPosition;
         isLerping = false;
         timeIdle = 0f;
-        currentState = eState.idle;
     }
 }

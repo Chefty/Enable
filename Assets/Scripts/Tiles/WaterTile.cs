@@ -9,6 +9,10 @@ public class WaterTile : Tile
         return GameManager.Instance.DoesPlayerPosessAbility(typeof(Swim));
     }
 
+    public override string CheckTileType() {
+        return "water";
+    }
+
     public override void DebugDisplay()
     {
 

@@ -21,7 +21,16 @@ public class Walk : Ability
 
             if (GameManager.Instance.GetTileAccessibility(newpos))
             {
-                GameManager.Instance.playerMovement.WalkAction(WalkDirection);
+                if (GameManager.Instance.GetTile(newpos).CheckTileType() == "water" &&
+                    GameManager.Instance._currentTile.CheckTileType() == "normal") {
+                    GameManager.Instance.playerMovement.Action(WalkDirection, eState.jump, eState.swim);
+                }
+                else if (GameManager.Instance.GetTile(newpos).CheckTileType() == "normal" &&
+                    GameManager.Instance._currentTile.CheckTileType() == "water") {
+                    GameManager.Instance.playerMovement.Action(WalkDirection, eState.jump, eState.idle);
+                }
+                else if (GameManager.Instance.GetTile(newpos).CheckTileType() == "normal")
+                    GameManager.Instance.playerMovement.Action(WalkDirection, eState.walk);
             }
         }
     }
