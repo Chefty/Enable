@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4549080170729b548ab50fa43e58ffd6, type: 3}
   m_Name: WalkRight
   m_EditorClassIdentifier: 
-  PlaceHolderProps: {fileID: 0}
+  PlaceHolderProps: {fileID: 1707525625466952, guid: a02ac2c1ec28931408baa1bc7c78ae75,
+    type: 3}
   AbilityIcon: {fileID: 21300000, guid: 97e8c1c0ac63d584287ba3ac3fbb0eed, type: 3}
-  ActionKeycode: 0
+  ActionKeycode: 275
   WalkDirection: {x: 1, y: 0, z: 0}

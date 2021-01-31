@@ -51,13 +51,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void WalkAction(Vector3 newPosition, Quaternion newRotation) {
+    public void WalkAction(Vector3 walkDirection) {
         
         currentState = eState.walk;
 
         if (!isLerping && !animator.GetCurrentAnimatorStateInfo(0).IsName(eState.walk.ToString())) {
-            targetPosition += newPosition;
-            targetRotation = newPosition;
+            targetPosition += walkDirection;
+            targetRotation = walkDirection;
             StartCoroutine(ActionCO(currentState));
             StartCoroutine(MovePlayerLerpCO(targetPosition, targetRotation, timeToMove));
         }
@@ -92,8 +92,8 @@ public class PlayerMovement : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-        transform.position = targetPosition;
         animator.SetBool(currentState.ToString(), false); //tile reached - end animation
+        transform.position = targetPosition;
         isLerping = false;
         timeIdle = 0f;
         currentState = eState.idle;
