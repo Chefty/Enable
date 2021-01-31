@@ -26,7 +26,7 @@ public class Tile : MonoBehaviour
     {
         if (TileOwnAbility != null)
         {
-            TileOwnAbility.SpawnProps(transform, transform.position + Vector3.up);
+            TileOwnAbility.SpawnProps(transform, transform.position + new Vector3(0f, .5f, 0f));
             DebugDisplay();
         }
     }
