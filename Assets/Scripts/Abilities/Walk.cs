@@ -21,7 +21,7 @@ public class Walk : Ability
 
             if (GameManager.Instance.GetTileAccessibility(newpos))
             {
-                GameManager.Instance.playerMovement.WalkAction(WalkDirection, Quaternion.Euler(WalkDirection));
+                GameManager.Instance.playerMovement.WalkAction(WalkDirection);
             }
         }
     }
