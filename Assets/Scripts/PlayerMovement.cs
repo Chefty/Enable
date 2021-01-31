@@ -7,7 +7,8 @@ public enum eState {
     walk,
     unhappy,
     idea,
-    swim
+    swim,
+    death
 }
 
 public class PlayerMovement : MonoBehaviour
@@ -74,16 +75,14 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private IEnumerator ActionCO() {
-        
+
         if (currentState == eState.walk) { //trigger animation
             animator.SetTrigger(currentState.ToString());
             yield return null;
-        }
-        else if (currentState == eState.swim && secondState == eState.idle) { //swim only
+        } else if (currentState == eState.swim && secondState == eState.idle) { //swim only
             animator.SetBool(currentState.ToString(), true);
             yield return null;
-        } 
-        else if (currentState == eState.jump && secondState == eState.swim) { //swim is a long lasting animation, should be interupt manually
+        } else if (currentState == eState.jump && secondState == eState.swim) { //swim is a long lasting animation, should be interupt manually
             animator.SetBool(currentState.ToString(), true);
 
             yield return new WaitForSeconds(.5f);
@@ -93,6 +92,14 @@ public class PlayerMovement : MonoBehaviour
             currentState = secondState;
             secondState = eState.idle;
             animator.SetBool(currentState.ToString(), true);
+            Instantiate(Resources.Load("DeathParticles_water"), transform);
+
+            //check if he has the ability
+            if (!GameManager.Instance.DoesPlayerPosessAbility(typeof(Swim))) {
+                currentState = eState.death;
+                animator.SetBool(currentState.ToString(), true);
+                StartCoroutine(MovePlayerLerpCO(transform.localPosition + new Vector3(0, -3f, 0), Vector3.zero, 3f));
+            }
         }
         else if (currentState == eState.jump && secondState == eState.unhappy) { //getting out of water
             animator.SetBool(currentState.ToString(), true);

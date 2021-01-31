@@ -6,7 +6,7 @@ public class WaterTile : Tile
 {
     public override bool CheckTileAccessibility()
     {
-        return GameManager.Instance.DoesPlayerPosessAbility(typeof(Swim));
+        return true;//GameManager.Instance.DoesPlayerPosessAbility(typeof(Swim));
     }
 
     public override string CheckTileType() {
