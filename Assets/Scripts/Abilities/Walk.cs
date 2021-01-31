@@ -16,29 +16,41 @@ public class Walk : Ability
     {
         if (Input.GetKeyUp(ActionKeycode))
         {
-            Debug.Log(name);
-            Vector3 newpos = GameManager.Instance.Player.parent.TransformPoint(
-                GameManager.Instance.Player.localPosition + WalkDirection);
-            //Vector3 newpos = GameManager.Instance.Player.position + WalkDirection;
+            ForceRun();
+        }
+    }
 
-            if (GameManager.Instance.GetTileAccessibility(newpos))
+    public void ForceRun()
+    {
+        Debug.Log(name);
+        Vector3 newpos = GameManager.Instance.Player.parent.TransformPoint(
+            GameManager.Instance.Player.localPosition + WalkDirection);
+        //Vector3 newpos = GameManager.Instance.Player.position + WalkDirection;
+
+        if (GameManager.Instance.GetTileAccessibility(newpos))
+        {
+            if (GameManager.Instance.GetTile(newpos).CheckTileType() == "water" &&
+                GameManager.Instance._currentTile.CheckTileType() == "normal")
             {
-                if (GameManager.Instance.GetTile(newpos).CheckTileType() == "water" &&
-                    GameManager.Instance._currentTile.CheckTileType() == "normal") {
-                    Debug.Log("001");
-                    GameManager.Instance.playerMovement.Action(WalkDirection, eState.jump, eState.swim);
-                } else if (GameManager.Instance.GetTile(newpos).CheckTileType() == "normal" &&
-                      GameManager.Instance._currentTile.CheckTileType() == "water") {
-                    Debug.Log("002");
-                    GameManager.Instance.playerMovement.Action(WalkDirection, eState.jump, eState.unhappy);
-                } else if (GameManager.Instance.GetTile(newpos).CheckTileType() == "water" &&
-                        GameManager.Instance._currentTile.CheckTileType() == "water") {
-                    Debug.Log("002.5");
-                    GameManager.Instance.playerMovement.Action(WalkDirection, eState.swim, eState.idle);
-                } else if (GameManager.Instance.GetTile(newpos).CheckTileType() == "normal") {
-                    Debug.Log("003");
-                    GameManager.Instance.playerMovement.Action(WalkDirection, eState.walk);
-                }
+                Debug.Log("001");
+                GameManager.Instance.playerMovement.Action(WalkDirection, eState.jump, eState.swim);
+            }
+            else if (GameManager.Instance.GetTile(newpos).CheckTileType() == "normal" &&
+                GameManager.Instance._currentTile.CheckTileType() == "water")
+            {
+                Debug.Log("002");
+                GameManager.Instance.playerMovement.Action(WalkDirection, eState.jump, eState.unhappy);
+            }
+            else if (GameManager.Instance.GetTile(newpos).CheckTileType() == "water" &&
+                  GameManager.Instance._currentTile.CheckTileType() == "water")
+            {
+                Debug.Log("002.5");
+                GameManager.Instance.playerMovement.Action(WalkDirection, eState.swim, eState.idle);
+            }
+            else if (GameManager.Instance.GetTile(newpos).CheckTileType() == "normal")
+            {
+                Debug.Log("003");
+                GameManager.Instance.playerMovement.Action(WalkDirection, eState.walk);
             }
         }
     }
