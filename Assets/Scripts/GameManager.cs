@@ -97,6 +97,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void CopyScriptableObjects()
+    {
+        //for (int i = 0; i < PlayerAbilities.Count; i++)
+        //{
+        //    PlayerAbilities[i] = CreateInstance<Ability>();
+        //}
+    }
+
     private void FillUI()
     {
         for (int i = 0; i < PlayerAbilities.Count; i++)
@@ -289,44 +297,44 @@ public class GameManager : MonoBehaviour
                 {
                     if (AxisOrientation == -1f)
                     {
-                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.forward);
+                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.back);
                     }
                     else
                     {
-                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.back);
+                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.forward);
                     }
                 }
                 else if (fromDirection == Vector3.right)
                 {
                     if (AxisOrientation == -1f)
                     {
-                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.back);
+                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.up);
                     }
                     else
                     {
-                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.forward);
+                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.back);
                     }
                 }
                 else if (fromDirection == Vector3.up)
                 {
                     if (AxisOrientation == -1f)
                     {
-                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.right);
+                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.left);
                     }
                     else
                     {
-                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.left);
+                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.right);
                     }
                 }
                 else if (fromDirection == Vector3.down)
                 {
                     if (AxisOrientation == -1f)
                     {
-                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.left);
+                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.right);
                     }
                     else
                     {
-                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.right);
+                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.left);
                     }
                 }
             }
