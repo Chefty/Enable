@@ -255,6 +255,8 @@ public class GameManager : MonoBehaviour
 
         print(toAngle.eulerAngles + " " + mapRoot.eulerAngles + (mapRoot.eulerAngles + (Vector3.up * axisOrientation * 90f)));
 
+        while (playerMovement.isLerping) { yield return new WaitForEndOfFrame(); }
+
         Player.parent = _currentTile.transform;
 
         while (time < 1f)
@@ -282,7 +284,7 @@ public class GameManager : MonoBehaviour
             {
                 fromDirection = ((Walk)tiles[i].Ability).WalkDirection;
                 // TODO might be buggy
-                ((Walk)tiles[i].Ability).UpdateDirection(Quaternion.Euler(0, 90f, 0) * fromDirection);
+                ((Walk)tiles[i].Ability).UpdateDirection((Quaternion.Euler(0, 90f * AxisOrientation, 0) * (fromDirection * 90f)).normalized);
             }
         }
     }

@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private eState currentState;
     private Vector3 targetPosition;
     private Vector3 targetRotation;
-    private bool isLerping = false;
+    public bool isLerping = false;
 
     public float timeToMove = 1f;
     public float rotationSmoothFactor = 350f;
@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 startPosition = transform.position;
 
         while (time < duration) {
-            transform.position = Vector3.Lerp(startPosition, targetPosition, time / duration);
+            transform.localPosition = Vector3.Lerp(startPosition, targetPosition, time / duration);
             transform.localRotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(targetRotation, Vector3.up), rotationSmoothFactor * Time.deltaTime);
             time += Time.deltaTime;
             yield return null;
