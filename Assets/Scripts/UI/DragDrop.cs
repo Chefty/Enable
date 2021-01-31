@@ -64,20 +64,20 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         GetComponent<RectTransform>().localPosition = initialPosition;
     }
 
-    public void SetAbility(Ability newability) {
-        
+    public void SetAbility(Ability newability)
+    {
         ability = newability;
         Button parentbutton = transform.parent.GetComponent<Button>();
-
         parentbutton.onClick.RemoveAllListeners();
-        parentbutton.onClick.AddListener(() =>
+        if (GameManager.Instance.PlayerAbilities.Contains(newability))
         {
-            if (ability.GetType() == typeof(Walk))
-            {
-                ((Walk)ability).ForceRun();
-            }
-        });
-
+            parentbutton.onClick.AddListener(() => {
+                if (ability.GetType() == typeof(Walk))
+                {
+                    ((Walk)ability).ForceRun();
+                }
+            });
+        }
         if (newability == null)
         {
             abilityIcon.sprite = null;
@@ -86,7 +86,6 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         {
             abilityIcon.sprite = newability.AbilityIcon;
         }
-
         abilityIcon.enabled = true;
         GetComponent<RectTransform>().localPosition = initialPosition;
     }
