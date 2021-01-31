@@ -50,4 +50,12 @@ public class Inventory : MonoBehaviour {
             }
         }
     }
+
+    public void FlushUI()
+    {
+        for (int i = 0; i < abilityItems.Count; i++)
+        {
+            abilityItems[i].SetAbility(null);
+        }
+    }
 }

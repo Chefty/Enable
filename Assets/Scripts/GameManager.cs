@@ -3,6 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+[Serializable]
+public class TileAbilityPair
+{
+    public Tile tileWithAbility;
+    public Ability Ability;
+}
+
+[Serializable]
+public class StartInfos
+{
+    public List<TileAbilityPair> StartPairs;
+    public Vector3 PlayerStartPosition;
+    public List<Ability> StartAbilities;
+}
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -16,6 +31,8 @@ public class GameManager : MonoBehaviour
     public Tile _currentTile;
     public Tile _prevTile;
 
+    public StartInfos _levelAwakeState;
+
     private void Awake()
     {
         Instance = this;
@@ -23,6 +40,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        // we save the level infos
+        RegisterLevelStartInformations();
+
         if (inventory == null)
         {
             Debug.LogError("Please fill the Inventory variable in GameManager.");
@@ -32,10 +52,7 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Please fill the Player variable in GameManager.");
         }
 
-        for (int i = 0; i < PlayerAbilities.Count; i++)
-        {
-            inventory.AddAbility(PlayerAbilities[i]);
-        }
+        FillUI();
     }
 
     private void Update()
@@ -43,6 +60,21 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < PlayerAbilities.Count; i++)
         {
             PlayerAbilities[i].RunAction();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            // restart the level here
+            LevelFlush();
+            LevelReload();
+        }
+    }
+
+    private void FillUI()
+    {
+        for (int i = 0; i < PlayerAbilities.Count; i++)
+        {
+            inventory.AddAbility(PlayerAbilities[i]);
         }
     }
 
@@ -171,4 +203,98 @@ public class GameManager : MonoBehaviour
             inventory.ShowHideSwapUI(false, null);
         }
     }
+
+    #region Level Flush
+
+    private void LevelFlush()
+    {
+        FlushAllTilesWithAbility();
+        FlushUI();
+        FlushPlayerAbilities();
+    }
+
+    private void FlushPlayerAbilities()
+    {
+        PlayerAbilities.Clear();
+    }
+
+    private void FlushUI()
+    {
+        inventory.FlushUI();
+    }
+
+    private void FlushAllTilesWithAbility()
+    {
+        List<Tile> TilesWithAbilities = FindObjectsOfType<Tile>().Where(x => x.TileOwnAbility != null).ToList();
+
+        TilesWithAbilities.ForEach(x =>
+        {
+            x.TileOwnAbility.AbilityTaken();
+            x.TileOwnAbility = null;
+            x.DebugDisplay();
+        });        
+    }
+
+    #endregion
+
+    #region Level reload
+
+    private void LevelReload()
+    {
+        // to reload
+        print("LevelReload");
+        ReFillPlayerAbilities();
+        ReFillTilesWithAbility();
+        FillUI();
+        RePlacePlayer();
+    }
+
+    private void RePlacePlayer()
+    {
+        Player.position = _levelAwakeState.PlayerStartPosition;
+    }
+
+    private void ReFillTilesWithAbility()
+    {
+        _levelAwakeState.StartPairs.ForEach(x =>
+        {
+            x.tileWithAbility.TileOwnAbility = x.Ability;
+            x.tileWithAbility.DisplayAbility();
+        });
+    }
+
+    private void ReFillPlayerAbilities()
+    {
+        PlayerAbilities = new List<Ability>(_levelAwakeState.StartAbilities);
+    }
+
+    #endregion
+
+    #region Level Save
+
+    void RegisterLevelStartInformations()
+    {
+        _levelAwakeState = new StartInfos()
+        {
+            StartPairs = GetTilesAndTheirAbilities(),
+            PlayerStartPosition = Player.transform.position,
+            StartAbilities = new List<Ability>(PlayerAbilities)
+        };
+    }
+
+    List<TileAbilityPair> GetTilesAndTheirAbilities()
+    {
+        List<Tile> TilesWithAbilities = FindObjectsOfType<Tile>().Where(x => x.TileOwnAbility != null).ToList();
+        List<TileAbilityPair> pairs = new List<TileAbilityPair>();
+
+        TilesWithAbilities.ForEach(x => pairs.Add(new TileAbilityPair()
+        {
+            tileWithAbility = x,
+            Ability = x.TileOwnAbility
+        }));
+
+        return pairs;
+    }
+
+    #endregion
 }

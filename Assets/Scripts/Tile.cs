@@ -8,8 +8,11 @@ public class Tile : MonoBehaviour
 
     private BoxCollider TriggerCollider;
 
+    private Color _startColor;
+
     private void Start()
     {
+        _startColor = GetComponent<MeshRenderer>().sharedMaterial.GetColor("_Color");
         DisplayAbility();
 
         TriggerCollider = gameObject.AddComponent<BoxCollider>();
@@ -17,7 +20,6 @@ public class Tile : MonoBehaviour
         TriggerCollider.center = (Vector3.up * transform.localScale.y);
         TriggerCollider.isTrigger = true;
         TriggerCollider.size = transform.localScale;
-
     }
 
     public void DisplayAbility()
@@ -70,7 +72,7 @@ public class Tile : MonoBehaviour
         }
         else
         {
-            rend.sharedMaterial.SetColor("_Color", Color.white);
+            rend.sharedMaterial.SetColor("_Color", _startColor);
         }
     }
 }
