@@ -57,9 +57,12 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        for (int i = 0; i < PlayerAbilities.Count; i++)
+        if (Player.gameObject.activeSelf)
         {
-            PlayerAbilities[i].RunAction();
+            for (int i = 0; i < PlayerAbilities.Count; i++)
+            {
+                PlayerAbilities[i].RunAction();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -252,6 +255,7 @@ public class GameManager : MonoBehaviour
     private void RePlacePlayer()
     {
         Player.position = _levelAwakeState.PlayerStartPosition;
+        Player.gameObject.SetActive(true);
     }
 
     private void ReFillTilesWithAbility()

@@ -37,15 +37,18 @@ public class Tile : MonoBehaviour
         return true;
     }
 
-    public void TileBehaviour()
+    public virtual void TileBehaviour()
     {
         // do something..
+        print("base.TileBehaviour");
     }
 
     private void OnTriggerEnter(Collider other)
     {
         GameManager.Instance.SetCurrentTile(this);
 
+        print("OnTriggerEnter");
+        TileBehaviour();
         //Not taking ability automatically for now
         /*if (TileOwnAbility != null)
         {
