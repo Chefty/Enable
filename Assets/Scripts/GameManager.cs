@@ -257,7 +257,7 @@ public class GameManager : MonoBehaviour
 
         while (playerMovement.isLerping) { yield return new WaitForEndOfFrame(); }
 
-        Player.parent = _currentTile.transform;
+        //Player.parent = _currentTile.transform;
 
         while (time < 1f)
         {
@@ -268,7 +268,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        Player.parent = null;
+        //Player.parent = null;
 
         yield return null;
     }
@@ -284,7 +284,51 @@ public class GameManager : MonoBehaviour
             {
                 fromDirection = ((Walk)tiles[i].Ability).WalkDirection;
                 // TODO might be buggy
-                ((Walk)tiles[i].Ability).UpdateDirection((Quaternion.Euler(0, 90f * AxisOrientation, 0) * (fromDirection * 90f)).normalized);
+
+                if (fromDirection == Vector3.left)
+                {
+                    if (AxisOrientation == -1f)
+                    {
+                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.forward);
+                    }
+                    else
+                    {
+                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.back);
+                    }
+                }
+                else if (fromDirection == Vector3.right)
+                {
+                    if (AxisOrientation == -1f)
+                    {
+                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.back);
+                    }
+                    else
+                    {
+                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.forward);
+                    }
+                }
+                else if (fromDirection == Vector3.up)
+                {
+                    if (AxisOrientation == -1f)
+                    {
+                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.right);
+                    }
+                    else
+                    {
+                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.left);
+                    }
+                }
+                else if (fromDirection == Vector3.down)
+                {
+                    if (AxisOrientation == -1f)
+                    {
+                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.left);
+                    }
+                    else
+                    {
+                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.right);
+                    }
+                }
             }
         }
     }

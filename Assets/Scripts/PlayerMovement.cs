@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake() {
         animator = GetComponentInChildren<Animator>();
-        targetPosition = transform.position;
+        targetPosition = transform.localPosition;
     }
 
     private void FixedUpdate() {
@@ -84,16 +84,16 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator MovePlayerLerpCO(Vector3 targetPosition, Vector3 targetRotation, float duration) {
         isLerping = true;
         float time = 0;
-        Vector3 startPosition = transform.position;
+        Vector3 startPosition = transform.localPosition;
 
         while (time < duration) {
             transform.localPosition = Vector3.Lerp(startPosition, targetPosition, time / duration);
-            transform.localRotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(targetRotation, Vector3.up), rotationSmoothFactor * Time.deltaTime);
+            transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.LookRotation(targetRotation, Vector3.up), rotationSmoothFactor * Time.deltaTime);
             time += Time.deltaTime;
             yield return null;
         }
         animator.SetBool(currentState.ToString(), false); //tile reached - end animation
-        transform.position = targetPosition;
+        transform.localPosition = targetPosition;
         isLerping = false;
         timeIdle = 0f;
         currentState = eState.idle;
