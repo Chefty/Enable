@@ -52,6 +52,8 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         if (eventData.pointerDrag.gameObject.CompareTag("InventoryAbility") &&
             !RectTransformUtility.RectangleContainsScreenPoint(parentRectTransform, transform.position) &&
             GameManager.Instance._currentTile.TileOwnAbility == null) {
+
+            transform.parent.GetComponent<Button>().onClick.RemoveAllListeners();
             abilityIcon.sprite = null;
             abilityIcon.enabled = false;
             
@@ -65,6 +67,16 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     public void SetAbility(Ability newability) {
         
         ability = newability;
+        Button parentbutton = transform.parent.GetComponent<Button>();
+
+        parentbutton.onClick.RemoveAllListeners();
+        parentbutton.onClick.AddListener(() =>
+        {
+            if (ability.GetType() == typeof(Walk))
+            {
+                ((Walk)ability).ForceRun();
+            }
+        });
 
         if (newability == null)
         {
