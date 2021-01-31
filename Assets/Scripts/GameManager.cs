@@ -48,8 +48,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        CopyScriptableObjects();
         // we save the level infos
         RegisterLevelStartInformations();
+
 
         if (inventory == null)
         {
@@ -99,10 +101,10 @@ public class GameManager : MonoBehaviour
 
     private void CopyScriptableObjects()
     {
-        //for (int i = 0; i < PlayerAbilities.Count; i++)
-        //{
-        //    PlayerAbilities[i] = CreateInstance<Ability>();
-        //}
+        for (int i = 0; i < PlayerAbilities.Count; i++)
+        {
+            PlayerAbilities[i] = Instantiate(PlayerAbilities[i]);
+        }
     }
 
     private void FillUI()

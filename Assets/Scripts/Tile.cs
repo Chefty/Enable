@@ -12,6 +12,11 @@ public class Tile : MonoBehaviour
 
     private void Start()
     {
+        if (TileOwnAbility != null)
+        {
+            TileOwnAbility = Instantiate(TileOwnAbility);
+        }
+
         _startColor = GetComponent<MeshRenderer>().sharedMaterial.GetColor("_Color");
         DisplayAbility();
 
