@@ -16,4 +16,4 @@ MonoBehaviour:
     type: 3}
   AbilityIcon: {fileID: 21300000, guid: 97e8c1c0ac63d584287ba3ac3fbb0eed, type: 3}
   ActionKeycode: 275
-  WalkDirection: {x: -1, y: 0, z: 0}
+  WalkDirection: {x: 1, y: 0, z: 0}

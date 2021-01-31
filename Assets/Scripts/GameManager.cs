@@ -113,6 +113,12 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    public void AddSlot()
+    {
+        MaxAmountOfAbilities += 1;
+        inventory.InitInventorySlots();
+    }
+
     private void FillUI()
     {
         for (int i = 0; i < PlayerAbilities.Count; i++)
