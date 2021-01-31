@@ -50,7 +50,8 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         }
         
         if (eventData.pointerDrag.gameObject.CompareTag("InventoryAbility") &&
-            !RectTransformUtility.RectangleContainsScreenPoint(parentRectTransform, transform.position)) {
+            !RectTransformUtility.RectangleContainsScreenPoint(parentRectTransform, transform.position) &&
+            GameManager.Instance._currentTile.TileOwnAbility == null) {
             abilityIcon.sprite = null;
             abilityIcon.enabled = false;
             
@@ -62,17 +63,8 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     }
 
     public void SetAbility(Ability newability) {
-
-        if (newability != null)
-        {
-            if (this.ability != null)
-            {
-                print("[GONAME][SetAbility][before][after]" + gameObject.name + " " + this.ability.name + " " + newability.name);
-            }
-            print("[GONAME][SetAbility][before][after] NULL " + gameObject.name + " " + newability.name);
-        }
-
-        this.ability = newability;
+        
+        ability = newability;
 
         if (newability == null)
         {
