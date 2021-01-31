@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 206f92c1bb728474193bf7ceba51f731
+  - enabled: 1
     path: Assets/Scenes/Ready to be decorated Scenes/Level 1.unity
     guid: c7eecfde12229f94690a2ec1971bc2b3
   - enabled: 1
@@ -16,8 +19,5 @@ EditorBuildSettings:
     guid: 8e0a8d097174ead4f84d991c65a2a31e
   - enabled: 1
     path: Assets/Scenes/Ready to be decorated Scenes/Level 4 Rotation.unity
-    guid: b486d441bbec17b48b6052bb5a9c2cbb
-  - enabled: 1
-    path: Assets/Scenes/Ready to be decorated Scenes/Level 5 Water and Rotation.unity
-    guid: 088d41adaf418e7499656cb143fd74bb
+    guid: 8b7c250d436df4b4d902ad634946b66b
   m_configObjects: {}
