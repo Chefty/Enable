@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690664e4a4d042a4fac1b9e791cd2be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlaceHolderPrefab: {fileID: 0}
+  PlaceHolderPrefab: {fileID: 308213551727355273, guid: 3bd800ed85606b949984c972ac48749f,
+    type: 3}
   Size: {x: 10, y: 10}
 --- !u!114 &8542357001781830476
 MonoBehaviour:

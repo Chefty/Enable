@@ -54,7 +54,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &7323348331165477400
 MeshRenderer:
@@ -122,5 +122,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faunaCube: {fileID: 7399428475371519865, guid: 34a1eb52e4c2e6e4dbad08da2999fc1f,
     type: 3}
+  Grass: {fileID: -7995496139591576777, guid: 4d9088e12f9791246a64647a0c5f772f, type: 3}
   minObjects: 10
   maxObjects: 30

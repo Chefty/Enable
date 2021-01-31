@@ -6,6 +6,7 @@ public class PlaceHolderTile : MonoBehaviour
 {
     public Tile TilePrefab;
     public Ability TileAbility;
+    public Tile DefaultTilePrefab;
 
     public  void DebugDisplay()
     {
@@ -37,5 +38,11 @@ public class PlaceHolderTile : MonoBehaviour
         tile.transform.position = transform.position;
 
         DestroyImmediate(gameObject);
+    }
+
+    public void GenerateForPlayMode()
+    {
+        TilePrefab = DefaultTilePrefab;
+        GenerateRealTile();
     }
 }

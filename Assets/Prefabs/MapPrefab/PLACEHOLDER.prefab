@@ -108,3 +108,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TilePrefab: {fileID: 0}
   TileAbility: {fileID: 0}
+  DefaultTilePrefab: {fileID: 7323348331165477405, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+    type: 3}
