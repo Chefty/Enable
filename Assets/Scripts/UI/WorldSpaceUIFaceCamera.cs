@@ -8,7 +8,7 @@ public class WorldSpaceUIFaceCamera : MonoBehaviour
 
     private void Update() {
         Vector3 relativePos = Camera.main.transform.position - transform.position;
-        
+
         relativePos.x = 90f;
         relativePos.z = 90f;
 

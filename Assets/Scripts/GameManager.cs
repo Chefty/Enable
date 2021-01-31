@@ -177,6 +177,8 @@ public class GameManager : MonoBehaviour
         tile.DisplayAbility();
 
         PlayerAbilities.Remove(ability);
+
+        CheckForCurrentTileAbility();
     }
 
     public Tile GetTile(Vector3 pos)
