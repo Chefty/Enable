@@ -42,7 +42,14 @@ public class PlaceHolderTile : MonoBehaviour
 
     public void GenerateForPlayMode()
     {
-        TilePrefab = DefaultTilePrefab;
+        if (TilePrefab == null)
+        {
+            TilePrefab = DefaultTilePrefab;
+        }
+        else
+        {
+
+        }
         GenerateRealTile();
     }
 }

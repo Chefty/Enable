@@ -252,15 +252,19 @@ public class GameManager : MonoBehaviour
 
         print(toAngle.eulerAngles + " " + mapRoot.eulerAngles + (mapRoot.eulerAngles + (Vector3.up * axisOrientation * 90f)));
 
+        Player.parent = _currentTile.transform;
+
         while (time < 1f)
         {
-            mapRoot.RotateAround(_mapBounds.center, Vector3.up, (90f * axisOrientation) / Time.deltaTime);
-                //Quaternion.Slerp(fromAngle, toAngle, time);
-            
+            mapRoot.RotateAround(_mapBounds.center, Vector3.up, (90f * axisOrientation) * Time.deltaTime);
+
             time += Time.deltaTime;
 
             yield return new WaitForEndOfFrame();
         }
+
+        Player.parent = null;
+
 
         yield return null;
     }
