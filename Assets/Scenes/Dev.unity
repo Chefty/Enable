@@ -10582,17 +10582,21 @@ MonoBehaviour:
   inventory: {fileID: 1952286126}
   Player: {fileID: 1809551059}
   playerMovement: {fileID: 1809551062}
+  mapRoot: {fileID: 0}
+  MapRotationSpeed: 0
+  MapRotationSmoothFactor: 0
   MaxAmountOfAbilities: 4
   PlayerAbilities:
-  - {fileID: 11400000, guid: 5f6d2e0b89e9ed14fb4443b59c61ba04, type: 2}
-  - {fileID: 11400000, guid: ae72105c28af49c4494f1a9a54357efe, type: 2}
   - {fileID: 11400000, guid: 096b95044210bb34dab0c1bc745f8552, type: 2}
-  - {fileID: 11400000, guid: b8f24510c37dbd24db239313751a53f4, type: 2}
   mask:
     serializedVersion: 2
     m_Bits: 55
   _currentTile: {fileID: 0}
   _prevTile: {fileID: 0}
+  _levelAwakeState:
+    StartPairs: []
+    PlayerStartPosition: {x: 0, y: 0, z: 0}
+    StartAbilities: []
 --- !u!4 &1913548940
 Transform:
   m_ObjectHideFlags: 0
