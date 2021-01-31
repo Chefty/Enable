@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Collections;
 
 [Serializable]
 public class TileAbilityPair
@@ -23,6 +24,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public Inventory inventory;
     public Transform Player;
+    public Transform mapRoot;
+
+    public float MapRotationSpeed;
+    public float MapRotationSmoothFactor;
 
     public int MaxAmountOfAbilities;
     public List<Ability> PlayerAbilities;
@@ -32,6 +37,8 @@ public class GameManager : MonoBehaviour
     public Tile _prevTile;
 
     public StartInfos _levelAwakeState;
+
+    Bounds _mapBounds;
 
     private void Awake()
     {
@@ -51,8 +58,13 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("Please fill the Player variable in GameManager.");
         }
+        if (mapRoot == null)
+        {
+            Debug.LogError("Please fill the map root variable in GameManager.");
+        }
 
         FillUI();
+        GetMapBounds();
     }
 
     private void Update()
@@ -70,6 +82,17 @@ public class GameManager : MonoBehaviour
             // restart the level here
             LevelFlush();
             LevelReload();
+        }
+    }
+
+    private void    GetMapBounds()
+    {
+        _mapBounds = new Bounds();
+        var tiles = FindObjectsOfType<Tile>();
+
+        for (int i = 0; i < tiles.Length; i++)
+        {
+            _mapBounds.Encapsulate(tiles[i].transform.position);
         }
     }
 
@@ -206,6 +229,48 @@ public class GameManager : MonoBehaviour
             inventory.ShowHideSwapUI(false, null);
         }
     }
+
+    #region Map rotation
+
+    [ContextMenu("Rotate level")]
+    private void DebugRotate()
+    {
+        RotateLevel(-1f);
+    }
+
+    public void RotateLevel(float AxisOrientation)
+    {
+        StartCoroutine(SmoothRotateMap(AxisOrientation));
+        //RotateAbilities(AxisOrientation);
+    }
+
+    IEnumerator SmoothRotateMap(float axisOrientation)
+    {
+        float time = 0;
+        Quaternion fromAngle = mapRoot.rotation;
+        Quaternion toAngle = Quaternion.Euler(mapRoot.eulerAngles + (Vector3.up * axisOrientation * 90f));
+
+        print(toAngle.eulerAngles + " " + mapRoot.eulerAngles + (mapRoot.eulerAngles + (Vector3.up * axisOrientation * 90f)));
+
+        while (time < 1f)
+        {
+            mapRoot.RotateAround(_mapBounds.center, Vector3.up, (90f * axisOrientation) / Time.deltaTime);
+                //Quaternion.Slerp(fromAngle, toAngle, time);
+            
+            time += Time.deltaTime;
+
+            yield return new WaitForEndOfFrame();
+        }
+
+        yield return null;
+    }
+
+    private void RotateAbilities(float AxisOrientation)
+    {
+
+    }
+
+    #endregion
 
     #region Level Flush
 
