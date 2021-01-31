@@ -27,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
     private void Awake() {
         animator = GetComponentInChildren<Animator>();
         targetPosition = transform.localPosition;
-        GameManager.Instance.onDieOnLava += StartActionCO;
     }
 
     private void FixedUpdate() {
@@ -75,10 +74,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void StartActionCO() {
-        StartCoroutine(ActionCO());
-    }
-
     private IEnumerator ActionCO() {
 
         if (currentState == eState.walk) { //trigger animation
@@ -105,7 +100,8 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool(currentState.ToString(), true);
                 StartCoroutine(MovePlayerLerpCO(transform.localPosition + new Vector3(0, -3f, 0), Vector3.zero, 3f));
             }
-        } else if (currentState == eState.jump && secondState == eState.unhappy) { //getting out of water
+        }
+        else if (currentState == eState.jump && secondState == eState.unhappy) { //getting out of water
             animator.SetBool(currentState.ToString(), true);
 
             yield return new WaitForSeconds(.5f);
@@ -120,12 +116,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool(currentState.ToString(), false);
             currentState = eState.idle;
             timeIdle = 0f;
-        } else if (currentState == eState.death && secondState == eState.idle) { //dying on lava
-            Instantiate(Resources.Load("DeathParticles_lava"), transform);
-            animator.SetBool(currentState.ToString(), true);
-            StartCoroutine(MovePlayerLerpCO(transform.localPosition + new Vector3(0, -3f, 0), Vector3.zero, 3f));
-        }
-        else {
+        } else {
             animator.SetBool(currentState.ToString(), true);
 
             yield return new WaitForSeconds(.5f);

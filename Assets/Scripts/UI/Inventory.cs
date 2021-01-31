@@ -49,16 +49,15 @@ public class Inventory : MonoBehaviour {
     }
 
     private IEnumerator ShowHidePlayerInterface(bool isShowing) {
-        if (UI != null) {
-            if (isShowing) {
-                UI.transform.DOMoveY(2.5f, .25f).WaitForCompletion();
-                UI.transform.DOScale(Vector3.one, .5f);
-            } else {
-                UI.transform.DOScale(Vector3.zero, .25f).WaitForCompletion();
-                UI.transform.DOMoveY(1.5f, .5f);
-            }
-            yield return null;
+        if (isShowing) {
+            UI.transform.DOMoveY(2.5f, .25f).WaitForCompletion();
+            UI.transform.DOScale(Vector3.one, .5f);    
         }
+        else {
+            UI.transform.DOScale(Vector3.zero, .25f).WaitForCompletion();
+            UI.transform.DOMoveY(1.5f, .5f);
+        }
+        yield return null;
     }
 
     public void AddAbility(Ability ability) {

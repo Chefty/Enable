@@ -34,7 +34,6 @@ public class GameManager : MonoBehaviour
     public int MaxAmountOfAbilities;
     public List<Ability> PlayerAbilities;
     public LayerMask mask;
-    public Action onDieOnLava;
 
     public Tile _currentTile;
     public Tile _prevTile;
@@ -211,7 +210,7 @@ public class GameManager : MonoBehaviour
 
         if (Physics.Raycast(pos + (Vector3.up * 15f), Vector3.down, out m_Hit, 50f, mask))
         {
-            //print("found " + m_Hit.collider.name + " [" + m_Hit.collider.GetComponent<Tile>().GetType().ToString() + "] at " + pos);
+            print("found " + m_Hit.collider.name + " [" + m_Hit.collider.GetComponent<Tile>().GetType().ToString() + "] at " + pos);
 
             return m_Hit.collider.GetComponent<Tile>();
         }

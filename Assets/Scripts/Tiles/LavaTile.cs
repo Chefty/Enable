@@ -15,14 +15,14 @@ public class LavaTile : Tile
 
     public override void TileBehaviour()
     {
-        if (!GameManager.Instance.DoesPlayerPosessAbility(typeof(Shoes))) {
-            StartCoroutine(StartDeathDelayCO(.25f));
+        if (GameManager.Instance.DoesPlayerPosessAbility(typeof(Shoes)))
+        {
+            return;
         }
-    }
+        else
+        {
 
-    private IEnumerator StartDeathDelayCO(float delay) {
-        yield return new WaitForSeconds(delay);
-        GameManager.Instance.playerMovement.currentState = eState.death;
-        GameManager.Instance.onDieOnLava();
+            GameManager.Instance.Player.gameObject.SetActive(false);
+        }
     }
 }
