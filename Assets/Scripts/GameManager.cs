@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public Inventory inventory;
     public Transform Player;
+    public PlayerMovement playerMovement;
     public Transform mapRoot;
 
     public float MapRotationSpeed;

@@ -32,12 +32,12 @@ public class Inventory : MonoBehaviour {
 
     private IEnumerator ShowHidePlayerInterface(bool isShowing) {
         if (isShowing) {
-            UI.transform.DOMoveY(2, .25f).WaitForCompletion();
+            UI.transform.DOMoveY(2.5f, .25f).WaitForCompletion();
             UI.transform.DOScale(Vector3.one, .5f);    
         }
         else {
-            UI.transform.DOScale(new Vector3(0, player.transform.localScale.y / 2, 0), .25f).WaitForCompletion();
-            UI.transform.DOMoveY(0, .5f);
+            UI.transform.DOScale(Vector3.zero, .25f).WaitForCompletion();
+            UI.transform.DOMoveY(1.5f, .5f);
         }
         yield return null;
     }
