@@ -88,6 +88,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    #region LevelStartup
+
     private void    GetMapBounds()
     {
         _mapBounds = new Bounds();
@@ -106,6 +108,8 @@ public class GameManager : MonoBehaviour
             PlayerAbilities[i] = Instantiate(PlayerAbilities[i]);
         }
     }
+
+    #endregion
 
     private void FillUI()
     {
@@ -283,64 +287,170 @@ public class GameManager : MonoBehaviour
         yield return null;
     }
 
+    Vector3 ConvertDirection(Vector3 fromDirection, float AxisOrientation)
+    {
+        Vector3 newdirection = Vector3.zero;
+
+        if (fromDirection == Vector3.left)
+        {
+            if (AxisOrientation == -1f)
+            {
+                newdirection = Vector3.forward;
+            }
+            else
+            {
+                newdirection = Vector3.back;
+                //((Walk)tiles[i].Ability).UpdateDirection(Vector3.forward);
+            }
+        }
+        else if (fromDirection == Vector3.right)
+        {
+            if (AxisOrientation == -1f)
+            {
+                newdirection = Vector3.back;
+
+                //((Walk)tiles[i].Ability).UpdateDirection(Vector3.forward);
+            }
+            else
+            {
+                newdirection = Vector3.forward;
+
+                //((Walk)tiles[i].Ability).UpdateDirection(Vector3.back);
+            }
+        }
+        else if (fromDirection == Vector3.forward)
+        {
+            if (AxisOrientation == -1f)
+            {
+                newdirection = Vector3.right;
+
+                //((Walk)tiles[i].Ability).UpdateDirection(Vector3.left);
+            }
+            else
+            {
+                newdirection = Vector3.left;
+            }
+        }
+        else if (fromDirection == Vector3.back)
+        {
+            if (AxisOrientation == -1f)
+            {
+                newdirection = Vector3.left;
+            }
+            else
+            {
+                newdirection = Vector3.right;
+            }
+        }
+
+        return newdirection;
+    }
+
     private void RotateAbilities(float AxisOrientation)
     {
         var tiles = GetTilesAndTheirAbilities();
         Vector3 fromDirection;
+        Vector3 newdirection = Vector3.zero;
+
+        for (int i = 0; i < PlayerAbilities.Count; i++)
+        {
+            if (PlayerAbilities[i].GetType() == typeof(Walk))
+            {
+                fromDirection = ((Walk)PlayerAbilities[i]).WalkDirection;
+                newdirection = Vector3.zero;
+                newdirection = ConvertDirection(fromDirection, AxisOrientation);
+                //PlayerAbilities[i].AbilityIcon = AbiltiesRotatedAssets.Instance.GetWalkArrowFromRotation(newdirection);
+                //inventory.abilityItems[i].abilityIcon.sprite = PlayerAbilities[i].AbilityIcon;
+
+                ((Walk)PlayerAbilities[i]).WalkDirection = newdirection;
+            }
+        }
+
+        AxisOrientation *= -1f;
 
         for (int i = 0; i < tiles.Count; i++)
         {
             if (tiles[i].Ability.GetType() == typeof(Walk))
             {
                 fromDirection = ((Walk)tiles[i].Ability).WalkDirection;
-                // TODO might be buggy
+                newdirection = ConvertDirection(fromDirection, AxisOrientation);
+                ((Walk)tiles[i].Ability).UpdateDirection(newdirection);
+            }
+        }
 
+        /*
+        for (int i = 0; i < tiles.Count; i++)
+        {
+            if (tiles[i].Ability.GetType() == typeof(Walk))
+            {
+                fromDirection = ((Walk)tiles[i].Ability).WalkDirection;
+                Vector3 newdirection = Vector3.zero;
                 if (fromDirection == Vector3.left)
                 {
                     if (AxisOrientation == -1f)
                     {
-                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.back);
+                        newdirection = Vector3.back;
                     }
                     else
                     {
-                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.forward);
+                        newdirection = Vector3.forward;
+                        //((Walk)tiles[i].Ability).UpdateDirection(Vector3.forward);
                     }
                 }
                 else if (fromDirection == Vector3.right)
                 {
                     if (AxisOrientation == -1f)
                     {
-                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.up);
+                        newdirection = Vector3.up;
+
+                        //((Walk)tiles[i].Ability).UpdateDirection(Vector3.up);
                     }
                     else
                     {
-                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.back);
+                        newdirection = Vector3.back;
+
+                        //((Walk)tiles[i].Ability).UpdateDirection(Vector3.back);
                     }
                 }
                 else if (fromDirection == Vector3.up)
                 {
                     if (AxisOrientation == -1f)
                     {
-                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.left);
+                        newdirection = Vector3.left;
+
+                        //((Walk)tiles[i].Ability).UpdateDirection(Vector3.left);
                     }
                     else
                     {
-                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.right);
+                        newdirection = Vector3.right;
+
+                        //((Walk)tiles[i].Ability).UpdateDirection(Vector3.right);
                     }
                 }
                 else if (fromDirection == Vector3.down)
                 {
                     if (AxisOrientation == -1f)
                     {
-                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.right);
+                        newdirection = Vector3.right;
+
+                        //((Walk)tiles[i].Ability).UpdateDirection(Vector3.right);
                     }
                     else
                     {
-                        ((Walk)tiles[i].Ability).UpdateDirection(Vector3.left);
+                        newdirection = Vector3.left;
+
+                        //((Walk)tiles[i].Ability).UpdateDirection(Vector3.left);
                     }
                 }
+
+
+
+                ((Walk)tiles[i].Ability).UpdateDirection(Vector3.back);
+
             }
         }
+         */
+
     }
 
     #endregion

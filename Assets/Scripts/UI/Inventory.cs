@@ -11,7 +11,7 @@ public class Inventory : MonoBehaviour {
     [SerializeField] private DragDrop SwapDragDrop = null;
     private CanvasGroup playerCanvasGroup;
     [SerializeField] GameObject player = null;
-    [SerializeField] private List<DragDrop> abilityItems;
+    [SerializeField] public List<DragDrop> abilityItems;
     private Camera mainCamera;
 
     private void Awake() {

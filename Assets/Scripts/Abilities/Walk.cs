@@ -28,20 +28,16 @@ public class Walk : Ability
 
     public void UpdateDirection(Vector3 newDirection)
     {
-        Vector3 propPosition = _ownProps.transform.position;
-        bool wasenabled = _ownProps.activeSelf;
-
-        WalkDirection = newDirection;
-        Destroy(_ownProps);
+        //WalkDirection = newDirection;
         // just to be sure
-        _ownProps = null;
-        PlaceHolderProps = AbiltiesRotatedAssets.Instance.GetWalkArrowFromRotation(newDirection);
+        AbilityIcon = AbiltiesRotatedAssets.Instance.GetWalkArrowFromRotation(newDirection);
+        ActionKeycode = AbiltiesRotatedAssets.Instance.GetKeycodeForDirection(newDirection);
 
-        if (wasenabled)
-        {
-            SpawnProps(
-                GameManager.Instance.GetTile(propPosition + Vector3.up).transform,
-                propPosition);
-        }
+        //if (wasenabled)
+        //{
+        //    SpawnProps(
+        //        GameManager.Instance.GetTile(propPosition + Vector3.up).transform,
+        //        propPosition);
+        //}
     }
 }

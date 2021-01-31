@@ -7,7 +7,8 @@ using System;
 public class DirectionToArrow
 {
     public Vector3 Direction;
-    public GameObject Arrow;
+    public Sprite Arrow;
+    public KeyCode keycode;
 }
 
 public class AbiltiesRotatedAssets : MonoBehaviour
@@ -21,8 +22,15 @@ public class AbiltiesRotatedAssets : MonoBehaviour
         Instance = this;
     }
 
-    public GameObject GetWalkArrowFromRotation(Vector3 walkDirection)
+    // TODO just change the sprite
+    public Sprite GetWalkArrowFromRotation(Vector3 walkDirection)
     {
         return Arrows.Where(x => x.Direction == walkDirection).First().Arrow;
+    }
+    
+    // TODO just change the sprite
+    public KeyCode GetKeycodeForDirection(Vector3 walkDirection)
+    {
+        return Arrows.Where(x => x.Direction == walkDirection).First().keycode;
     }
 }
