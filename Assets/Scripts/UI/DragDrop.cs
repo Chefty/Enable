@@ -70,13 +70,16 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         Button parentbutton = transform.parent.GetComponent<Button>();
 
         parentbutton.onClick.RemoveAllListeners();
-        parentbutton.onClick.AddListener(() =>
+        if (GameManager.Instance.PlayerAbilities.Contains(newability))
         {
-            if (ability.GetType() == typeof(Walk))
+            parentbutton.onClick.AddListener(() =>
             {
-                ((Walk)ability).ForceRun();
-            }
-        });
+                if (ability.GetType() == typeof(Walk))
+                {
+                    ((Walk)ability).ForceRun();
+                }
+            });
+        }
 
         if (newability == null)
         {
