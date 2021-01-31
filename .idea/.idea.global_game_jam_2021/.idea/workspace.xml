@@ -19,16 +19,21 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/Arghonot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:Franco" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df795c71-8411-41fa-8031-6ee16d2edd4e" name="Default Changelist" comment="Leven 5">
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Ready to be decorated Scenes/Level 7 Extra slot.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Ready to be decorated Scenes/Level 7 Extra slot.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Scenes in progress.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.global_game_jam_2021/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.global_game_jam_2021/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.global_game_jam_2021/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.global_game_jam_2021/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/CreateCubeGrid.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/CreateCubeGrid.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/___MAP_GENERATOR___.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/___MAP_GENERATOR___.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ready to be decorated Scenes/Level 6 Double Rotation (This one should be level 5).unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ready to be decorated Scenes/Level 6 Double Rotation (This one should be level 5).unity.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +43,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Franco" />
+        <entry key="$PROJECT_DIR$" value="graphic" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,21 +51,33 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CreateCubeGrid.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AbiltiesRotatedAssets.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Ready to be decorated Scenes/Level 6 Double Rotation (This one should be level 5).unity.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CreateCubeGrid.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlaceHolderTile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Level 6 Double Rotation (This one should be level 5).unity.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Level 1.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Abilities/Walk.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///CreateCubeGrid.cs.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Ready to be decorated Scenes/Level 1.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Ready to be decorated Scenes/Level 3 Lava.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Ready to be decorated Scenes/Level 7 Extra slot.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Level 3 Lava.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///CreateCubeGrid.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/WorldSpaceUIFaceCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Levels.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DragDrop.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/___MAP_GENERATOR___.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Ready to be decorated Scenes/Level 5 Water and Rotation.unity.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Ready to be decorated Scenes/Level 5 Water and Rotation.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CreateCubeGrid.cs.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/CreateCubeGrid.cs.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlaceHolderTile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Ready to be decorated Scenes/Level 4 Rotation.unity.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/WorldSpaceUIFaceCamera.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DragDrop.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Abilities/Walk.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///___MAP_GENERATOR___.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///CreateCubeGrid.cs.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultipleTargetsCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/packages-lock.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Level 6 Double Rotation (This one should be level 5).unity.meta" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -93,10 +110,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="1264">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="1264" />
+      <option name="pid" />
       <method v="2" />
     </configuration>
   </component>
@@ -138,7 +155,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/Arghonot" />
+                        <option value="Franco" />
                       </list>
                     </value>
                   </entry>
@@ -221,18 +238,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="938" height="375" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1612116650681" />
-    <state x="766" y="230" key="RollbackChangesDialog" timestamp="1612116827853">
+    <state x="766" y="230" key="RollbackChangesDialog" timestamp="1612123856107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="766" y="230" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1612116827853" />
+    <state x="766" y="230" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1612123856107" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1612116845352">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1612116845352" />
-    <state x="740" y="234" key="git4idea.branch.GitSmartOperationDialog" timestamp="1612110160278">
+    <state x="594" y="234" key="git4idea.branch.GitSmartOperationDialog" timestamp="1612123841036">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="234" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1612110160278" />
+    <state x="594" y="234" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1612123841036" />
     <state x="616" y="173" width="670" height="676" key="search.everywhere.popup" timestamp="1612112023975">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

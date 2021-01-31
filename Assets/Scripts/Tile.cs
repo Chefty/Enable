@@ -42,6 +42,10 @@ public class Tile : MonoBehaviour
         return true;
     }
 
+    public virtual string CheckTileType() {
+        return "normal";
+    }
+
     public virtual void TileBehaviour()
     {
         // do something..
