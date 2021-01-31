@@ -1,16 +1,21 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class WorldSpaceUIFaceCamera : MonoBehaviour
 {
     public float smoothFactor = 10f;
+    private Camera _camera;
 
-    private void Update() {
-        Vector3 relativePos = Camera.main.transform.position - transform.position;
+    private void Awake()
+    {
+        _camera = Camera.main;
+    }
 
-        relativePos.x = 90f;
-        relativePos.z = 90f;
+    private void Update() 
+    {
+        Vector3 relativePos = transform.position - _camera.transform.position;
 
         Quaternion toRotation = Quaternion.LookRotation(relativePos);
         
