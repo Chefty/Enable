@@ -13,16 +13,18 @@ public enum eState {
 public class PlayerMovement : MonoBehaviour
 {
     private Animator animator;
-    public float timeIdle = 0f;
-    public eState currentState;
-    public Vector3 direction;
-    public float smoothFactor = 1f;
-    private Quaternion currentRotation; 
-    private float timeCount = 0.0f;
+    private float timeIdle = 0f;
+    private eState currentState;
+    private Vector3 targetPosition;
+    private Vector3 targetRotation;
+    private bool isLerping = false;
+
+    public float timeToMove = 1f;
+    public float rotationSmoothFactor = 350f;
 
     private void Awake() {
         animator = GetComponentInChildren<Animator>();
-        direction = transform.position;
+        targetPosition = transform.position;
     }
 
     private void FixedUpdate() {
@@ -35,17 +37,6 @@ public class PlayerMovement : MonoBehaviour
                 break;
             case eState.jump:
                 //nothing yet
-                break;
-            case eState.walk:
-                //StartCoroutine(ActionCO(currentState));
-                timeCount = timeCount + Time.deltaTime;
-                if (direction != Vector3.zero) {
-                    transform.position = Vector3.Lerp(transform.position, direction, smoothFactor * timeCount);
-                    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction, Vector3.up), smoothFactor * timeCount);
-                }
-                //if (Vector3.Distance(transform.position, direction) < .1f) {
-                //    animator.SetBool(currentState.ToString(), false);
-                //}
                 break;
             case eState.unhappy:
             case eState.idea:
@@ -60,11 +51,15 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void WalkAction(Vector3 newPosition, Quaternion newRotation) {
+        
         currentState = eState.walk;
 
-        //if (Vector3.Distance(transform.position, direction) < .1f)
-        currentRotation = transform.rotation;
-        direction += newPosition;
+        if (!isLerping && !animator.GetCurrentAnimatorStateInfo(0).IsName(eState.walk.ToString())) {
+            targetPosition += newPosition;
+            targetRotation = newPosition;
+            StartCoroutine(ActionCO(currentState));
+            StartCoroutine(MovePlayerLerpCO(targetPosition, targetRotation, timeToMove));
+        }
     }
 
     private IEnumerator ActionCO(eState state) {
@@ -74,6 +69,23 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForEndOfFrame();
         
         animator.SetBool(currentState.ToString(), false);
+        currentState = eState.idle;
         timeIdle = 0f;
+    }
+
+    IEnumerator MovePlayerLerpCO(Vector3 targetPosition, Vector3 targetRotation, float duration) {
+        isLerping = true;
+        float time = 0;
+        Vector3 startPosition = transform.position;
+
+        while (time < duration) {
+            transform.position = Vector3.Lerp(startPosition, targetPosition, time / duration);
+            transform.localRotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(targetRotation, Vector3.up), rotationSmoothFactor * Time.deltaTime);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = targetPosition;
+        animator.SetBool(currentState.ToString(), false); //tile reached - end animation
+        isLerping = false;
     }
 }
