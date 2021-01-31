@@ -19,7 +19,9 @@ public class WalkRight : Ability
 
             if (GameManager.Instance.GetTileAccessibility(newpos))
             {
-                GameManager.Instance.Player.transform.position += Vector3.right;
+                GameManager.Instance.playerMovement.targetPosition += Vector3.right;
+                GameManager.Instance.playerMovement.targetRotation = Quaternion.Euler(Vector3.right);
+                GameManager.Instance.playerMovement.currentState = eState.walk;
             }
         }
     }

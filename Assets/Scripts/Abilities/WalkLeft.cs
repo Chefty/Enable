@@ -19,7 +19,9 @@ public class WalkLeft : Ability
 
             if (GameManager.Instance.GetTileAccessibility(newpos))
             {
-                GameManager.Instance.Player.transform.position += Vector3.left;
+                GameManager.Instance.playerMovement.targetPosition += Vector3.left;
+                GameManager.Instance.playerMovement.targetRotation = Quaternion.Euler(Vector3.left);
+                GameManager.Instance.playerMovement.currentState = eState.walk;
             }
         }
     }

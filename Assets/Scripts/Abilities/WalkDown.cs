@@ -19,7 +19,9 @@ public class WalkDown : Ability
 
             if (GameManager.Instance.GetTileAccessibility(newpos))
             {
-                GameManager.Instance.Player.transform.position += Vector3.back;
+                GameManager.Instance.playerMovement.targetPosition += Vector3.back;
+                GameManager.Instance.playerMovement.targetRotation = Quaternion.Euler(Vector3.back);
+                GameManager.Instance.playerMovement.currentState = eState.walk;
             }
         }
     }
