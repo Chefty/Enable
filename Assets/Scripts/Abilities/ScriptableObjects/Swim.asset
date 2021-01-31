@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f10b3a134f65374c80ce84247a8961d, type: 3}
+  m_Name: Swim
+  m_EditorClassIdentifier: 
+  PlaceHolderProps: {fileID: 4666716047051160010, guid: 52e9d4c7e9ed98846b650f0d144a3cd4,
+    type: 3}
+  AbilityIcon: {fileID: 21300000, guid: 73a19fcc98b584c47b80204ef4ba5c39, type: 3}
+  ActionKeycode: 0

@@ -1,4 +1,5 @@
-﻿public enum AbilityType
+﻿// TODO delete later
+public enum AbilityType
 {
     None,
     WalkLeft,

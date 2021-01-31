@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3545fbca08c0045a233c534312a29b, type: 3}
+  m_Script: {fileID: 11500000, guid: 4549080170729b548ab50fa43e58ffd6, type: 3}
   m_Name: WalkDown
   m_EditorClassIdentifier: 
-  PlaceHolderProps: {fileID: 0}
+  PlaceHolderProps: {fileID: 6149179426058736902, guid: 1965dc61d9c39aa49a3586cea68ec2a3,
+    type: 3}
+  AbilityIcon: {fileID: 21300000, guid: 6ff8cedd8943d8449b208089c38a02c0, type: 3}
   ActionKeycode: 274
+  WalkDirection: {x: 0, y: 0, z: -1}
