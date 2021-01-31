@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\fabra\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\fabra\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_global_game_jam_2021.-1410561153.00" t="ExcludeRecursive" />
+    <e p="C:\Users\fabra\AppData\Roaming\JetBrains\Rider2020.1\scratches" t="IncludeRecursive" />
+    <e p="D:\Unity Projects\global_game_jam_2021" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Audio" t="Include">
+          <e p="_audio.txt" t="Include" />
+        </e>
+        <e p="ExternalAssets" t="Include">
+          <e p="_external_assets.txt" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="_resources.txt" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Abilities" t="Include">
+            <e p="Enum.cs" t="Include" />
+            <e p="WalkDown.cs" t="Include" />
+            <e p="WalkLeft.cs" t="Include" />
+            <e p="WalkRight.cs" t="Include" />
+            <e p="WalkUp.cs" t="Include" />
+          </e>
+          <e p="Ability.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
+          <e p="graphics" t="Include">
+            <e p="OpenFirstLevel.cs" t="Include" />
+            <e p="RandomFauna.cs" t="Include" />
+            <e p="ToggleCredits.cs" t="Include" />
+          </e>
+          <e p="Misc" t="Include">
+            <e p="CreateCubeGrid.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="_shaders.txt" t="Include" />
+        </e>
+        <e p="Textures" t="Include">
+          <e p="_textures.txt" t="Include" />
+        </e>
+      </e>
+      <e p="global_game_jam_2021.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
