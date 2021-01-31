@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "WalkRight", menuName = "Abilities/WalkRight")]
-public class WalkRight : Ability
+[CreateAssetMenu(fileName = "Walk", menuName = "Abilities/Walk")]
+public class Walk : Ability
 {
+    public Vector3 WalkDirection;
+
     public override void ActionForTile()
     {
         throw new NotImplementedException();
@@ -15,11 +17,11 @@ public class WalkRight : Ability
     {
         if (Input.GetKeyUp(ActionKeycode))
         {
-            Vector3 newpos = GameManager.Instance.Player.position + (Vector3.right);
+            Vector3 newpos = GameManager.Instance.Player.position + WalkDirection;
 
             if (GameManager.Instance.GetTileAccessibility(newpos))
             {
-                GameManager.Instance.Player.transform.position += Vector3.right;
+                GameManager.Instance.Player.transform.position += WalkDirection;
             }
         }
     }

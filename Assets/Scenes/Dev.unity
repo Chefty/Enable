@@ -11907,6 +11907,30 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 2067965555}
+    - target: {fileID: 6739023986334336773, guid: 12c0aaa14f393b84ab17be396e057154,
+        type: 3}
+      propertyPath: PlayerAbilities.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: ae72105c28af49c4494f1a9a54357efe,
+        type: 2}
+    - target: {fileID: 6739023986334336773, guid: 12c0aaa14f393b84ab17be396e057154,
+        type: 3}
+      propertyPath: PlayerAbilities.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 096b95044210bb34dab0c1bc745f8552,
+        type: 2}
+    - target: {fileID: 6739023986334336773, guid: 12c0aaa14f393b84ab17be396e057154,
+        type: 3}
+      propertyPath: PlayerAbilities.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: b8f24510c37dbd24db239313751a53f4,
+        type: 2}
+    - target: {fileID: 6739023986334336773, guid: 12c0aaa14f393b84ab17be396e057154,
+        type: 3}
+      propertyPath: PlayerAbilities.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5f6d2e0b89e9ed14fb4443b59c61ba04,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12c0aaa14f393b84ab17be396e057154, type: 3}
 --- !u!114 &8513052494133131485 stripped
