@@ -19,9 +19,7 @@ public class WalkUp : Ability
 
             if (GameManager.Instance.GetTileAccessibility(newpos))
             {
-                GameManager.Instance.playerMovement.targetPosition+= Vector3.forward;
-                GameManager.Instance.playerMovement.targetRotation = Quaternion.Euler(Vector3.forward);
-                GameManager.Instance.playerMovement.currentState = eState.walk;
+                GameManager.Instance.playerMovement.WalkAction(Vector3.forward, Quaternion.Euler(Vector3.forward));
             }
         }
     }

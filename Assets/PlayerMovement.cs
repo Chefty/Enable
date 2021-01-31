@@ -15,17 +15,17 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     public float timeIdle = 0f;
     public eState currentState;
-    public Vector3 targetPosition;
-    public Quaternion targetRotation; //Optional of course
-    public float smoothFactor = 2f;
+    public Vector3 direction;
+    public float smoothFactor = 1f;
+    private Quaternion currentRotation; 
+    private float timeCount = 0.0f;
 
     private void Awake() {
         animator = GetComponentInChildren<Animator>();
-        targetPosition = transform.position;
-        targetRotation = transform.rotation;
+        direction = transform.position;
     }
 
-    private void Update() {
+    private void FixedUpdate() {
         switch(currentState) {
             case eState.idle:
                 timeIdle += Time.deltaTime;
@@ -37,14 +37,15 @@ public class PlayerMovement : MonoBehaviour
                 //nothing yet
                 break;
             case eState.walk:
-                StartCoroutine(ActionCO(currentState));
-                transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * smoothFactor);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * smoothFactor);
-                Debug.Log("01: " + Vector3.Distance(transform.position, targetPosition));
-                if (Vector3.Distance(transform.position, targetPosition) < .1f) {
-                    animator.SetBool(currentState.ToString(), false);
-                    currentState = eState.idle;
+                //StartCoroutine(ActionCO(currentState));
+                timeCount = timeCount + Time.deltaTime;
+                if (direction != Vector3.zero) {
+                    transform.position = Vector3.Lerp(transform.position, direction, smoothFactor * timeCount);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction, Vector3.up), smoothFactor * timeCount);
                 }
+                //if (Vector3.Distance(transform.position, direction) < .1f) {
+                //    animator.SetBool(currentState.ToString(), false);
+                //}
                 break;
             case eState.unhappy:
             case eState.idea:
@@ -56,6 +57,14 @@ public class PlayerMovement : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public void WalkAction(Vector3 newPosition, Quaternion newRotation) {
+        currentState = eState.walk;
+
+        //if (Vector3.Distance(transform.position, direction) < .1f)
+        currentRotation = transform.rotation;
+        direction += newPosition;
     }
 
     private IEnumerator ActionCO(eState state) {
