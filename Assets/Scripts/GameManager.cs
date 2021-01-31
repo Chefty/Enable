@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class TileAbilityPair
@@ -82,9 +83,10 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             // restart the level here
-            LevelFlush();
-            LevelReload();
+            //LevelFlush();
+            //LevelReload();
         }
     }
 
@@ -111,6 +113,12 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    public void AddSlot()
+    {
+        MaxAmountOfAbilities += 1;
+        inventory.InitInventorySlots();
+    }
+
     private void FillUI()
     {
         for (int i = 0; i < PlayerAbilities.Count; i++)
@@ -123,6 +131,7 @@ public class GameManager : MonoBehaviour
     {
         Tile tile = GetTile(pos);
 
+        print("GetTileAccessibility[tile]" + (tile == null));
         if (tile != null)
         {
             return tile.CheckTileAccessibility();
@@ -201,7 +210,7 @@ public class GameManager : MonoBehaviour
 
         if (Physics.Raycast(pos + (Vector3.up * 15f), Vector3.down, out m_Hit, 50f, mask))
         {
-            print("found " + m_Hit.collider.name + " at " + pos);
+            print("found " + m_Hit.collider.name + " [" + m_Hit.collider.GetComponent<Tile>().GetType().ToString() + "] at " + pos);
 
             return m_Hit.collider.GetComponent<Tile>();
         }

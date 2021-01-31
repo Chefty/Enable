@@ -29,8 +29,10 @@ public class CreateCubeGrid : MonoBehaviour
         {
             for (int y = 0; y < Size.y; y++)
             {
-                Transform cube = Instantiate(PlaceHolderPrefab, origin).transform;
-
+                Transform cube = null;
+#if UNITY_EDITOR
+                 cube = (UnityEditor.PrefabUtility.InstantiatePrefab(PlaceHolderPrefab, origin) as PlaceHolderTile).gameObject.transform;
+#endif
                 cube.position = new Vector3(x, 0f, y);
                 cube.name = x.ToString() + "_" + y.ToString();
                 cube.SetParent(origin);

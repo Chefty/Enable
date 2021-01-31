@@ -25,7 +25,7 @@ public class Inventory : MonoBehaviour {
         InitInventorySlots();
     }
 
-    private void InitInventorySlots() {
+    public void InitInventorySlots() {
         var abilitiesSlots = GameManager.Instance.MaxAmountOfAbilities;
         int occ = 0;
 
