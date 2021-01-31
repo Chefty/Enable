@@ -241,7 +241,7 @@ public class GameManager : MonoBehaviour
     public void RotateLevel(float AxisOrientation)
     {
         StartCoroutine(SmoothRotateMap(AxisOrientation));
-        //RotateAbilities(AxisOrientation);
+        RotateAbilities(AxisOrientation);
     }
 
     IEnumerator SmoothRotateMap(float axisOrientation)
@@ -265,13 +265,22 @@ public class GameManager : MonoBehaviour
 
         Player.parent = null;
 
-
         yield return null;
     }
 
     private void RotateAbilities(float AxisOrientation)
     {
+        var tiles = GetTilesAndTheirAbilities();
+        Vector3 fromDirection;
 
+        for (int i = 0; i < tiles.Count; i++)
+        {
+            if (tiles[i].Ability.GetType() == typeof(Walk))
+            {
+                fromDirection = ((Walk)tiles[i].Ability).WalkDirection;
+                ((Walk)tiles[i].Ability).WalkDirection = Quaternion.Euler(0, 90f, 0) * fromDirection;
+            }
+        }
     }
 
     #endregion
@@ -345,7 +354,7 @@ public class GameManager : MonoBehaviour
 
     #region Level Save
 
-    void RegisterLevelStartInformations()
+    private void RegisterLevelStartInformations()
     {
         _levelAwakeState = new StartInfos()
         {
@@ -355,7 +364,7 @@ public class GameManager : MonoBehaviour
         };
     }
 
-    List<TileAbilityPair> GetTilesAndTheirAbilities()
+    private List<TileAbilityPair> GetTilesAndTheirAbilities()
     {
         List<Tile> TilesWithAbilities = FindObjectsOfType<Tile>().Where(x => x.TileOwnAbility != null).ToList();
         List<TileAbilityPair> pairs = new List<TileAbilityPair>();
