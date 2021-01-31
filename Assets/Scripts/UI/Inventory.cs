@@ -18,6 +18,24 @@ public class Inventory : MonoBehaviour {
         abilityItems = GetComponentsInChildren<DragDrop>().ToList();
         mainCamera = Camera.main;
         playerCanvasGroup = GetComponentInParent<CanvasGroup>();
+        UI.GetComponent<Canvas>().worldCamera = Camera.main;
+    }
+
+    private void OnEnable() {
+        InitInventorySlots();
+    }
+
+    private void InitInventorySlots() {
+        var abilitiesSlots = GameManager.Instance.MaxAmountOfAbilities;
+        int occ = 0;
+
+        for (int i = 0; i < abilityItems.Count; i++) {
+            if (occ < abilitiesSlots)
+                abilityItems[i].transform.parent.gameObject.SetActive(true);
+            else
+                abilityItems[i].transform.parent.gameObject.SetActive(false);
+            occ++;
+        }
     }
 
     public void ShowHideSwapUI(bool isShowing, Ability swapableAbility)
