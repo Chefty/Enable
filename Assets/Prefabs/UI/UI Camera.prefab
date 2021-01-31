@@ -59,7 +59,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: 1
   m_CullingMask:
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Targets:
   - {fileID: 0}
-  offset: {x: -10, y: 10, z: -10}
+  offset: {x: 0, y: 8, z: -10}
   smoothTime: 1
-  CurrentZoom: 5
-  NextZoom: 5
+  CurrentZoom: 3
+  NextZoom: 10
