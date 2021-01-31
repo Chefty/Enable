@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     public int MaxAmountOfAbilities;
     public List<Ability> PlayerAbilities;
     public LayerMask mask;
+    public Action onDieOnLava;
 
     public Tile _currentTile;
     public Tile _prevTile;
