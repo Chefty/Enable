@@ -123,6 +123,7 @@ public class GameManager : MonoBehaviour
     {
         Tile tile = GetTile(pos);
 
+        print("GetTileAccessibility[tile]" + (tile == null));
         if (tile != null)
         {
             return tile.CheckTileAccessibility();
@@ -201,7 +202,7 @@ public class GameManager : MonoBehaviour
 
         if (Physics.Raycast(pos + (Vector3.up * 15f), Vector3.down, out m_Hit, 50f, mask))
         {
-            print("found " + m_Hit.collider.name + " at " + pos);
+            print("found " + m_Hit.collider.name + " [" + m_Hit.collider.GetComponent<Tile>().GetType().ToString() + "] at " + pos);
 
             return m_Hit.collider.GetComponent<Tile>();
         }

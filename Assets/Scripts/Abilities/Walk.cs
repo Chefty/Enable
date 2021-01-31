@@ -12,12 +12,14 @@ public class Walk : Ability
     {
         throw new NotImplementedException();
     }
-
     public override void RunAction()
     {
         if (Input.GetKeyUp(ActionKeycode))
         {
-            Vector3 newpos = GameManager.Instance.Player.position + WalkDirection;
+            Debug.Log(name);
+            Vector3 newpos = GameManager.Instance.Player.parent.TransformPoint(
+                GameManager.Instance.Player.localPosition + WalkDirection);
+            //Vector3 newpos = GameManager.Instance.Player.position + WalkDirection;
 
             if (GameManager.Instance.GetTileAccessibility(newpos))
             {
