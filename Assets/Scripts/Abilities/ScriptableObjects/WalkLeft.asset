@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f4edc93cddd1874bace23bb4e1089ed, type: 3}
+  m_Script: {fileID: 11500000, guid: fc3545fbca08c0045a233c534312a29b, type: 3}
   m_Name: WalkLeft
   m_EditorClassIdentifier: 
   PlaceHolderProps: {fileID: 3779246883820978302, guid: e7379ef0dc4a2124d9d55f9107aac3c5,
     type: 3}
   AbilityIcon: {fileID: 21300000, guid: cf761aeadb28f4248a0043c338fd06ac, type: 3}
   ActionKeycode: 276
+  WalkDirection: {x: -1, y: 0, z: 0}

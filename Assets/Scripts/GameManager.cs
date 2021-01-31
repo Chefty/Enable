@@ -2,6 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Collections;
+
+[Serializable]
+public class TileAbilityPair
+{
+    public Tile tileWithAbility;
+    public Ability Ability;
+}
+
+[Serializable]
+public class StartInfos
+{
+    public List<TileAbilityPair> StartPairs;
+    public Vector3 PlayerStartPosition;
+    public List<Ability> StartAbilities;
+}
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +25,10 @@ public class GameManager : MonoBehaviour
     public Inventory inventory;
     public Transform Player;
     public PlayerMovement playerMovement;
+    public Transform mapRoot;
+
+    public float MapRotationSpeed;
+    public float MapRotationSmoothFactor;
 
     public int MaxAmountOfAbilities;
     public List<Ability> PlayerAbilities;
@@ -17,6 +37,10 @@ public class GameManager : MonoBehaviour
     public Tile _currentTile;
     public Tile _prevTile;
 
+    public StartInfos _levelAwakeState;
+
+    Bounds _mapBounds;
+
     private void Awake()
     {
         Instance = this;
@@ -24,6 +48,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        // we save the level infos
+        RegisterLevelStartInformations();
+
         if (inventory == null)
         {
             Debug.LogError("Please fill the Inventory variable in GameManager.");
@@ -32,18 +59,49 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("Please fill the Player variable in GameManager.");
         }
-
-        for (int i = 0; i < PlayerAbilities.Count; i++)
+        if (mapRoot == null)
         {
-            inventory.AddAbility(PlayerAbilities[i]);
+            Debug.LogError("Please fill the map root variable in GameManager.");
         }
+
+        FillUI();
+        GetMapBounds();
     }
 
     private void Update()
     {
+        if (Player.gameObject.activeSelf)
+        {
+            for (int i = 0; i < PlayerAbilities.Count; i++)
+            {
+                PlayerAbilities[i].RunAction();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            // restart the level here
+            LevelFlush();
+            LevelReload();
+        }
+    }
+
+    private void    GetMapBounds()
+    {
+        _mapBounds = new Bounds();
+        var tiles = FindObjectsOfType<Tile>();
+
+        for (int i = 0; i < tiles.Length; i++)
+        {
+            _mapBounds.Encapsulate(tiles[i].transform.position);
+        }
+    }
+
+    private void FillUI()
+    {
         for (int i = 0; i < PlayerAbilities.Count; i++)
         {
-            PlayerAbilities[i].RunAction();
+            inventory.AddAbility(PlayerAbilities[i]);
         }
     }
 
@@ -172,4 +230,141 @@ public class GameManager : MonoBehaviour
             inventory.ShowHideSwapUI(false, null);
         }
     }
+
+    #region Map rotation
+
+    [ContextMenu("Rotate level")]
+    private void DebugRotate()
+    {
+        RotateLevel(-1f);
+    }
+
+    public void RotateLevel(float AxisOrientation)
+    {
+        StartCoroutine(SmoothRotateMap(AxisOrientation));
+        //RotateAbilities(AxisOrientation);
+    }
+
+    IEnumerator SmoothRotateMap(float axisOrientation)
+    {
+        float time = 0;
+        Quaternion fromAngle = mapRoot.rotation;
+        Quaternion toAngle = Quaternion.Euler(mapRoot.eulerAngles + (Vector3.up * axisOrientation * 90f));
+
+        print(toAngle.eulerAngles + " " + mapRoot.eulerAngles + (mapRoot.eulerAngles + (Vector3.up * axisOrientation * 90f)));
+
+        while (time < 1f)
+        {
+            mapRoot.RotateAround(_mapBounds.center, Vector3.up, (90f * axisOrientation) / Time.deltaTime);
+                //Quaternion.Slerp(fromAngle, toAngle, time);
+            
+            time += Time.deltaTime;
+
+            yield return new WaitForEndOfFrame();
+        }
+
+        yield return null;
+    }
+
+    private void RotateAbilities(float AxisOrientation)
+    {
+
+    }
+
+    #endregion
+
+    #region Level Flush
+
+    private void LevelFlush()
+    {
+        FlushAllTilesWithAbility();
+        FlushUI();
+        FlushPlayerAbilities();
+    }
+
+    private void FlushPlayerAbilities()
+    {
+        PlayerAbilities.Clear();
+    }
+
+    private void FlushUI()
+    {
+        inventory.FlushUI();
+    }
+
+    private void FlushAllTilesWithAbility()
+    {
+        List<Tile> TilesWithAbilities = FindObjectsOfType<Tile>().Where(x => x.TileOwnAbility != null).ToList();
+
+        TilesWithAbilities.ForEach(x =>
+        {
+            x.TileOwnAbility.AbilityTaken();
+            x.TileOwnAbility = null;
+            x.DebugDisplay();
+        });        
+    }
+
+    #endregion
+
+    #region Level reload
+
+    private void LevelReload()
+    {
+        // to reload
+        print("LevelReload");
+        ReFillPlayerAbilities();
+        ReFillTilesWithAbility();
+        FillUI();
+        RePlacePlayer();
+    }
+
+    private void RePlacePlayer()
+    {
+        Player.position = _levelAwakeState.PlayerStartPosition;
+        Player.gameObject.SetActive(true);
+    }
+
+    private void ReFillTilesWithAbility()
+    {
+        _levelAwakeState.StartPairs.ForEach(x =>
+        {
+            x.tileWithAbility.TileOwnAbility = x.Ability;
+            x.tileWithAbility.DisplayAbility();
+        });
+    }
+
+    private void ReFillPlayerAbilities()
+    {
+        PlayerAbilities = new List<Ability>(_levelAwakeState.StartAbilities);
+    }
+
+    #endregion
+
+    #region Level Save
+
+    void RegisterLevelStartInformations()
+    {
+        _levelAwakeState = new StartInfos()
+        {
+            StartPairs = GetTilesAndTheirAbilities(),
+            PlayerStartPosition = Player.transform.position,
+            StartAbilities = new List<Ability>(PlayerAbilities)
+        };
+    }
+
+    List<TileAbilityPair> GetTilesAndTheirAbilities()
+    {
+        List<Tile> TilesWithAbilities = FindObjectsOfType<Tile>().Where(x => x.TileOwnAbility != null).ToList();
+        List<TileAbilityPair> pairs = new List<TileAbilityPair>();
+
+        TilesWithAbilities.ForEach(x => pairs.Add(new TileAbilityPair()
+        {
+            tileWithAbility = x,
+            Ability = x.TileOwnAbility
+        }));
+
+        return pairs;
+    }
+
+    #endregion
 }

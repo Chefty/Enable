@@ -13,7 +13,7 @@ public class CreateCubeGrid : MonoBehaviour
 
         for (int i = 0; i < Tiles.Length; i++)
         {
-            Destroy(Tiles[i].gameObject);
+            Tiles[i].GenerateForPlayMode();
         }
 
         Destroy(gameObject);
