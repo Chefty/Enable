@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6739023986334336770}
   - component: {fileID: 6739023986334336773}
+  - component: {fileID: 2776474951608134684}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,6 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
   Player: {fileID: 0}
+  playerMovement: {fileID: 0}
+  mapRoot: {fileID: 0}
+  MapRotationSpeed: 0
+  MapRotationSmoothFactor: 0
   MaxAmountOfAbilities: 4
   PlayerAbilities:
   - {fileID: 11400000, guid: ae72105c28af49c4494f1a9a54357efe, type: 2}
@@ -60,3 +65,16 @@ MonoBehaviour:
     StartPairs: []
     PlayerStartPosition: {x: 0, y: 0, z: 0}
     StartAbilities: []
+--- !u!114 &2776474951608134684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739023986334336772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b08f6e9c4bed33c48940570302d55b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arrows: []

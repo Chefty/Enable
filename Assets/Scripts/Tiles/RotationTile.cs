@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RotationTile : Tile
 {
+    public float RotationDirection;
     public override bool CheckTileAccessibility()
     {
         return true;
@@ -11,6 +12,6 @@ public class RotationTile : Tile
 
     public override void TileBehaviour()
     {
-
+        GameManager.Instance.RotateLevel(RotationDirection);
     }
 }

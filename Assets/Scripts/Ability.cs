@@ -9,7 +9,7 @@ public abstract class Ability : ScriptableObject
     public Sprite AbilityIcon;
     public KeyCode ActionKeycode;
 
-    private GameObject _ownProps;
+    protected GameObject _ownProps;
 
     public abstract void RunAction();
     public abstract void ActionForTile();

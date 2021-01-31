@@ -279,7 +279,8 @@ public class GameManager : MonoBehaviour
             if (tiles[i].Ability.GetType() == typeof(Walk))
             {
                 fromDirection = ((Walk)tiles[i].Ability).WalkDirection;
-                ((Walk)tiles[i].Ability).WalkDirection = Quaternion.Euler(0, 90f, 0) * fromDirection;
+                // TODO might be buggy
+                ((Walk)tiles[i].Ability).UpdateDirection(Quaternion.Euler(0, 90f, 0) * fromDirection);
             }
         }
     }

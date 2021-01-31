@@ -22,8 +22,26 @@ public class Walk : Ability
             if (GameManager.Instance.GetTileAccessibility(newpos))
             {
                 GameManager.Instance.playerMovement.WalkAction(WalkDirection, Quaternion.Euler(WalkDirection));
-
             }
+        }
+    }
+
+    public void UpdateDirection(Vector3 newDirection)
+    {
+        Vector3 propPosition = _ownProps.transform.position;
+        bool wasenabled = _ownProps.activeSelf;
+
+        WalkDirection = newDirection;
+        Destroy(_ownProps);
+        // just to be sure
+        _ownProps = null;
+        PlaceHolderProps = AbiltiesRotatedAssets.Instance.GetWalkArrowFromRotation(newDirection);
+
+        if (wasenabled)
+        {
+            SpawnProps(
+                GameManager.Instance.GetTile(propPosition + Vector3.up).transform,
+                propPosition);
         }
     }
 }
