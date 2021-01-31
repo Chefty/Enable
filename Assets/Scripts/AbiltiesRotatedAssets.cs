@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEditor;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class DirectionToArrow
@@ -32,5 +34,6 @@ public class AbiltiesRotatedAssets : MonoBehaviour
     public KeyCode GetKeycodeForDirection(Vector3 walkDirection)
     {
         return Arrows.Where(x => x.Direction == walkDirection).First().keycode;
+        
     }
 }
