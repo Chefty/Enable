@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
                 timeIdle += Time.deltaTime;
                 if (timeIdle > 8f) {
                     currentState = Random.Range(0f, 1f) > .5f ? eState.idea : eState.unhappy;
+                    timeIdle = 0f;
                 }
                 break;
             case eState.jump:
@@ -64,13 +65,20 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator ActionCO(eState state) {
         currentState = state;
-        animator.SetBool(currentState.ToString(), true);
-
-        yield return new WaitForEndOfFrame();
         
-        animator.SetBool(currentState.ToString(), false);
-        currentState = eState.idle;
-        timeIdle = 0f;
+        if (currentState == eState.walk) { //trigger animation
+            animator.SetTrigger(currentState.ToString());
+            yield return null;
+        } 
+        else { //boolean animation
+            animator.SetBool(currentState.ToString(), true);
+
+            yield return new WaitForEndOfFrame();
+
+            animator.SetBool(currentState.ToString(), false);
+            currentState = eState.idle;
+            timeIdle = 0f;
+        }
     }
 
     IEnumerator MovePlayerLerpCO(Vector3 targetPosition, Vector3 targetRotation, float duration) {
@@ -87,5 +95,7 @@ public class PlayerMovement : MonoBehaviour
         transform.position = targetPosition;
         animator.SetBool(currentState.ToString(), false); //tile reached - end animation
         isLerping = false;
+        timeIdle = 0f;
+        currentState = eState.idle;
     }
 }
