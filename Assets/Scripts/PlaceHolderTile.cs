@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class PlaceHolderTile : MonoBehaviour
@@ -32,7 +33,9 @@ public class PlaceHolderTile : MonoBehaviour
             return;
         }
 
-        var tile = Instantiate(TilePrefab, transform.parent);
+        var tile = (PrefabUtility.InstantiatePrefab(TilePrefab, transform.parent) as Tile);
+
+        //var tile = Instantiate(TilePrefab, transform.parent);
 
         tile.TileOwnAbility = TileAbility;
         tile.transform.position = transform.position;
