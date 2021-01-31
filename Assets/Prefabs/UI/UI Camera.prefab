@@ -100,5 +100,5 @@ MonoBehaviour:
   - {fileID: 0}
   offset: {x: -10, y: 8, z: -10}
   smoothTime: 1
-  CurrentZoom: 3
+  CurrentZoom: 4
   NextZoom: 10
