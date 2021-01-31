@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class TileAbilityPair
@@ -82,9 +83,10 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             // restart the level here
-            LevelFlush();
-            LevelReload();
+            //LevelFlush();
+            //LevelReload();
         }
     }
 
@@ -110,6 +112,12 @@ public class GameManager : MonoBehaviour
     }
 
     #endregion
+
+    public void AddSlot()
+    {
+        MaxAmountOfAbilities += 1;
+        inventory.InitInventorySlots();
+    }
 
     private void FillUI()
     {

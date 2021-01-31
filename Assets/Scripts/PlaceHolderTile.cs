@@ -33,8 +33,14 @@ public class PlaceHolderTile : MonoBehaviour
             return;
         }
 
-        var tile = (PrefabUtility.InstantiatePrefab(TilePrefab, transform.parent) as Tile);
+        Tile tile = null;
 
+#if UNITY_EDITOR
+
+        tile = (PrefabUtility.InstantiatePrefab(TilePrefab, transform.parent) as Tile);
+#else
+        tile = Instantiate(TilePrefab, transform.parent);
+#endif
         //var tile = Instantiate(TilePrefab, transform.parent);
 
         tile.TileOwnAbility = TileAbility;

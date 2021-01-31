@@ -7,14 +7,16 @@ public enum eState {
     walk,
     unhappy,
     idea,
-    swim
+    swim,
+    death
 }
 
 public class PlayerMovement : MonoBehaviour
 {
     private Animator animator;
     private float timeIdle = 0f;
-    private eState currentState;
+    public eState currentState;
+    public eState secondState;
     private Vector3 targetPosition;
     private Vector3 targetRotation;
     public bool isLerping = false;
@@ -41,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
             case eState.unhappy:
             case eState.idea:
-                StartCoroutine(ActionCO(currentState));
+                StartCoroutine(ActionCO());
                 break;
             case eState.swim:
                 //nothing yet
@@ -51,31 +53,76 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void WalkAction(Vector3 walkDirection) {
-        
-        currentState = eState.walk;
+    public void Action(Vector3 direction, eState newState, eState newState2 = eState.idle) {
 
-        if (!isLerping && !animator.GetCurrentAnimatorStateInfo(0).IsName(eState.walk.ToString())) {
-            targetPosition += walkDirection;
-            targetRotation = walkDirection;
-            StartCoroutine(ActionCO(currentState));
+        if (!isLerping && 
+            !animator.GetCurrentAnimatorStateInfo(0).IsName(eState.walk.ToString()) &&
+            !animator.GetCurrentAnimatorStateInfo(0).IsName(eState.jump.ToString())) {
+
+            Debug.Log("001: " + currentState.ToString() + " - " + secondState.ToString());
+            if (newState != eState.swim)
+                animator.SetBool(currentState.ToString(), false);
+
+            currentState = newState;
+            secondState = newState2;
+
+
+            targetPosition += direction;
+            targetRotation = direction;
+            StartCoroutine(ActionCO());
             StartCoroutine(MovePlayerLerpCO(targetPosition, targetRotation, timeToMove));
         }
     }
 
-    private IEnumerator ActionCO(eState state) {
-        currentState = state;
-        
+    private IEnumerator ActionCO() {
+
         if (currentState == eState.walk) { //trigger animation
             animator.SetTrigger(currentState.ToString());
             yield return null;
-        } 
-        else { //boolean animation
+        } else if (currentState == eState.swim && secondState == eState.idle) { //swim only
+            animator.SetBool(currentState.ToString(), true);
+            yield return null;
+        } else if (currentState == eState.jump && secondState == eState.swim) { //swim is a long lasting animation, should be interupt manually
             animator.SetBool(currentState.ToString(), true);
 
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForSeconds(.5f);
 
             animator.SetBool(currentState.ToString(), false);
+
+            currentState = secondState;
+            secondState = eState.idle;
+            animator.SetBool(currentState.ToString(), true);
+            Instantiate(Resources.Load("DeathParticles_water"), transform);
+
+            //check if he has the ability
+            if (!GameManager.Instance.DoesPlayerPosessAbility(typeof(Swim))) {
+                currentState = eState.death;
+                animator.SetBool(currentState.ToString(), true);
+                StartCoroutine(MovePlayerLerpCO(transform.localPosition + new Vector3(0, -3f, 0), Vector3.zero, 3f));
+            }
+        }
+        else if (currentState == eState.jump && secondState == eState.unhappy) { //getting out of water
+            animator.SetBool(currentState.ToString(), true);
+
+            yield return new WaitForSeconds(.5f);
+
+            animator.SetBool(currentState.ToString(), false);
+
+            currentState = secondState;
+            animator.SetBool(currentState.ToString(), true);
+
+            yield return new WaitForSeconds(.5f);
+
+            animator.SetBool(currentState.ToString(), false);
+            currentState = eState.idle;
+            timeIdle = 0f;
+        } else {
+            animator.SetBool(currentState.ToString(), true);
+
+            yield return new WaitForSeconds(.5f);
+
+            animator.SetBool(currentState.ToString(), false);
+
             currentState = eState.idle;
             timeIdle = 0f;
         }
@@ -92,10 +139,10 @@ public class PlayerMovement : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-        animator.SetBool(currentState.ToString(), false); //tile reached - end animation
+        if (currentState != eState.swim)
+            animator.SetBool(currentState.ToString(), false); //tile reached - end animation
         transform.localPosition = targetPosition;
         isLerping = false;
         timeIdle = 0f;
-        currentState = eState.idle;
     }
 }
