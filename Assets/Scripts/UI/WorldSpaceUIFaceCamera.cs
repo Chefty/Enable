@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class WorldSpaceUIFaceCamera : MonoBehaviour
 {
-    public float smoothFactor = 10f;
     private Camera _camera;
 
     private void Awake()
@@ -15,10 +14,6 @@ public class WorldSpaceUIFaceCamera : MonoBehaviour
 
     private void Update() 
     {
-        Vector3 relativePos = transform.position - _camera.transform.position;
-
-        Quaternion toRotation = Quaternion.LookRotation(relativePos);
-        
-        transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, smoothFactor * Time.deltaTime);
+        transform.LookAt(transform.position + _camera.transform.rotation * Vector3.back, _camera.transform.rotation * Vector3.up);
     }
 }

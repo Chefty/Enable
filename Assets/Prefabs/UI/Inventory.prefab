@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 55624664770735732}
   - component: {fileID: 55624664770735733}
   - component: {fileID: 55624664770735738}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: AbilitySlot4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,13 +61,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.105882354, g: 0.105882354, b: 0.105882354, a: 0.78431374}
+  m_Color: {r: 0.1764706, g: 0.20392157, b: 0.21176471, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 55624665694531867}
   - component: {fileID: 55624665694531864}
   - component: {fileID: 55624665694531865}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: AbilityIcon
   m_TagString: InventoryAbility
   m_Icon: {fileID: 0}
@@ -220,7 +220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0b5973e2a82b44cb7c66efb2c34c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
   abilityIcon: {fileID: 0}
   ability: {fileID: 0}
 --- !u!225 &55624665694531865
@@ -248,7 +247,7 @@ GameObject:
   - component: {fileID: 55624665721850009}
   - component: {fileID: 55624665721850014}
   - component: {fileID: 55624665721850015}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: AbilitySlot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,13 +295,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.105882354, g: 0.105882354, b: 0.105882354, a: 0.78431374}
+  m_Color: {r: 0.1764706, g: 0.20392157, b: 0.21176471, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -380,7 +379,7 @@ GameObject:
   - component: {fileID: 55624665859152746}
   - component: {fileID: 55624665859152747}
   - component: {fileID: 55624665859152744}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: AbilitySlot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,13 +427,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.105882354, g: 0.105882354, b: 0.105882354, a: 0.78431374}
+  m_Color: {r: 0.1764706, g: 0.20392157, b: 0.21176471, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -512,7 +511,7 @@ GameObject:
   - component: {fileID: 55624665932788530}
   - component: {fileID: 55624665932788531}
   - component: {fileID: 55624665932788528}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: AbilityIcon
   m_TagString: InventoryAbility
   m_Icon: {fileID: 0}
@@ -587,7 +586,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0b5973e2a82b44cb7c66efb2c34c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
   abilityIcon: {fileID: 0}
   ability: {fileID: 0}
 --- !u!225 &55624665932788528
@@ -615,7 +613,7 @@ GameObject:
   - component: {fileID: 55624666108503337}
   - component: {fileID: 55624666108503342}
   - component: {fileID: 55624666108503343}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: AbilityIcon
   m_TagString: InventoryAbility
   m_Icon: {fileID: 0}
@@ -690,7 +688,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0b5973e2a82b44cb7c66efb2c34c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
   abilityIcon: {fileID: 0}
   ability: {fileID: 0}
 --- !u!225 &55624666108503343
@@ -718,7 +715,7 @@ GameObject:
   - component: {fileID: 55624666213339801}
   - component: {fileID: 55624666213339806}
   - component: {fileID: 55624666213339807}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: AbilityIcon
   m_TagString: InventoryAbility
   m_Icon: {fileID: 0}
@@ -793,7 +790,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0b5973e2a82b44cb7c66efb2c34c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
   abilityIcon: {fileID: 0}
   ability: {fileID: 0}
 --- !u!225 &55624666213339807
@@ -821,7 +817,7 @@ GameObject:
   - component: {fileID: 55624666589909369}
   - component: {fileID: 55624666589909374}
   - component: {fileID: 55624666589909375}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: AbilitySlot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -869,13 +865,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.105882354, g: 0.105882354, b: 0.105882354, a: 0.78431374}
+  m_Color: {r: 0.1764706, g: 0.20392157, b: 0.21176471, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1004,14 +1000,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
+  m_Color: {r: 0.99215686, g: 0.79607844, b: 0.43137255, a: 0.5882353}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

@@ -43,8 +43,8 @@ Camera:
   m_GameObject: {fileID: 7498122714073682606}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -118,10 +118,10 @@ MonoBehaviour:
   volumeTrigger: {fileID: 7498122714073682579}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 0
-  stopNaNPropagation: 1
+    m_Bits: 1024
+  stopNaNPropagation: 0
   finalBlitToCameraTarget: 0
-  antialiasingMode: 0
+  antialiasingMode: 1
   temporalAntialiasing:
     jitterSpread: 0.75
     sharpness: 0.25

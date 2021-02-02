@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler {
 
-    [SerializeField] Canvas canvas = null;
+    private Canvas canvas;
     private CanvasGroup canvasGroup;
     private Vector3 initialPosition;
     private RectTransform parentRectTransform;
@@ -14,11 +14,17 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     private Vector2 mousePos;
     public Ability ability;
 
+    private Transform originalParentTransform;
+    private Transform temporaryParentTransform;
+
     private void Awake() {
+        canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
         initialPosition = transform.localPosition;
         parentRectTransform = transform.parent.GetComponent<RectTransform>();
         abilityIcon = GetComponent<Image>();
+        originalParentTransform = transform.parent;
+        temporaryParentTransform = canvas.transform;
     }
 
     private void OnEnable() {
@@ -38,17 +44,17 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
     public void OnBeginDrag(PointerEventData eventData) {
         if (canvasGroup) {
-            canvasGroup.alpha = .6f;
             canvasGroup.blocksRaycasts = false;
         }
+        transform.parent = temporaryParentTransform;
     }
 
     public void OnEndDrag(PointerEventData eventData) {
         if (canvasGroup) {
-            canvasGroup.alpha = 1f;
             canvasGroup.blocksRaycasts = true;
         }
-        
+        transform.parent = originalParentTransform;
+
         if (eventData.pointerDrag.gameObject.CompareTag("InventoryAbility") &&
             !RectTransformUtility.RectangleContainsScreenPoint(parentRectTransform, transform.position) &&
             GameManager.Instance._currentTile.TileOwnAbility == null) {
