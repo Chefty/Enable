@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5116485300890164869}
   - component: {fileID: 5116485300890164870}
   - component: {fileID: 5116485300890164871}
-  - component: {fileID: 6221006009655053641}
   m_Layer: 0
   m_Name: DeathParticles_lava
   m_TagString: Untagged
@@ -4822,16 +4821,3 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &6221006009655053641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5116485300890164864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d4a25e06e3b09145be880a65dc7c7e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeLeft: 2
