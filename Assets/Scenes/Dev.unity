@@ -6819,7 +6819,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1138569036}
   - component: {fileID: 1138569035}
-  - component: {fileID: 1138569034}
   - component: {fileID: 1138569037}
   m_Layer: 0
   m_Name: UI Camera
@@ -6828,14 +6827,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1138569034
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138569033}
-  m_Enabled: 1
 --- !u!20 &1138569035
 Camera:
   m_ObjectHideFlags: 0
@@ -11728,6 +11719,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 3943713111049072222, guid: 0ff379a52322b1c44a8c15dafa21fc76,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943713111049072222, guid: 0ff379a52322b1c44a8c15dafa21fc76,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3951851889848137571, guid: 0ff379a52322b1c44a8c15dafa21fc76,
         type: 3}
       propertyPath: m_Layer
@@ -12418,7 +12419,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7315523955476307577, guid: 0ff379a52322b1c44a8c15dafa21fc76, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0ff379a52322b1c44a8c15dafa21fc76, type: 3}
 --- !u!1 &1992348655
 GameObject:
