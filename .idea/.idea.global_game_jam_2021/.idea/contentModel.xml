@@ -41,7 +41,6 @@
           <e p="CreateCubeGrid.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="_editor.txt" t="Include" />
-            <e p="CreateCubeGrid.cs" t="Include" />
             <e p="CreateCubeGridEditor.cs" t="Include" />
           </e>
           <e p="GameManager.cs" t="Include" />
@@ -52,12 +51,14 @@
           </e>
           <e p="Misc" t="Include">
             <e p="MapDebugDisplay.cs" t="Include" />
+            <e p="SelfDestruct.cs" t="Include" />
           </e>
           <e p="MultipleTargetsCamera.cs" t="Include" />
           <e p="PlaceHolderTile.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="Tile.cs" t="Include" />
           <e p="Tiles" t="Include">
+            <e p="AddASlotTile.cs" t="Include" />
             <e p="EndOfLevelTile.cs" t="Include" />
             <e p="LavaTile.cs" t="Include" />
             <e p="NonWalkableTile.cs" t="Include" />
