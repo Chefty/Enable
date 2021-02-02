@@ -1073,7 +1073,6 @@ GameObject:
   - component: {fileID: 8566390152515582258}
   - component: {fileID: 8566390152515582256}
   - component: {fileID: 6705101107879423366}
-  - component: {fileID: 7647238965583492897}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -1185,21 +1184,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8566390152515582257}
   m_CullTransparentMesh: 0
---- !u!114 &7647238965583492897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8566390152515582257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68d40e8a512d6d948bb31c68b1a9f300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Targets:
-  - {fileID: 0}
-  offset: {x: -10, y: 10, z: -10}
-  smoothTime: 1
-  CurrentZoom: 5
-  NextZoom: 5
