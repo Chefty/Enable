@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1166427783736223167}
   - component: {fileID: 1166427783736223160}
   - component: {fileID: 3149735381847661327}
+  - component: {fileID: 3011386690941732280}
   m_Layer: 0
   m_Name: NonWalkableTile
   m_TagString: Untagged
@@ -73,7 +74,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c1b72fa1610db72418292f2a619e85ce, type: 2}
+  - {fileID: 2100000, guid: 20dbe877b0a43c04280ba68041d77a96, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,3 +108,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TileOwnAbility: {fileID: 0}
+--- !u!114 &3011386690941732280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166427783736223162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c99c9855b69dea34fa977d2b00186640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faunaCube: {fileID: 7399428475371519865, guid: 34a1eb52e4c2e6e4dbad08da2999fc1f,
+    type: 3}
+  Grass: {fileID: 2100000, guid: 20dbe877b0a43c04280ba68041d77a96, type: 2}
+  minObjects: 10
+  maxObjects: 30
