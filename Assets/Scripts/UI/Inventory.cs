@@ -50,7 +50,7 @@ public class Inventory : MonoBehaviour {
 
     private IEnumerator ShowHidePlayerInterface(bool isShowing) {
         if (isShowing) {
-            UI.transform.DOMoveY(2.5f, .25f).WaitForCompletion();
+            UI.transform.DOMoveY(2.20f, .25f).WaitForCompletion();
             UI.transform.DOScale(Vector3.one, .5f);    
         }
         else {

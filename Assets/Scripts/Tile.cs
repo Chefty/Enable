@@ -31,7 +31,7 @@ public class Tile : MonoBehaviour
     {
         if (TileOwnAbility != null)
         {
-            TileOwnAbility.SpawnProps(transform, transform.position + new Vector3(0f, .5f, 0f));
+            TileOwnAbility.SpawnProps(transform, transform.position + new Vector3(0f, .15f, 0f));
             DebugDisplay();
         }
     }
@@ -78,7 +78,7 @@ public class Tile : MonoBehaviour
         if (TileOwnAbility != null)
         {
             Material mat = new Material(rend.sharedMaterial);
-            mat.SetColor("_Color", TileOwnAbility.PlaceHolderProps.GetComponent<MeshRenderer>().sharedMaterial.GetColor("_Color"));
+            mat = TileOwnAbility.PlaceHolderProps.GetComponent<MeshRenderer>().sharedMaterial;//SetColor("_Color", TileOwnAbility.PlaceHolderProps.GetComponent<MeshRenderer>().sharedMaterial.GetColor("_Color"));
 
             rend.sharedMaterial = mat;                
         }
