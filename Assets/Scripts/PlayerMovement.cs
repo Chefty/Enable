@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake() {
         animator = GetComponentInChildren<Animator>();
         targetPosition = transform.localPosition;
+        GameManager.Instance.onDieOnLava += StartActionCO;
     }
 
     private void FixedUpdate() {
@@ -72,6 +73,10 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(ActionCO());
             StartCoroutine(MovePlayerLerpCO(targetPosition, targetRotation, timeToMove));
         }
+    }
+
+    private void StartActionCO() {
+        StartCoroutine(ActionCO());
     }
 
     private IEnumerator ActionCO() {

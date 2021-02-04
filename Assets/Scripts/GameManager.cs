@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public Transform Player;
     public PlayerMovement playerMovement;
     public Transform mapRoot;
+    public Action onDieOnLava;
 
     public float MapRotationSpeed;
     public float MapRotationSmoothFactor;
