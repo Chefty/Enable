@@ -29,6 +29,15 @@ public class MultipleTargetsCamera : MonoBehaviour
         cam.orthographicSize = CurrentZoom;
         OriginalOffset = offset;
         OriginalRotation = transform.eulerAngles;
+        
+        // If no target, look for the player
+        if (Targets == null || Targets.Count == 0) {
+            var player = GameObject.FindGameObjectWithTag("Player");
+            Debug.Log("001 - " + player);
+            if (player)
+                Targets.Add(player.transform);
+            return;
+        }
     }
 
     void LateUpdate()

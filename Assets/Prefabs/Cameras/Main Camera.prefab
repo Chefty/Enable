@@ -44,7 +44,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -97,11 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68d40e8a512d6d948bb31c68b1a9f300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Targets:
-  - {fileID: 0}
+  Targets: []
   offset: {x: -10, y: 8, z: -10}
   smoothTime: 1
-  CurrentZoom: 4
+  CurrentZoom: 5
   NextZoom: 10
 --- !u!114 &8084493238699224337
 MonoBehaviour:

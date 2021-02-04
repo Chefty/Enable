@@ -21,7 +21,6 @@ public class LavaTile : Tile
         }
         else
         {
-
             GameManager.Instance.Player.gameObject.SetActive(false);
         }
     }

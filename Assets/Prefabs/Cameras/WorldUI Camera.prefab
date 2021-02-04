@@ -87,8 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68d40e8a512d6d948bb31c68b1a9f300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Targets:
-  - {fileID: 0}
+  Targets: []
   offset: {x: -10, y: 8, z: -10}
   smoothTime: 1
   CurrentZoom: 4
