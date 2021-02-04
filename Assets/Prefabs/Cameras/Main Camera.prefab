@@ -98,7 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Targets: []
-  offset: {x: -10, y: 8, z: -10}
+  targetOffset: {x: 0, y: 2, z: 0}
+  offset: {x: -10, y: 9, z: -10}
   smoothTime: 1
   CurrentZoom: 5
   NextZoom: 10
