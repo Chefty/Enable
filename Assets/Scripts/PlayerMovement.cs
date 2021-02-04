@@ -11,8 +11,7 @@ public enum eState {
     death
 }
 
-public class PlayerMovement : MonoBehaviour
-{
+public class PlayerMovement : MonoBehaviour {
     private Animator animator;
     private float timeIdle = 0f;
     public eState currentState;
@@ -31,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        switch(currentState) {
+        switch (currentState) {
             case eState.idle:
                 timeIdle += Time.deltaTime;
                 if (timeIdle > 8f) {
@@ -56,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Action(Vector3 direction, eState newState, eState newState2 = eState.idle) {
 
-        if (!isLerping && 
+        if (!isLerping &&
             !animator.GetCurrentAnimatorStateInfo(0).IsName(eState.walk.ToString()) &&
             !animator.GetCurrentAnimatorStateInfo(0).IsName(eState.jump.ToString())) {
 
@@ -105,8 +104,7 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool(currentState.ToString(), true);
                 StartCoroutine(MovePlayerLerpCO(transform.localPosition + new Vector3(0, -3f, 0), Vector3.zero, 3f));
             }
-        }
-        else if (currentState == eState.jump && secondState == eState.unhappy) { //getting out of water
+        } else if (currentState == eState.jump && secondState == eState.unhappy) { //getting out of water
             animator.SetBool(currentState.ToString(), true);
 
             yield return new WaitForSeconds(.5f);
@@ -121,6 +119,10 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool(currentState.ToString(), false);
             currentState = eState.idle;
             timeIdle = 0f;
+        } else if (currentState == eState.death && secondState == eState.idle) { //dying on lava
+            Instantiate(Resources.Load("DeathParticles_lava"), transform);
+            animator.SetBool(currentState.ToString(), true);
+            StartCoroutine(MovePlayerLerpCO(transform.localPosition + new Vector3(0, -2f, 0), Vector3.zero, 3f));
         } else {
             animator.SetBool(currentState.ToString(), true);
 
