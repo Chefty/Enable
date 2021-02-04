@@ -59,10 +59,11 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             !RectTransformUtility.RectangleContainsScreenPoint(parentRectTransform, transform.position) &&
             GameManager.Instance._currentTile.TileOwnAbility == null) {
 
-            transform.parent.GetComponent<Button>().onClick.RemoveAllListeners();
+            //Inventory click not working properly
+            //transform.parent.GetComponent<Button>().onClick.RemoveAllListeners();
             abilityIcon.sprite = null;
             abilityIcon.enabled = false;
-            
+
             //Drop ability
             GameManager.Instance.DumpAbility(ability);
             ability = null;
@@ -73,20 +74,22 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     public void SetAbility(Ability newability)
     {
         ability = newability;
-        Button parentbutton = transform.parent.GetComponent<Button>();
-        parentbutton.onClick.RemoveAllListeners();
-        if (GameManager.Instance.PlayerAbilities.Contains(newability))
-        {
-            parentbutton.onClick.AddListener(() => {
-                if (ability.GetType() == typeof(Walk))
-                {
-                    ((Walk)ability).ForceRun();
-                }
-            });
-        }
+        //Inventory click not working properly
+        //Button parentbutton = transform.parent.GetComponent<Button>();
+        //parentbutton.onClick.RemoveAllListeners();
+        //if (GameManager.Instance.PlayerAbilities.Contains(newability))
+        //{
+        //    parentbutton.onClick.AddListener(() => {
+        //        if (ability.GetType() == typeof(Walk))
+        //        {
+        //            ((Walk)ability).ForceRun();
+        //        }
+        //    });
+        //}
         if (newability == null)
         {
             abilityIcon.sprite = null;
+            return;
         }
         else
         {

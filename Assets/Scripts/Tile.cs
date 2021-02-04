@@ -78,7 +78,7 @@ public class Tile : MonoBehaviour
         if (TileOwnAbility != null)
         {
             Material mat = new Material(rend.sharedMaterial);
-            mat = TileOwnAbility.PlaceHolderProps.GetComponent<MeshRenderer>().sharedMaterial;//SetColor("_Color", TileOwnAbility.PlaceHolderProps.GetComponent<MeshRenderer>().sharedMaterial.GetColor("_Color"));
+            mat.SetColor("_Color", TileOwnAbility.PlaceHolderProps.GetComponent<MeshRenderer>().sharedMaterial.GetColor("_Color"));
 
             rend.sharedMaterial = mat;                
         }

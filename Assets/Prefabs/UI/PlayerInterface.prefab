@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 9016354973576945219}
   - component: {fileID: 9016354973576945217}
   - component: {fileID: 9016354973576945216}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: CurrentTileAbility
   m_TagString: TileAbility
   m_Icon: {fileID: 0}

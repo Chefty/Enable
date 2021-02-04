@@ -14,6 +14,6 @@ public class WorldSpaceUIFaceCamera : MonoBehaviour
 
     private void Update() 
     {
-        transform.LookAt(transform.position + _camera.transform.rotation * Vector3.back, _camera.transform.rotation * Vector3.up);
+        transform.LookAt(transform.position + _camera.transform.rotation * Vector3.forward, _camera.transform.rotation * Vector3.up);
     }
 }
