@@ -212,6 +212,18 @@ public class GameManager : MonoBehaviour
         CheckForCurrentTileAbility();
     }
 
+    public void DestroyAbility(Ability ability)
+    {
+        PlayerAbilities.Remove(ability);
+
+        CheckForCurrentTileAbility();
+    }
+
+    public Ability GetFirstAbility(Type typeOfAbility)
+    {
+        return PlayerAbilities.Where(x => x.GetType() == typeOfAbility).FirstOrDefault();
+    }
+
     public Tile GetTile(Vector3 pos)
     {
         RaycastHit m_Hit;
