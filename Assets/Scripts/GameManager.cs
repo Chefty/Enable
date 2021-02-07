@@ -25,6 +25,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public Inventory inventory;
     public Transform Player;
+    public MultipleTargetsCamera camPlayer;
+    public MultipleTargetsCamera camUI;
+
     public PlayerMovement playerMovement;
     public Transform mapRoot;
     public Action onDieOnLava;
@@ -300,15 +303,18 @@ public class GameManager : MonoBehaviour
         while (playerMovement.isLerping) { yield return new WaitForEndOfFrame(); }
 
         //Player.parent = _currentTile.transform;
+        Vector3 originOffset = camPlayer.offset;
 
-        while (time < 1f)
+        while (time < .5f)
         {
-            mapRoot.RotateAround(_mapBounds.center, Vector3.up, (90f * axisOrientation) * Time.deltaTime);
+            camPlayer.offset = Vector3.Lerp(originOffset, new Vector3(originOffset.x * -1f, originOffset.y, originOffset.z), time * 2f);
+            //mapRoot.RotateAround(_mapBounds.center, Vector3.up, (90f * axisOrientation) * Time.deltaTime);
 
             time += Time.deltaTime;
 
             yield return new WaitForEndOfFrame();
         }
+
 
         //Player.parent = null;
 
