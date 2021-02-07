@@ -122,6 +122,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faunaCube: {fileID: 7399428475371519865, guid: 34a1eb52e4c2e6e4dbad08da2999fc1f,
     type: 3}
-  Grass: {fileID: -7995496139591576777, guid: 4d9088e12f9791246a64647a0c5f772f, type: 3}
+  Grass: {fileID: 2100000, guid: 20dbe877b0a43c04280ba68041d77a96, type: 2}
   minObjects: 10
   maxObjects: 30
