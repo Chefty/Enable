@@ -746,7 +746,7 @@ ParticleSystem:
     sphericalDirectionAmount: 1
     randomPositionAmount: 0
     radius:
-      value: 1.2
+      value: 1.1
       mode: 0
       spread: 0
       speed:
@@ -14403,7 +14403,7 @@ PrefabInstance:
     - target: {fileID: 1166427783736223161, guid: dd4b62fb3200a8346ac21d6b193e3859,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1166427783736223161, guid: dd4b62fb3200a8346ac21d6b193e3859,
         type: 3}
@@ -14530,6 +14530,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 58656386745809641, guid: 95e35b3a74f70df4fbcaf579180e11ce,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 20dbe877b0a43c04280ba68041d77a96, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95e35b3a74f70df4fbcaf579180e11ce, type: 3}
 --- !u!4 &6310639919163627786 stripped
@@ -14553,7 +14558,7 @@ PrefabInstance:
     - target: {fileID: 1166427783736223161, guid: dd4b62fb3200a8346ac21d6b193e3859,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1166427783736223161, guid: dd4b62fb3200a8346ac21d6b193e3859,
         type: 3}
