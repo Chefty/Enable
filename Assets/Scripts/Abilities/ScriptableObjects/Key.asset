@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlaceHolderProps: {fileID: 4525618495218316609, guid: bbf8b3df6477a4543a181273a0e0b3e3,
     type: 3}
-  AbilityIcon: {fileID: 21300000, guid: f86e8b4534b9076419e6eae96a9983f9, type: 3}
+  AbilityIcon: {fileID: 21300000, guid: b9b9f57c30083fc43ba32ff9d112a6bf, type: 3}
   ActionKeycode: 0
