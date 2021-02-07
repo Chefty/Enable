@@ -20,6 +20,7 @@ public class Walk : Ability
         }
     }
 
+    // TODO replace with typeofs instead
     public void ForceRun()
     {
         Debug.Log(name);

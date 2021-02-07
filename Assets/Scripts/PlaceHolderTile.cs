@@ -17,7 +17,7 @@ public class PlaceHolderTile : MonoBehaviour
         {
             Material mat = new Material(rend.sharedMaterial);
 
-            mat.SetColor("_Color", Color.magenta);
+            mat.color = Color.magenta;//.SetColor("_Color", Color.magenta);
             rend.sharedMaterial = mat;
         }
         else

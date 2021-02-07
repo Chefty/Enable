@@ -32,7 +32,6 @@ public class Tile : MonoBehaviour
         if (TileOwnAbility != null)
         {
             TileOwnAbility.SpawnProps(transform, transform.position + new Vector3(0f, .15f, 0f));
-            DebugDisplay();
         }
     }
 

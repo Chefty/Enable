@@ -223,7 +223,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerAbilities.Remove(ability);
 
-        CheckForCurrentTileAbility();
+        inventory.RemoveAbility(ability);
     }
 
     public Ability GetFirstAbility(Type typeOfAbility)

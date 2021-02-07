@@ -10,46 +10,29 @@ public class DoorTile : Tile
     [SerializeField] private Transform _leftPart;
     [SerializeField] private Transform _rightPart;
 
-    private void Start()
-    {
-        _leftPart.localRotation = Quaternion.identity;
-        _rightPart.eulerAngles = Vector3.zero;
-    }
+    public bool canPlayerEnter = false;
 
     public override bool CheckTileAccessibility()
     {
-        return GameManager.Instance.DoesPlayerPosessAbility(typeof(Key));
-    }
-
-    public override void TileBehaviour()
-    {
-        GameManager.Instance.DestroyAbility(
-            GameManager.Instance.GetFirstAbility(typeof(Key)));
+        return canPlayerEnter;
     }
 
     [ContextMenu("RotateDoor")]
-    public void RotateDoor()
+    public void OpenDoor()
     {
-
-        StartCoroutine(PUUUTEUUUh());
+        StartCoroutine(DoOpenDoor());
     }
 
-    // TODO use DOTween instead
-    IEnumerator PUUUTEUUUh()
+    IEnumerator DoOpenDoor()
     {
-        float currentDuration = 0f;
-        Vector3 currentRotation = Vector3.zero;
-
-        while (currentDuration < _rotationDuration)
-        {
-            currentDuration += Time.deltaTime;
-            currentRotation = Vector3.Lerp(Vector3.zero, Vector3.up * _rotationOffset, _rotationDuration / currentDuration);
-
-            _leftPart.eulerAngles = currentRotation * -1f;
-            _rightPart.eulerAngles = currentRotation;
-
-            print(currentDuration);
-        }
+        _leftPart.DOLocalRotate(
+            new Vector3(0, -_rotationOffset, 0),
+            1f,
+            RotateMode.Fast).SetEase(Ease.InOutSine);
+        _rightPart.DOLocalRotate(
+             new Vector3(0, _rotationOffset, 0),
+             1f,
+            RotateMode.Fast).SetEase(Ease.InOutSine);
 
         yield return null;
     }

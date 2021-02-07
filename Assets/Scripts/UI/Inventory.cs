@@ -60,10 +60,25 @@ public class Inventory : MonoBehaviour {
         yield return null;
     }
 
-    public void AddAbility(Ability ability) {
-        for (int i = 0; i < abilityItems.Count; i++) {
-            if (abilityItems[i].ability == null) {
+    public void AddAbility(Ability ability)
+    {
+        for (int i = 0; i < abilityItems.Count; i++)
+        {
+            if (abilityItems[i].ability == null)
+            {
                 abilityItems[i].SetAbility(ability);
+                break;
+            }
+        }
+    }
+
+    public void RemoveAbility(Ability ability)
+    {
+        for (int i = 0; i < abilityItems.Count; i++)
+        {
+            if (abilityItems[i].ability == ability)
+            {
+                abilityItems[i].SetAbility(null);
                 break;
             }
         }
