@@ -25,15 +25,14 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public Inventory inventory;
     public Transform Player;
-    public MultipleTargetsCamera camPlayer;
-    public MultipleTargetsCamera camUI;
+    private MultipleTargetsCamera camPlayer;
+    private MultipleTargetsCamera camUI;
 
     public PlayerMovement playerMovement;
     public Transform mapRoot;
     public Action onDieOnLava;
 
-    public float MapRotationSpeed;
-    public float MapRotationSmoothFactor;
+    public float MapRotationSpeed = .5f;
 
     public int MaxAmountOfAbilities;
     public List<Ability> PlayerAbilities;
@@ -49,6 +48,11 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        camPlayer = GameObject.Find("Main Camera").GetComponent<MultipleTargetsCamera>();
+        camUI = GameObject.Find("WorldUI Camera").GetComponent<MultipleTargetsCamera>();
+
+        camUI.offset = camPlayer.offset;
     }
 
     private void Start()
@@ -305,15 +309,20 @@ public class GameManager : MonoBehaviour
         //Player.parent = _currentTile.transform;
         Vector3 originOffset = camPlayer.offset;
 
-        while (time < .5f)
+        while (time < MapRotationSpeed)
         {
-            camPlayer.offset = Vector3.Lerp(originOffset, new Vector3(originOffset.x * -1f, originOffset.y, originOffset.z), time * 2f);
+            camPlayer.offset = Vector3.Lerp(
+                originOffset,
+                new Vector3(originOffset.x * -axisOrientation, originOffset.y, originOffset.z),
+                MapRotationSpeed / time);
             //mapRoot.RotateAround(_mapBounds.center, Vector3.up, (90f * axisOrientation) * Time.deltaTime);
 
             time += Time.deltaTime;
 
             yield return new WaitForEndOfFrame();
         }
+
+        camUI.offset = camPlayer.offset;
 
 
         //Player.parent = null;
