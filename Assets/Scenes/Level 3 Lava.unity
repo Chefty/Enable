@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 378823590}
-  m_IndirectSpecularColor: {r: 0.4321997, g: 0.11353176, b: 0.05393263, a: 1}
+  m_IndirectSpecularColor: {r: 0.43186203, g: 0.1134133, b: 0.05393359, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -129,6 +129,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1207080051}
     m_Modifications:
+    - target: {fileID: 3330800939410616196, guid: 9ebfe53b386fc364481ce4a98d33e177,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3835269999966342737, guid: 9ebfe53b386fc364481ce4a98d33e177,
         type: 3}
       propertyPath: m_Name
@@ -2368,6 +2373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 378823591}
   - component: {fileID: 378823590}
+  - component: {fileID: 378823592}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -2397,7 +2403,7 @@ Light:
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0
+    m_Bias: 1
     m_NormalBias: 0
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
@@ -2443,13 +2449,26 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378823589}
-  m_LocalRotation: {x: 0.15038373, y: -0.4924039, z: 0.08682408, w: 0.85286856}
+  m_LocalRotation: {x: 0.1874422, y: -0.48814803, z: 0.1082198, w: 0.8454972}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 20, y: -60, z: 0}
+  m_LocalEulerAnglesHint: {x: 25, y: -60, z: 0}
+--- !u!114 &378823592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378823589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UsePipelineSettings: 1
 --- !u!1001 &383777139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3407,6 +3426,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215769726709391464, guid: f7331f278590a2a418d343c0d50b107c,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7331f278590a2a418d343c0d50b107c, type: 3}
@@ -5791,7 +5815,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b7ff310cca31d014398781b38bc34065, type: 2}
+      objectReference: {fileID: 2100000, guid: 57381d4654fd951419332f9bb45eb6be, type: 2}
     - target: {fileID: 919132149155446097, guid: e929bb659c0a22042afd40d21912f97d,
         type: 3}
       propertyPath: m_Name
@@ -6258,6 +6282,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1207080051}
     m_Modifications:
+    - target: {fileID: 3043527276068521851, guid: fcaf18ca195ee204d9e9b041771931e0,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3547776158884521646, guid: fcaf18ca195ee204d9e9b041771931e0,
         type: 3}
       propertyPath: m_Name
@@ -8823,6 +8852,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1207080051}
     m_Modifications:
+    - target: {fileID: 2375877970154146871, guid: de2151dbf47c3834a89aec967a5b2f95,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3509426374553712472, guid: de2151dbf47c3834a89aec967a5b2f95,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11120,6 +11154,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.007543972
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203192251888088691, guid: c7733eb5e2afd5840b017c667479f6fe,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7733eb5e2afd5840b017c667479f6fe, type: 3}
@@ -14586,6 +14625,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 3569350310084005694, guid: 2b492590ffa60a7488fdd1ba916216c7,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b492590ffa60a7488fdd1ba916216c7, type: 3}
 --- !u!4 &1825867340 stripped
@@ -14950,6 +14994,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.007543972
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203192251888088691, guid: c7733eb5e2afd5840b017c667479f6fe,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7733eb5e2afd5840b017c667479f6fe, type: 3}

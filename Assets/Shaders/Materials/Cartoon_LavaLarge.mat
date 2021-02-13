@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cartoon_Lava
+  m_Name: Cartoon_LavaLarge
   m_Shader: {fileID: -6465566751694194690, guid: 1b45afbe1f0c4cb4f9e6a4a79613784d,
     type: 3}
   m_ShaderKeywords: ENUM_6B99C3BA_B
@@ -28,21 +28,21 @@ Material:
     - Vector1_F1E786B1: 5
     - _: 1
     - _Depth: 2.27
-    - _Displacement_Multiplier: 0.01
-    - _Distance: 1
-    - _Edge_Amount: 0.5
+    - _Displacement_Multiplier: 0.02
+    - _Distance: 0
+    - _Edge_Amount: 1
     - _Edge_Cutoff: 1.06
-    - _Edge_Scale: 31.26
-    - _Edge_Speed: 0.4
+    - _Edge_Scale: 45
+    - _Edge_Speed: 0.2
     - _Metallic: 0.05
     - _Normal_Strength: 1
     - _Refraction_Scale: 112.95
     - _Refraction_Speed: 0.3
     - _Refraction_Strength: 0.03
-    - _Ripple_Density: 12
-    - _Ripple_Slimness: 6
+    - _Ripple_Density: 24
+    - _Ripple_Slimness: 10
     - _Strength: 0.13
-    - _Water_Tiling_Speed: 0.5
+    - _Water_Tiling_Speed: 0.3
     m_Colors:
     - Vector2_CFDAA394: {r: 0.02, g: 0, b: 0, a: 0}
     - _Base_Color: {r: 0, g: 0, b: 0, a: 0.7529412}
