@@ -89,6 +89,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         if (newability == null)
         {
             abilityIcon.sprite = null;
+            abilityIcon.enabled = false;
             return;
         }
         else
