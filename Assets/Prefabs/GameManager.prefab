@@ -48,7 +48,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   playerMovement: {fileID: 0}
   mapRoot: {fileID: 0}
-  MapRotationSpeed: 0
+  MapRotationSpeed: 1
   MaxAmountOfAbilities: 4
   PlayerAbilities:
   - {fileID: 11400000, guid: ae72105c28af49c4494f1a9a54357efe, type: 2}

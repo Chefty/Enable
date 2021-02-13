@@ -297,7 +297,7 @@ public class GameManager : MonoBehaviour
 
         print(toAngle.eulerAngles + " " + mapRoot.eulerAngles + (mapRoot.eulerAngles + (Vector3.up * axisOrientation * 90f)));
 
-        //while (playerMovement.isLerping) { yield return new WaitForEndOfFrame(); }
+        while (playerMovement.isLerping) { yield return new WaitForEndOfFrame(); }
 
         //Player.parent = _currentTile.transform;
         Vector3 originOffset = camPlayer.offset;
