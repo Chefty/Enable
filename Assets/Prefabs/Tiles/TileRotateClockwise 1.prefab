@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4694118451199980084}
   - component: {fileID: 4694118451199980083}
-  - component: {fileID: 4694118451199980082}
   - component: {fileID: 4694118451199980085}
   - component: {fileID: 4694118451199980086}
+  - component: {fileID: 6737307645060603461}
+  - component: {fileID: 260547129859640285}
   m_Layer: 0
   m_Name: TileRotateClockwise 1
   m_TagString: Untagged
@@ -43,19 +44,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4694118451199980087}
   m_Mesh: {fileID: -3650865179533500963, guid: 5f0d904e1b1869c43ad99824912b45b3, type: 3}
---- !u!65 &4694118451199980082
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4694118451199980087}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &4694118451199980085
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -109,6 +97,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TileOwnAbility: {fileID: 0}
   RotationDirection: 1
+  grass: {fileID: 2100000, guid: c757d3fdbc3be00489ce1c994fc8cbef, type: 2}
+  Icon: {fileID: 3718023586044102389}
+--- !u!65 &6737307645060603461
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4694118451199980087}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.25, z: 1}
+  m_Center: {x: 0, y: 0.00000012665987, z: 0.00000010430813}
+--- !u!114 &260547129859640285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4694118451199980087}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c99c9855b69dea34fa977d2b00186640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faunaCube: {fileID: 7399428475371519865, guid: 34a1eb52e4c2e6e4dbad08da2999fc1f,
+    type: 3}
+  Grass: {fileID: 2100000, guid: 20dbe877b0a43c04280ba68041d77a96, type: 2}
+  minObjects: 10
+  maxObjects: 30
 --- !u!1001 &8861880176862689260
 PrefabInstance:
   m_ObjectHideFlags: 0

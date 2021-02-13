@@ -139,7 +139,7 @@ public class GameManager : MonoBehaviour
     {
         Tile tile = GetTile(pos);
 
-        print("GetTileAccessibility[tile]" + (tile == null));
+        print("GetTileAccessibility[tile]" + (tile == null) + " " + tile.name);
         if (tile != null)
         {
             return tile.CheckTileAccessibility();

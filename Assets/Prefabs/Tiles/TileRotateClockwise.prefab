@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3301501756014134197}
   - component: {fileID: 3301501756014134194}
   - component: {fileID: 3301501756014134193}
+  - component: {fileID: 6878939153215083489}
   m_Layer: 0
   m_Name: TileRotateClockwise
   m_TagString: Untagged
@@ -109,6 +110,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TileOwnAbility: {fileID: 0}
   RotationDirection: -1
+  grass: {fileID: 2100000, guid: c757d3fdbc3be00489ce1c994fc8cbef, type: 2}
+  Icon: {fileID: 7022560316589521309}
+--- !u!114 &6878939153215083489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3301501756014134192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c99c9855b69dea34fa977d2b00186640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faunaCube: {fileID: 7399428475371519865, guid: 34a1eb52e4c2e6e4dbad08da2999fc1f,
+    type: 3}
+  Grass: {fileID: 2100000, guid: 20dbe877b0a43c04280ba68041d77a96, type: 2}
+  minObjects: 10
+  maxObjects: 30
 --- !u!1001 &2888934605753518212
 PrefabInstance:
   m_ObjectHideFlags: 0
