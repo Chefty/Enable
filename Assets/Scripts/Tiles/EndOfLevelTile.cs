@@ -12,6 +12,7 @@ public class EndOfLevelTile : Tile
 
     public override void TileBehaviour()
     {
+        SoundManager.Instance.PlayWinSound();
         GameManager.Instance.PrepareLoadNextLevel();
     }
 }

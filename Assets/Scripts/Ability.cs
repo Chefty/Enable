@@ -31,5 +31,6 @@ public abstract class Ability : ScriptableObject
     public void AbilityTaken()
     {
         _ownProps.SetActive(false);
+        SoundManager.Instance.PlayPickSound();
     }
 }

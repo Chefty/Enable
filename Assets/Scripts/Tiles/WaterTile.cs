@@ -25,6 +25,7 @@ public class WaterTile : Tile
     {
         yield return new WaitForSeconds(delay);
         GameManager.Instance.playerMovement.currentState = eState.death;
+        SoundManager.Instance.PlayDeathSound();
         GameManager.Instance.onDieOnLava();
     }
 }
