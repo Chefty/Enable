@@ -151,5 +151,7 @@ public class PlayerMovement : MonoBehaviour {
         transform.localPosition = targetPosition;
         isLerping = false;
         timeIdle = 0f;
+
+        GameManager.Instance.onMoving();
     }
 }

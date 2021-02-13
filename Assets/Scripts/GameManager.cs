@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public PlayerMovement playerMovement;
     public Transform mapRoot;
     public Action onDieOnLava;
+    public Action onMoving;
 
     public float MapRotationSpeed = .5f;
 
