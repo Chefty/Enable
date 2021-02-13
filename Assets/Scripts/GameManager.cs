@@ -36,7 +36,6 @@ public class GameManager : MonoBehaviour
     public Action onMoving;
 
     public float MapRotationSpeed = .5f;
-    public float FadeDuration = 1f;
 
     public int MaxAmountOfAbilities;
     public List<Ability> PlayerAbilities;
@@ -48,6 +47,8 @@ public class GameManager : MonoBehaviour
     public StartInfos _levelAwakeState;
 
     [SerializeField] Image FadeBlack;
+    public float FadeDuration = 1f;
+    AudioSource ostBroadcaster;
 
     Bounds _mapBounds;
 
@@ -59,12 +60,12 @@ public class GameManager : MonoBehaviour
         camUI = GameObject.Find("WorldUI Camera").GetComponent<MultipleTargetsCamera>();
 
         camUI.offset = camPlayer.offset;
+        ostBroadcaster = FindObjectOfType<AudioSource>();
     }
 
     private void Start()
     {
-        StartCoroutine(AsynLoadLevel());
-
+        PrepareLoadLevel();
         CopyScriptableObjects();
         // we save the level infos
         RegisterLevelStartInformations();
@@ -533,9 +534,24 @@ public class GameManager : MonoBehaviour
 
     #region Level reload
 
+    public void PrepareReloadLevel()
+    {
+        StartCoroutine(AsynReloadLevel());
+    }
+    public void PrepareLoadLevel()
+    {
+        StartCoroutine(AsynLoadLevel());
+    }
+
+    public void PrepareLoadNextLevel()
+    {
+        StartCoroutine(AsyncLoadNextLevel());
+    }
+
     IEnumerator AsynReloadLevel()
     {
         FadeBlack.DOFade(1f, FadeDuration/8f).SetEase(Ease.OutExpo);
+        ostBroadcaster.DOFade(0f, FadeDuration).SetEase(Ease.InCirc);
 
         yield return new WaitForSeconds(FadeDuration);
 
@@ -551,6 +567,7 @@ public class GameManager : MonoBehaviour
             FadeBlack.color.g,
             FadeBlack.color.b,
             1f);
+        ostBroadcaster.DOFade(1f, FadeDuration).SetEase(Ease.InCirc);
         FadeBlack.DOFade(0f, FadeDuration).SetEase(Ease.InCirc);
 
         yield return new WaitForSeconds(FadeDuration);
@@ -558,16 +575,12 @@ public class GameManager : MonoBehaviour
         FadeBlack.transform.parent.gameObject.SetActive(false);
     }
 
-    public void PrepareLoadNextLevel()
-    {
-        StartCoroutine(AsyncLoadNextLevel());
-    }
-
     IEnumerator AsyncLoadNextLevel()
     {
         FadeBlack.transform.parent.gameObject.SetActive(true);
 
         FadeBlack.DOFade(1f, FadeDuration).SetEase(Ease.OutExpo);
+        ostBroadcaster.DOFade(0f, FadeDuration).SetEase(Ease.InCirc);
 
         yield return new WaitForSeconds(FadeDuration);
 

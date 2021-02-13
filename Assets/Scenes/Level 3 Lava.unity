@@ -1092,7 +1092,7 @@ PrefabInstance:
     - target: {fileID: 22502841742406628, guid: 59ab16f8ea66d9644bae902f34db180b,
         type: 3}
       propertyPath: field of view
-      value: 17
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4376771800844352824, guid: 59ab16f8ea66d9644bae902f34db180b,
         type: 3}
@@ -15990,6 +15990,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034687926602837286, guid: 5ac8fb5c2c91020438cd425b0f0e9039,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 8020335036840439530, guid: 5ac8fb5c2c91020438cd425b0f0e9039,
         type: 3}
