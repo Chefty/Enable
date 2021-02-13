@@ -17,7 +17,7 @@ public class Tile : MonoBehaviour
             TileOwnAbility = Instantiate(TileOwnAbility);
         }
 
-        _startColor = GetComponent<MeshRenderer>().sharedMaterial.GetColor("_Color");
+        //_startColor = GetComponent<MeshRenderer>().sharedMaterial.GetColor("_Color");
         DisplayAbility();
 
         TriggerCollider = gameObject.AddComponent<BoxCollider>();
