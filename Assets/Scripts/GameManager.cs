@@ -306,7 +306,7 @@ public class GameManager : MonoBehaviour
         {
             camPlayer.offset = Vector3.Lerp(
                 originOffset,
-                new Vector3(originOffset.x * -axisOrientation, originOffset.y, originOffset.z),
+                new Vector3(originOffset.z * -axisOrientation, originOffset.y, originOffset.x / 2f),
                 MapRotationSpeed / time);
             //mapRoot.RotateAround(_mapBounds.center, Vector3.up, (90f * axisOrientation) * Time.deltaTime);
 

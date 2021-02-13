@@ -48,8 +48,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   playerMovement: {fileID: 0}
   mapRoot: {fileID: 0}
-  MapRotationSpeed: 0
-  MapRotationSmoothFactor: 0
+  MapRotationSpeed: 1
   MaxAmountOfAbilities: 4
   PlayerAbilities:
   - {fileID: 11400000, guid: ae72105c28af49c4494f1a9a54357efe, type: 2}
@@ -77,4 +76,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08f6e9c4bed33c48940570302d55b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arrows: []
+  Arrows:
+  - Direction: {x: -1, y: 0, z: 0}
+    Arrow: {fileID: 21300000, guid: cf761aeadb28f4248a0043c338fd06ac, type: 3}
+    keycode: 276
+  - Direction: {x: 1, y: 0, z: 0}
+    Arrow: {fileID: 21300000, guid: 97e8c1c0ac63d584287ba3ac3fbb0eed, type: 3}
+    keycode: 275
+  - Direction: {x: 0, y: 0, z: -1}
+    Arrow: {fileID: 21300000, guid: 6ff8cedd8943d8449b208089c38a02c0, type: 3}
+    keycode: 274
+  - Direction: {x: 0, y: 0, z: 1}
+    Arrow: {fileID: 21300000, guid: 0381973afae9d1e4fbed329091e3214c, type: 3}
+    keycode: 273
