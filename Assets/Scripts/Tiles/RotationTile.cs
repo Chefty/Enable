@@ -12,6 +12,7 @@ public class RotationTile : Tile
 
     public override void TileBehaviour()
     {
+        print("RotationTile.TileBehaviour");
         GameManager.Instance.RotateLevel(RotationDirection);
     }
 }

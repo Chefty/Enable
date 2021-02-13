@@ -297,7 +297,7 @@ public class GameManager : MonoBehaviour
 
         print(toAngle.eulerAngles + " " + mapRoot.eulerAngles + (mapRoot.eulerAngles + (Vector3.up * axisOrientation * 90f)));
 
-        while (playerMovement.isLerping) { yield return new WaitForEndOfFrame(); }
+        //while (playerMovement.isLerping) { yield return new WaitForEndOfFrame(); }
 
         //Player.parent = _currentTile.transform;
         Vector3 originOffset = camPlayer.offset;
@@ -306,7 +306,7 @@ public class GameManager : MonoBehaviour
         {
             camPlayer.offset = Vector3.Lerp(
                 originOffset,
-                new Vector3(originOffset.x, originOffset.y * -axisOrientation, originOffset.z),
+                new Vector3(originOffset.z * -axisOrientation, originOffset.y, originOffset.x / 2f),
                 MapRotationSpeed / time);
             //mapRoot.RotateAround(_mapBounds.center, Vector3.up, (90f * axisOrientation) * Time.deltaTime);
 
