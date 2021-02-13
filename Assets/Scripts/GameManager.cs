@@ -1,9 +1,11 @@
 ﻿using System.Linq;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using System;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 [Serializable]
 public class TileAbilityPair
@@ -34,6 +36,7 @@ public class GameManager : MonoBehaviour
     public Action onMoving;
 
     public float MapRotationSpeed = .5f;
+    public float FadeDuration = 1f;
 
     public int MaxAmountOfAbilities;
     public List<Ability> PlayerAbilities;
@@ -43,6 +46,8 @@ public class GameManager : MonoBehaviour
     public Tile _prevTile;
 
     public StartInfos _levelAwakeState;
+
+    [SerializeField] Image FadeBlack;
 
     Bounds _mapBounds;
 
@@ -58,6 +63,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(AsynLoadLevel());
+
         CopyScriptableObjects();
         // we save the level infos
         RegisterLevelStartInformations();
@@ -92,7 +99,7 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            StartCoroutine(AsynReloadLevel());
             // restart the level here
             //LevelFlush();
             //LevelReload();
@@ -140,7 +147,6 @@ public class GameManager : MonoBehaviour
     {
         Tile tile = GetTile(pos);
 
-        print("GetTileAccessibility[tile]" + (tile == null) + " " + tile.name);
         if (tile != null)
         {
             return tile.CheckTileAccessibility();
@@ -527,14 +533,45 @@ public class GameManager : MonoBehaviour
 
     #region Level reload
 
-    private void LevelReload()
+    IEnumerator AsynReloadLevel()
     {
-        // to reload
-        print("LevelReload");
-        ReFillPlayerAbilities();
-        ReFillTilesWithAbility();
-        FillUI();
-        RePlacePlayer();
+        FadeBlack.DOFade(1f, FadeDuration/8f).SetEase(Ease.OutExpo);
+
+        yield return new WaitForSeconds(FadeDuration);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    IEnumerator AsynLoadLevel()
+    {
+        FadeBlack.transform.parent.gameObject.SetActive(true);
+
+        FadeBlack.color = new Color(
+            FadeBlack.color.r,
+            FadeBlack.color.g,
+            FadeBlack.color.b,
+            1f);
+        FadeBlack.DOFade(0f, FadeDuration).SetEase(Ease.InCirc);
+
+        yield return new WaitForSeconds(FadeDuration);
+
+        FadeBlack.transform.parent.gameObject.SetActive(false);
+    }
+
+    public void PrepareLoadNextLevel()
+    {
+        StartCoroutine(AsyncLoadNextLevel());
+    }
+
+    IEnumerator AsyncLoadNextLevel()
+    {
+        FadeBlack.transform.parent.gameObject.SetActive(true);
+
+        FadeBlack.DOFade(1f, FadeDuration).SetEase(Ease.OutExpo);
+
+        yield return new WaitForSeconds(FadeDuration);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void RePlacePlayer()

@@ -8,7 +8,7 @@ public class TutorialScript : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI textScript;
 
     // Update is called once per frame
-    void Start() {
+    void Awake() {
         GameManager.Instance.onMoving += UpdateScriptStory;
         UpdateScriptText("Welcome to this tutorial!");
     }

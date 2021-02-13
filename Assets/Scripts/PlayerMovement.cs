@@ -152,6 +152,9 @@ public class PlayerMovement : MonoBehaviour {
         isLerping = false;
         timeIdle = 0f;
 
-        GameManager.Instance.onMoving();
+        if (GameManager.Instance.onMoving != null)
+        {
+            GameManager.Instance.onMoving();
+        }
     }
 }
