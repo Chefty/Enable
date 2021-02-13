@@ -100,11 +100,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WorldUI Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 3461618980721311743, guid: bbbc24dced837f7439b660f3784191d4,
-        type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbbc24dced837f7439b660f3784191d4, type: 3}
 --- !u!4 &4376771800844352825 stripped

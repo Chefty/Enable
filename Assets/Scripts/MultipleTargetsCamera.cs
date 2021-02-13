@@ -25,8 +25,8 @@ public class MultipleTargetsCamera : MonoBehaviour
     private void Start()
     {
         cam = GetComponent<Camera>();
-        cam.orthographic = true;
-        cam.orthographicSize = CurrentZoom;
+        //cam.orthographic = true;
+        //cam.orthographicSize = CurrentZoom;
         OriginalOffset = offset;
         OriginalRotation = transform.eulerAngles;
         
