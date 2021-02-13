@@ -96,13 +96,6 @@ public class GameManager : MonoBehaviour
             //LevelFlush();
             //LevelReload();
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(0);
-            // restart the level here
-            //LevelFlush();
-            //LevelReload();
-        }
     }
 
     #region LevelStartup
