@@ -333,6 +333,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2889336182185322965}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -408,6 +433,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2889336182185322965}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -483,11 +533,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2889336182185322965}
     m_Modifications:
+    - target: {fileID: 2020362042930647945, guid: ff801fe9cde4e80409d7c54bfa37f4f4,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020362042930647945, guid: ff801fe9cde4e80409d7c54bfa37f4f4,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020362042930647945, guid: ff801fe9cde4e80409d7c54bfa37f4f4,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020362042930647945, guid: ff801fe9cde4e80409d7c54bfa37f4f4,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020362042930647945, guid: ff801fe9cde4e80409d7c54bfa37f4f4,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 8296788667080280540, guid: ff801fe9cde4e80409d7c54bfa37f4f4,
         type: 3}
       propertyPath: m_Name
       value: DoorTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8296788667080280542, guid: ff801fe9cde4e80409d7c54bfa37f4f4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 40f0a6f8371e4634eb4386872271e802, type: 2}
     - target: {fileID: 8296788667080280543, guid: ff801fe9cde4e80409d7c54bfa37f4f4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -595,6 +675,31 @@ PrefabInstance:
       propertyPath: _door
       value: 
       objectReference: {fileID: 2922649163338384714}
+    - target: {fileID: 3774202950271597350, guid: bbd9e13cac091ba4ea5ee7c64e7d4df6,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774202950271597350, guid: bbd9e13cac091ba4ea5ee7c64e7d4df6,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774202950271597350, guid: bbd9e13cac091ba4ea5ee7c64e7d4df6,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774202950271597350, guid: bbd9e13cac091ba4ea5ee7c64e7d4df6,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774202950271597350, guid: bbd9e13cac091ba4ea5ee7c64e7d4df6,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 6579038125773136240, guid: bbd9e13cac091ba4ea5ee7c64e7d4df6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -650,6 +755,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6579038125773136241, guid: bbd9e13cac091ba4ea5ee7c64e7d4df6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 40f0a6f8371e4634eb4386872271e802, type: 2}
     - target: {fileID: 6579038125773136243, guid: bbd9e13cac091ba4ea5ee7c64e7d4df6,
         type: 3}
       propertyPath: m_Name

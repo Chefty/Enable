@@ -40,7 +40,7 @@ Material:
     - _Refraction_Scale: 28.6
     - _Refraction_Speed: 0.91
     - _Refraction_Strength: 0.0064
-    - _Ripple_Density: 16
+    - _Ripple_Density: 5
     - _Ripple_Slimness: 4
     - _Strength: 0.26
     - _Water_Tiling_Speed: 1

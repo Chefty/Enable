@@ -74,7 +74,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c757d3fdbc3be00489ce1c994fc8cbef, type: 2}
+  - {fileID: 2100000, guid: 40f0a6f8371e4634eb4386872271e802, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,5 +123,7 @@ MonoBehaviour:
   faunaCube: {fileID: 7399428475371519865, guid: 34a1eb52e4c2e6e4dbad08da2999fc1f,
     type: 3}
   Grass: {fileID: 2100000, guid: 20dbe877b0a43c04280ba68041d77a96, type: 2}
+  Rock: {fileID: 0}
   minObjects: 10
   maxObjects: 30
+  minMaxSize: {x: 0.05, y: 0.15}

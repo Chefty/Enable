@@ -24,7 +24,7 @@ Material:
     - BOOLEAN_B7922ADA: 0
     - ENUM_6B99C3BA: 0
     - Vector1_3A4931B2: 124.5
-    - Vector1_A9532B28: 89.4
+    - Vector1_A9532B28: 6.8
     - Vector1_F1E786B1: 6.1
     - _: 1
     - _Caustic_Depth: 9.54
@@ -49,7 +49,7 @@ Material:
     - Vector2_CFDAA394: {r: 0.05, g: 0, b: 0, a: 0}
     - _Base_Color: {r: 0, g: 0, b: 0, a: 0.7529412}
     - _Deep_Water_Color: {r: 0, g: 0.21389468, b: 0.48235294, a: 0.8156863}
-    - _Edge_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Edge_Color: {r: 0, g: 0.18076691, b: 0.41509432, a: 1}
     - _Radial_Shear: {r: 0, g: 0, b: 0, a: 0}
     - _Ripple_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Shallow_Water_Color: {r: 0.08877714, g: 0.57617974, b: 0.8962264, a: 0.6313726}
