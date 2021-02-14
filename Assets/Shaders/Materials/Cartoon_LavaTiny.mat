@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cartoon_Poison
+  m_Name: Cartoon_LavaTiny
   m_Shader: {fileID: -6465566751694194690, guid: 1b45afbe1f0c4cb4f9e6a4a79613784d,
     type: 3}
   m_ShaderKeywords: ENUM_6B99C3BA_B
@@ -27,28 +27,27 @@ Material:
     - Vector1_A9532B28: 1
     - Vector1_F1E786B1: 5
     - _: 1
-    - _Depth: 0.82
-    - _Displacement_Multiplier: 0.36
-    - _Distance: 2.8
-    - _Edge_Amount: 0.43
-    - _Edge_Cutoff: 1.04
-    - _Edge_Scale: 35.2
-    - _Edge_Speed: 1.19
-    - _Metallic: 0.983
+    - _Depth: 2.27
+    - _Displacement_Multiplier: 0.01
+    - _Distance: 1
+    - _Edge_Amount: 0.5
+    - _Edge_Cutoff: 1.06
+    - _Edge_Scale: 31.26
+    - _Edge_Speed: 0.4
+    - _Metallic: 0.05
     - _Normal_Strength: 1
-    - _Refraction_Scale: 87.3
-    - _Refraction_Speed: 0.7
-    - _Refraction_Strength: 0.0082
-    - _Ripple_Density: 14.25
-    - _Ripple_Slimness: 3.6
-    - _Strength: 1.17
-    - _Water_Tiling_Speed: 0.73
+    - _Refraction_Scale: 112.95
+    - _Refraction_Speed: 0.3
+    - _Refraction_Strength: 0.03
+    - _Ripple_Density: 9
+    - _Ripple_Slimness: 9
+    - _Strength: 0.13
+    - _Water_Tiling_Speed: 0.5
     m_Colors:
-    - Vector2_CFDAA394: {r: 0.04, g: 0, b: 0, a: 0}
+    - Vector2_CFDAA394: {r: 0.02, g: 0, b: 0, a: 0}
     - _Base_Color: {r: 0, g: 0, b: 0, a: 0.7529412}
-    - _Deep_Water_Color: {r: 0.07450981, g: 0, b: 0.016442452, a: 0.9490196}
-    - _Edge_Color: {r: 0.73919916, g: 5.6474814, b: 0, a: 1}
+    - _Deep_Water_Color: {r: 0.13207549, g: 0, b: 0, a: 1}
+    - _Edge_Color: {r: 6.5494413, g: 0.75438595, b: 0, a: 1}
     - _Radial_Shear: {r: 0, g: 0, b: 0, a: 0}
-    - _Ripple_Color: {r: 0.73919916, g: 5.6474814, b: 0, a: 1}
-    - _Shallow_Water_Color: {r: 0.2502401, g: 0, b: 0.26666668, a: 0.8666667}
-  m_BuildTextureStacks: []
+    - _Ripple_Color: {r: 31.999996, g: 3.6858635, b: 0, a: 1}
+    - _Shallow_Water_Color: {r: 0.7264151, g: 0, b: 0, a: 0.94509804}
