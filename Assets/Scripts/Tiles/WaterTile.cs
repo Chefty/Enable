@@ -15,7 +15,7 @@ public class WaterTile : Tile
 
     public override void TileBehaviour()
     {
-        if (!GameManager.Instance.DoesPlayerPosessAbility(typeof(Shoes)))
+        if (!GameManager.Instance.DoesPlayerPosessAbility(typeof(Swim)))
         {
             StartCoroutine(StartDeathDelayCO(.25f));
         }
@@ -26,6 +26,5 @@ public class WaterTile : Tile
         yield return new WaitForSeconds(delay);
         GameManager.Instance.playerMovement.currentState = eState.death;
         SoundManager.Instance.PlayDeathSound();
-        GameManager.Instance.onDieOnLava();
     }
 }

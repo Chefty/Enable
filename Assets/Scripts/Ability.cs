@@ -18,10 +18,21 @@ public abstract class Ability : ScriptableObject
     {
         if (_ownProps == null)
         {
+            if (this.GetType() == typeof(Walk))
+            {
+                PlaceHolderProps = AbiltiesRotatedAssets.Instance.GetPlaceholderForDirection(((Walk)this).WalkDirection);
+            }
             _ownProps = Instantiate(PlaceHolderProps, tile);
         }
         else
         {
+            if (this.GetType() == typeof(Walk) && ((Walk)this).PlaceHolderProps != AbiltiesRotatedAssets.Instance.GetPlaceholderForDirection(((Walk)this).WalkDirection))
+            {
+                PlaceHolderProps = AbiltiesRotatedAssets.Instance.GetPlaceholderForDirection(((Walk)this).WalkDirection);
+                Destroy(_ownProps.gameObject);
+                _ownProps = Instantiate(PlaceHolderProps, tile);
+            }
+
             _ownProps.SetActive(true);
         }
 
