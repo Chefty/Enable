@@ -123,7 +123,14 @@ public class PlayerMovement : MonoBehaviour {
             Instantiate(Resources.Load("DeathParticles_lava"), transform);
             animator.SetBool(currentState.ToString(), true);
             StartCoroutine(MovePlayerLerpCO(transform.localPosition + new Vector3(0, -2f, 0), Vector3.zero, 3f));
-        } else {
+        }
+        else if (currentState == eState.swim && secondState == eState.death)
+        { //dying in water
+            Instantiate(Resources.Load("DeathParticles_water"), transform);
+            animator.SetBool(currentState.ToString(), true);
+            StartCoroutine(MovePlayerLerpCO(transform.localPosition + new Vector3(0, -2f, 0), Vector3.zero, 3f));
+        }
+        else {
             animator.SetBool(currentState.ToString(), true);
 
             yield return new WaitForSeconds(.5f);

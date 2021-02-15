@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour
     public float FadeDuration = 1f;
     AudioSource ostBroadcaster;
 
+    public bool isDead = false;
     Bounds _mapBounds;
 
     private void Awake()
@@ -90,6 +91,18 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            StartCoroutine(AsynReloadLevel());
+            // restart the level here
+            //LevelFlush();
+            //LevelReload();
+        }
+        if (isDead)
+        {
+            return;
+        }
+
         if (Player.gameObject.activeSelf)
         {
             for (int i = 0; i < PlayerAbilities.Count; i++)
@@ -98,13 +111,6 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            StartCoroutine(AsynReloadLevel());
-            // restart the level here
-            //LevelFlush();
-            //LevelReload();
-        }
     }
 
     #region LevelStartup
