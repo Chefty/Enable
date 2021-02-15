@@ -24,7 +24,6 @@ public class AbilitySlot : MonoBehaviour, IDropHandler {
             Ability tmpAbility = tileUI.ability;
             var PlayerUI = GetComponentInChildren<DragDrop>();
 
-            print("[OnDrop]->[tileUI][PlayerUI]" + tileUI.name + " " + PlayerUI.name);
             //var ContainedAbility = PlayerUI.ability;
             if (PlayerUI.ability == null)
                 GameManager.Instance.AddAbility(tileUI.ability);

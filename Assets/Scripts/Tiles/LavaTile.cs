@@ -26,6 +26,7 @@ public class LavaTile : Tile
         SoundManager.Instance.PlayDeathSound();
         GameManager.Instance.playerMovement.currentState = eState.death;
         GameManager.Instance.onDieOnLava();
+        GameManager.Instance.DisplayDeathScreen();
         GameManager.Instance.isDead = true;
     }
 }

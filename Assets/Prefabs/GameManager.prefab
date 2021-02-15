@@ -64,6 +64,9 @@ MonoBehaviour:
     StartPairs: []
     PlayerStartPosition: {x: 0, y: 0, z: 0}
     StartAbilities: []
+  FadeBlack: {fileID: 0}
+  FadeDuration: 1
+  isDead: 0
 --- !u!114 &2776474951608134684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,12 +83,20 @@ MonoBehaviour:
   - Direction: {x: -1, y: 0, z: 0}
     Arrow: {fileID: 21300000, guid: cf761aeadb28f4248a0043c338fd06ac, type: 3}
     keycode: 276
+    placeholder: {fileID: 3779246883820978302, guid: e7379ef0dc4a2124d9d55f9107aac3c5,
+      type: 3}
   - Direction: {x: 1, y: 0, z: 0}
     Arrow: {fileID: 21300000, guid: 97e8c1c0ac63d584287ba3ac3fbb0eed, type: 3}
     keycode: 275
+    placeholder: {fileID: 5099337818622356804, guid: 9e89956891797144cb1890f709228874,
+      type: 3}
   - Direction: {x: 0, y: 0, z: -1}
     Arrow: {fileID: 21300000, guid: 6ff8cedd8943d8449b208089c38a02c0, type: 3}
     keycode: 274
+    placeholder: {fileID: 6149179426058736902, guid: 1965dc61d9c39aa49a3586cea68ec2a3,
+      type: 3}
   - Direction: {x: 0, y: 0, z: 1}
     Arrow: {fileID: 21300000, guid: 0381973afae9d1e4fbed329091e3214c, type: 3}
     keycode: 273
+    placeholder: {fileID: 2049771985316688209, guid: c61d4138f7ec4ea419375a2253dbb9b2,
+      type: 3}

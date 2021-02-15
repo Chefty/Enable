@@ -4726,6 +4726,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4694118451199980086, guid: 6a2d955d22ca3f0438dd2761b0de8077,
+        type: 3}
+      propertyPath: grass
+      value: 
+      objectReference: {fileID: 2100000, guid: 40f0a6f8371e4634eb4386872271e802, type: 2}
     - target: {fileID: 4694118451199980087, guid: 6a2d955d22ca3f0438dd2761b0de8077,
         type: 3}
       propertyPath: m_Name
@@ -7926,6 +7931,11 @@ PrefabInstance:
       propertyPath: FadeBlack
       value: 
       objectReference: {fileID: 1982859535}
+    - target: {fileID: 6739023986334336773, guid: 12c0aaa14f393b84ab17be396e057154,
+        type: 3}
+      propertyPath: deathScreen
+      value: 
+      objectReference: {fileID: 2104211412}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12c0aaa14f393b84ab17be396e057154, type: 3}
 --- !u!1001 &741431969
@@ -17636,17 +17646,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e929bb659c0a22042afd40d21912f97d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e929bb659c0a22042afd40d21912f97d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e929bb659c0a22042afd40d21912f97d,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e929bb659c0a22042afd40d21912f97d,
         type: 3}
@@ -22271,6 +22281,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8932752202677209307, guid: 5ac8fb5c2c91020438cd425b0f0e9039,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8983720177116928017, guid: 5ac8fb5c2c91020438cd425b0f0e9039,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -23432,6 +23447,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3856778993613235792, guid: 3e7c56984542a264384df6635fd141fe,
     type: 3}
   m_PrefabInstance: {fileID: 2090816980}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &2104211412 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 8932752202677209307, guid: 5ac8fb5c2c91020438cd425b0f0e9039,
+    type: 3}
+  m_PrefabInstance: {fileID: 1982859533}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2104807458
 PrefabInstance:

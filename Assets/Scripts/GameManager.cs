@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] Image FadeBlack;
     public float FadeDuration = 1f;
+    public Canvas deathScreen;
+
     AudioSource ostBroadcaster;
 
     public bool isDead = false;
@@ -136,6 +138,11 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    public void DisplayDeathScreen()
+    {
+        deathScreen.enabled = true;
+    }
+
     public void AddSlot()
     {
         MaxAmountOfAbilities += 1;
@@ -190,8 +197,6 @@ public class GameManager : MonoBehaviour
     public void SwapAbility(Ability UIAbility)
     {
         Ability newAbility = _currentTile.TileOwnAbility;
-
-        print("[SwapAbility][UIAbility][newAbility]" + UIAbility.name + " " + newAbility.name);
 
         _currentTile.TileOwnAbility = UIAbility;
         _currentTile.DisplayAbility();
@@ -278,13 +283,10 @@ public class GameManager : MonoBehaviour
         // display swipe UI
         if (_currentTile.TileOwnAbility != null)
         {
-            print("CheckForCurrentTileAbility true " + _currentTile.TileOwnAbility);
             inventory.ShowHideSwapUI(true, _currentTile.TileOwnAbility);
         }
         else
         {
-            print("CheckForCurrentTileAbility false");
-
             inventory.ShowHideSwapUI(false, null);
         }
     }
@@ -308,8 +310,6 @@ public class GameManager : MonoBehaviour
         float time = 0;
         Quaternion fromAngle = mapRoot.rotation;
         Quaternion toAngle = Quaternion.Euler(mapRoot.eulerAngles + (Vector3.up * axisOrientation * 90f));
-
-        print(toAngle.eulerAngles + " " + mapRoot.eulerAngles + (mapRoot.eulerAngles + (Vector3.up * axisOrientation * 90f)));
 
         while (playerMovement.isLerping) { yield return new WaitForEndOfFrame(); }
 

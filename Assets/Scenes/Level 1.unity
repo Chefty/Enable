@@ -2081,6 +2081,11 @@ PrefabInstance:
       propertyPath: m_StitchLightmapSeams
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8950650966040154070, guid: c3957541a1a1e1941b671d4478dacac8,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3957541a1a1e1941b671d4478dacac8, type: 3}
 --- !u!1 &99646140
@@ -3303,6 +3308,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StitchLightmapSeams
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760019969238998590, guid: 412ac9eb8331f834da78b0bc0563be61,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8120515127817682923, guid: 412ac9eb8331f834da78b0bc0563be61,
         type: 3}
@@ -5184,6 +5194,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StitchLightmapSeams
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888538694194059768, guid: 105ee3f716bd8a54e9cc008515ebe35d,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 105ee3f716bd8a54e9cc008515ebe35d, type: 3}
@@ -7376,6 +7391,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StitchLightmapSeams
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950650966040154070, guid: c3957541a1a1e1941b671d4478dacac8,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3957541a1a1e1941b671d4478dacac8, type: 3}
@@ -9724,6 +9744,11 @@ PrefabInstance:
       propertyPath: m_StitchLightmapSeams
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1257346485451075620, guid: 8b1b92f5a31436d42b8a92c8713749b8,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b1b92f5a31436d42b8a92c8713749b8, type: 3}
 --- !u!1001 &473700596
@@ -11559,6 +11584,11 @@ PrefabInstance:
       propertyPath: m_StitchLightmapSeams
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8950650966040154070, guid: c3957541a1a1e1941b671d4478dacac8,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3957541a1a1e1941b671d4478dacac8, type: 3}
 --- !u!1 &571324713
@@ -12385,6 +12415,11 @@ PrefabInstance:
       propertyPath: m_StitchLightmapSeams
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5924756655712996287, guid: 95dfd59ed4da5f949b2b92176564efdc,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95dfd59ed4da5f949b2b92176564efdc, type: 3}
 --- !u!4 &603415750 stripped
@@ -12644,6 +12679,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StitchLightmapSeams
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257346485451075620, guid: 8b1b92f5a31436d42b8a92c8713749b8,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b1b92f5a31436d42b8a92c8713749b8, type: 3}
@@ -13646,6 +13686,11 @@ PrefabInstance:
       propertyPath: m_StitchLightmapSeams
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8950650966040154070, guid: c3957541a1a1e1941b671d4478dacac8,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3957541a1a1e1941b671d4478dacac8, type: 3}
 --- !u!1 &710918283
@@ -13899,6 +13944,11 @@ PrefabInstance:
       propertyPath: m_StitchLightmapSeams
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8950650966040154070, guid: c3957541a1a1e1941b671d4478dacac8,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3957541a1a1e1941b671d4478dacac8, type: 3}
 --- !u!1001 &725674832
@@ -13912,6 +13962,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StitchLightmapSeams
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760019969238998590, guid: 412ac9eb8331f834da78b0bc0563be61,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8120515127817682923, guid: 412ac9eb8331f834da78b0bc0563be61,
         type: 3}
@@ -15160,6 +15215,11 @@ PrefabInstance:
       propertyPath: m_StitchLightmapSeams
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1888538694194059768, guid: 105ee3f716bd8a54e9cc008515ebe35d,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 105ee3f716bd8a54e9cc008515ebe35d, type: 3}
 --- !u!4 &787339508 stripped
@@ -15752,6 +15812,11 @@ PrefabInstance:
       propertyPath: m_StitchLightmapSeams
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8425696557055426338, guid: 06a234f68935b8d409e4169fbf5f28ea,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06a234f68935b8d409e4169fbf5f28ea, type: 3}
 --- !u!4 &833066500 stripped
@@ -16316,6 +16381,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StitchLightmapSeams
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924756655712996287, guid: 95dfd59ed4da5f949b2b92176564efdc,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95dfd59ed4da5f949b2b92176564efdc, type: 3}
@@ -17494,6 +17564,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StitchLightmapSeams
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3041976053068238613, guid: bc25de35e1d896044bab4440947e6e8d,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3546507098052308672, guid: bc25de35e1d896044bab4440947e6e8d,
         type: 3}
@@ -20876,6 +20951,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StitchLightmapSeams
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301269641939035842, guid: daac5b495fe335d4fb8182c39573d565,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: daac5b495fe335d4fb8182c39573d565, type: 3}
@@ -25244,6 +25324,11 @@ PrefabInstance:
       propertyPath: m_StitchLightmapSeams
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5924756655712996287, guid: 95dfd59ed4da5f949b2b92176564efdc,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95dfd59ed4da5f949b2b92176564efdc, type: 3}
 --- !u!1 &1314722684
@@ -26768,6 +26853,11 @@ PrefabInstance:
       propertyPath: m_StitchLightmapSeams
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5924756655712996287, guid: 95dfd59ed4da5f949b2b92176564efdc,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95dfd59ed4da5f949b2b92176564efdc, type: 3}
 --- !u!1001 &1423696116
@@ -26846,6 +26936,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StitchLightmapSeams
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950650966040154070, guid: c3957541a1a1e1941b671d4478dacac8,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3957541a1a1e1941b671d4478dacac8, type: 3}
@@ -27340,6 +27435,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StitchLightmapSeams
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3041976053068238613, guid: bc25de35e1d896044bab4440947e6e8d,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3546507098052308672, guid: bc25de35e1d896044bab4440947e6e8d,
         type: 3}
@@ -28302,6 +28402,11 @@ PrefabInstance:
       propertyPath: m_StitchLightmapSeams
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8950650966040154070, guid: c3957541a1a1e1941b671d4478dacac8,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3957541a1a1e1941b671d4478dacac8, type: 3}
 --- !u!1001 &1519835298
@@ -28395,6 +28500,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StitchLightmapSeams
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257346485451075620, guid: 8b1b92f5a31436d42b8a92c8713749b8,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b1b92f5a31436d42b8a92c8713749b8, type: 3}
@@ -29287,6 +29397,11 @@ PrefabInstance:
       propertyPath: m_StitchLightmapSeams
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8950650966040154070, guid: c3957541a1a1e1941b671d4478dacac8,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3957541a1a1e1941b671d4478dacac8, type: 3}
 --- !u!1 &1593638446
@@ -29938,6 +30053,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StitchLightmapSeams
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837632424088550170, guid: d567bec19c6b1774d92aee6f39aac74a,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8630059457240242895, guid: d567bec19c6b1774d92aee6f39aac74a,
         type: 3}
@@ -31134,6 +31254,11 @@ PrefabInstance:
       propertyPath: m_StitchLightmapSeams
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1888538694194059768, guid: 105ee3f716bd8a54e9cc008515ebe35d,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 105ee3f716bd8a54e9cc008515ebe35d, type: 3}
 --- !u!1 &1722032932
@@ -31305,6 +31430,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StitchLightmapSeams
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760019969238998590, guid: 412ac9eb8331f834da78b0bc0563be61,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8120515127817682923, guid: 412ac9eb8331f834da78b0bc0563be61,
         type: 3}
@@ -33546,6 +33676,11 @@ PrefabInstance:
       propertyPath: m_StitchLightmapSeams
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7760019969238998590, guid: 412ac9eb8331f834da78b0bc0563be61,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8120515127817682923, guid: 412ac9eb8331f834da78b0bc0563be61,
         type: 3}
       propertyPath: m_Name
@@ -35590,6 +35725,11 @@ PrefabInstance:
       propertyPath: m_StitchLightmapSeams
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8950650966040154070, guid: c3957541a1a1e1941b671d4478dacac8,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3957541a1a1e1941b671d4478dacac8, type: 3}
 --- !u!1 &1996507136
@@ -35682,6 +35822,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StitchLightmapSeams
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760019969238998590, guid: 412ac9eb8331f834da78b0bc0563be61,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8120515127817682923, guid: 412ac9eb8331f834da78b0bc0563be61,
         type: 3}

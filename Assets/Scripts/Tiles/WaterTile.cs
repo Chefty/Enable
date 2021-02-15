@@ -28,5 +28,6 @@ public class WaterTile : Tile
         SoundManager.Instance.PlayDeathSound();
         GameManager.Instance.onDieOnLava();
         GameManager.Instance.isDead = true;
+        GameManager.Instance.DisplayDeathScreen();
     }
 }

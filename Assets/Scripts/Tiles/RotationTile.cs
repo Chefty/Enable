@@ -31,8 +31,6 @@ public class RotationTile : Tile
             return;
         }
 
-        print("RotationTile.TileBehaviour");
-        print("+--------------+");
         GameManager.Instance.RotateLevel(RotationDirection);
 
         rend.sharedMaterial = grass;
