@@ -2251,6 +2251,16 @@ PrefabInstance:
       propertyPath: FadeBlack
       value: 
       objectReference: {fileID: 1982859535}
+    - target: {fileID: 6739023986334336773, guid: 12c0aaa14f393b84ab17be396e057154,
+        type: 3}
+      propertyPath: deathScreen
+      value: 
+      objectReference: {fileID: 1982859537}
+    - target: {fileID: 6739023986334336773, guid: 12c0aaa14f393b84ab17be396e057154,
+        type: 3}
+      propertyPath: endScreen
+      value: 
+      objectReference: {fileID: 1982859538}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12c0aaa14f393b84ab17be396e057154, type: 3}
 --- !u!1001 &760210057
@@ -6548,6 +6558,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959ac9a28b6f72840ae61fb36efd4977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!223 &1982859537 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 8932752202677209307, guid: 5ac8fb5c2c91020438cd425b0f0e9039,
+    type: 3}
+  m_PrefabInstance: {fileID: 1982859533}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &1982859538 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 5617736709559696458, guid: 5ac8fb5c2c91020438cd425b0f0e9039,
+    type: 3}
+  m_PrefabInstance: {fileID: 1982859533}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1983674659
 PrefabInstance:
   m_ObjectHideFlags: 0
