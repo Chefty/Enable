@@ -37,7 +37,6 @@ public class Tile : MonoBehaviour
 
     public virtual bool CheckTileAccessibility()
     {
-        print("Walking next on tile " + name);
         return true;
     }
 
@@ -48,26 +47,13 @@ public class Tile : MonoBehaviour
     public virtual void TileBehaviour()
     {
         // do something..
-        print("base.TileBehaviour");
     }
 
     private void OnTriggerEnter(Collider other)
     {
         GameManager.Instance.SetCurrentTile(this);
 
-        print("OnTriggerEnter");
         TileBehaviour();
-        //Not taking ability automatically for now
-        /*if (TileOwnAbility != null)
-        {
-            if (GameManager.Instance.AddAbility(TileOwnAbility))
-            {
-                TileOwnAbility.AbilityTaken();
-                TileOwnAbility = null;
-
-                DebugDisplay();
-            }
-        }*/
     }
 
     public virtual void DebugDisplay()

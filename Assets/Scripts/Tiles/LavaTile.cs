@@ -20,8 +20,13 @@ public class LavaTile : Tile
     }
 
     private IEnumerator StartDeathDelayCO(float delay) {
+
         yield return new WaitForSeconds(delay);
+
+        SoundManager.Instance.PlayDeathSound();
         GameManager.Instance.playerMovement.currentState = eState.death;
         GameManager.Instance.onDieOnLava();
+        GameManager.Instance.DisplayDeathScreen();
+        GameManager.Instance.isDead = true;
     }
 }

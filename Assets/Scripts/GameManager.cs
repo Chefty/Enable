@@ -1,9 +1,11 @@
 ﻿using System.Linq;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using System;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 [Serializable]
 public class TileAbilityPair
@@ -44,6 +46,13 @@ public class GameManager : MonoBehaviour
 
     public StartInfos _levelAwakeState;
 
+    [SerializeField] Image FadeBlack;
+    public float FadeDuration = 1f;
+    public Canvas deathScreen;
+
+    AudioSource ostBroadcaster;
+
+    public bool isDead = false;
     Bounds _mapBounds;
 
     private void Awake()
@@ -54,10 +63,12 @@ public class GameManager : MonoBehaviour
         camUI = GameObject.Find("WorldUI Camera").GetComponent<MultipleTargetsCamera>();
 
         camUI.offset = camPlayer.offset;
+        ostBroadcaster = FindObjectOfType<AudioSource>();
     }
 
     private void Start()
     {
+        PrepareLoadLevel();
         CopyScriptableObjects();
         // we save the level infos
         RegisterLevelStartInformations();
@@ -82,6 +93,18 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            StartCoroutine(AsynReloadLevel());
+            // restart the level here
+            //LevelFlush();
+            //LevelReload();
+        }
+        if (isDead)
+        {
+            return;
+        }
+
         if (Player.gameObject.activeSelf)
         {
             for (int i = 0; i < PlayerAbilities.Count; i++)
@@ -90,13 +113,6 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            // restart the level here
-            //LevelFlush();
-            //LevelReload();
-        }
     }
 
     #region LevelStartup
@@ -122,6 +138,11 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    public void DisplayDeathScreen()
+    {
+        deathScreen.enabled = true;
+    }
+
     public void AddSlot()
     {
         MaxAmountOfAbilities += 1;
@@ -140,7 +161,6 @@ public class GameManager : MonoBehaviour
     {
         Tile tile = GetTile(pos);
 
-        print("GetTileAccessibility[tile]" + (tile == null) + " " + tile.name);
         if (tile != null)
         {
             return tile.CheckTileAccessibility();
@@ -177,8 +197,6 @@ public class GameManager : MonoBehaviour
     public void SwapAbility(Ability UIAbility)
     {
         Ability newAbility = _currentTile.TileOwnAbility;
-
-        print("[SwapAbility][UIAbility][newAbility]" + UIAbility.name + " " + newAbility.name);
 
         _currentTile.TileOwnAbility = UIAbility;
         _currentTile.DisplayAbility();
@@ -265,13 +283,10 @@ public class GameManager : MonoBehaviour
         // display swipe UI
         if (_currentTile.TileOwnAbility != null)
         {
-            print("CheckForCurrentTileAbility true " + _currentTile.TileOwnAbility);
             inventory.ShowHideSwapUI(true, _currentTile.TileOwnAbility);
         }
         else
         {
-            print("CheckForCurrentTileAbility false");
-
             inventory.ShowHideSwapUI(false, null);
         }
     }
@@ -295,8 +310,6 @@ public class GameManager : MonoBehaviour
         float time = 0;
         Quaternion fromAngle = mapRoot.rotation;
         Quaternion toAngle = Quaternion.Euler(mapRoot.eulerAngles + (Vector3.up * axisOrientation * 90f));
-
-        print(toAngle.eulerAngles + " " + mapRoot.eulerAngles + (mapRoot.eulerAngles + (Vector3.up * axisOrientation * 90f)));
 
         while (playerMovement.isLerping) { yield return new WaitForEndOfFrame(); }
 
@@ -527,14 +540,57 @@ public class GameManager : MonoBehaviour
 
     #region Level reload
 
-    private void LevelReload()
+    public void PrepareReloadLevel()
     {
-        // to reload
-        print("LevelReload");
-        ReFillPlayerAbilities();
-        ReFillTilesWithAbility();
-        FillUI();
-        RePlacePlayer();
+        StartCoroutine(AsynReloadLevel());
+    }
+    public void PrepareLoadLevel()
+    {
+        StartCoroutine(AsynLoadLevel());
+    }
+
+    public void PrepareLoadNextLevel()
+    {
+        StartCoroutine(AsyncLoadNextLevel());
+    }
+
+    IEnumerator AsynReloadLevel()
+    {
+        FadeBlack.DOFade(1f, FadeDuration/8f).SetEase(Ease.OutExpo);
+        ostBroadcaster.DOFade(0f, FadeDuration).SetEase(Ease.InCirc);
+
+        yield return new WaitForSeconds(FadeDuration);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    IEnumerator AsynLoadLevel()
+    {
+        FadeBlack.transform.parent.gameObject.SetActive(true);
+
+        FadeBlack.color = new Color(
+            FadeBlack.color.r,
+            FadeBlack.color.g,
+            FadeBlack.color.b,
+            1f);
+        ostBroadcaster.DOFade(1f, FadeDuration).SetEase(Ease.InCirc);
+        FadeBlack.DOFade(0f, FadeDuration).SetEase(Ease.InCirc);
+
+        yield return new WaitForSeconds(FadeDuration);
+
+        FadeBlack.transform.parent.gameObject.SetActive(false);
+    }
+
+    IEnumerator AsyncLoadNextLevel()
+    {
+        FadeBlack.transform.parent.gameObject.SetActive(true);
+
+        FadeBlack.DOFade(1f, FadeDuration).SetEase(Ease.OutExpo);
+        ostBroadcaster.DOFade(0f, FadeDuration).SetEase(Ease.InCirc);
+
+        yield return new WaitForSeconds(FadeDuration);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void RePlacePlayer()

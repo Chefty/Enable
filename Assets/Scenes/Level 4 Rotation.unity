@@ -398,6 +398,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -952,6 +977,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1186,6 +1236,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1763,6 +1838,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1933,6 +2033,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2097,6 +2222,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2572,6 +2722,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3067,6 +3242,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3313,6 +3513,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3959,6 +4184,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4480,6 +4730,11 @@ PrefabInstance:
       propertyPath: MapRotationSpeed
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6739023986334336773, guid: 12c0aaa14f393b84ab17be396e057154,
+        type: 3}
+      propertyPath: FadeBlack
+      value: 
+      objectReference: {fileID: 1982859537}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12c0aaa14f393b84ab17be396e057154, type: 3}
 --- !u!1001 &745386743
@@ -6301,6 +6556,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6571,6 +6851,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7393,6 +7698,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7751,6 +8081,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7831,6 +8186,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7911,6 +8291,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8684,6 +9089,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8844,6 +9274,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9444,6 +9899,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4694118451199980086, guid: 6a2d955d22ca3f0438dd2761b0de8077,
+        type: 3}
+      propertyPath: grass
+      value: 
+      objectReference: {fileID: 2100000, guid: 40f0a6f8371e4634eb4386872271e802, type: 2}
     - target: {fileID: 4694118451199980087, guid: 6a2d955d22ca3f0438dd2761b0de8077,
         type: 3}
       propertyPath: m_Name
@@ -9808,6 +10268,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9888,6 +10373,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1293815214}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10284,6 +10794,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerV2
       objectReference: {fileID: 0}
+    - target: {fileID: 3675583310475750254, guid: 5ac8fb5c2c91020438cd425b0f0e9039,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3675583310475750255, guid: 5ac8fb5c2c91020438cd425b0f0e9039,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10509,6 +11024,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 959ac9a28b6f72840ae61fb36efd4977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1982859537 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3056679974828256404, guid: 5ac8fb5c2c91020438cd425b0f0e9039,
+    type: 3}
+  m_PrefabInstance: {fileID: 1982859533}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1986137620 stripped

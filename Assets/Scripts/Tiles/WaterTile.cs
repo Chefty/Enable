@@ -13,8 +13,21 @@ public class WaterTile : Tile
         return "water";
     }
 
-    public override void DebugDisplay()
+    public override void TileBehaviour()
     {
+        if (!GameManager.Instance.DoesPlayerPosessAbility(typeof(Swim)))
+        {
+            StartCoroutine(StartDeathDelayCO(.25f));
+        }
+    }
 
+    private IEnumerator StartDeathDelayCO(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        GameManager.Instance.playerMovement.secondState = eState.death;
+        SoundManager.Instance.PlayDeathSound();
+        GameManager.Instance.onDieOnLava();
+        GameManager.Instance.isDead = true;
+        GameManager.Instance.DisplayDeathScreen();
     }
 }
