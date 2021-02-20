@@ -23,7 +23,7 @@ public class LavaTile : Tile
 
         yield return new WaitForSeconds(delay);
 
-        SoundManager.Instance.PlayDeathSound();
+        SoundFxManager.Instance.PlayDeathSound();
         GameManager.Instance.playerMovement.currentState = eState.death;
         GameManager.Instance.onDieOnLava();
         GameManager.Instance.DisplayDeathScreen();

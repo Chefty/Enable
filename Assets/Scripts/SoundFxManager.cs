@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+public class SoundFxManager : MonoBehaviour
 {
-    public static SoundManager Instance;
+    public static SoundFxManager Instance;
 
     public AudioClip[] Death;
     public AudioClip[] Pick;

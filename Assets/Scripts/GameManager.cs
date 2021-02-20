@@ -49,8 +49,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Image FadeBlack;
     public float FadeDuration = 1f;
     public Canvas deathScreen;
-
-    AudioSource ostBroadcaster;
+    public Canvas endScreen;
 
     public bool isDead = false;
     Bounds _mapBounds;
@@ -63,7 +62,6 @@ public class GameManager : MonoBehaviour
         camUI = GameObject.Find("WorldUI Camera").GetComponent<MultipleTargetsCamera>();
 
         camUI.offset = camPlayer.offset;
-        ostBroadcaster = FindObjectOfType<AudioSource>();
     }
 
     private void Start()
@@ -557,7 +555,6 @@ public class GameManager : MonoBehaviour
     IEnumerator AsynReloadLevel()
     {
         FadeBlack.DOFade(1f, FadeDuration/8f).SetEase(Ease.OutExpo);
-        ostBroadcaster.DOFade(0f, FadeDuration).SetEase(Ease.InCirc);
 
         yield return new WaitForSeconds(FadeDuration);
 
@@ -573,7 +570,6 @@ public class GameManager : MonoBehaviour
             FadeBlack.color.g,
             FadeBlack.color.b,
             1f);
-        ostBroadcaster.DOFade(1f, FadeDuration).SetEase(Ease.InCirc);
         FadeBlack.DOFade(0f, FadeDuration).SetEase(Ease.InCirc);
 
         yield return new WaitForSeconds(FadeDuration);
@@ -586,11 +582,14 @@ public class GameManager : MonoBehaviour
         FadeBlack.transform.parent.gameObject.SetActive(true);
 
         FadeBlack.DOFade(1f, FadeDuration).SetEase(Ease.OutExpo);
-        ostBroadcaster.DOFade(0f, FadeDuration).SetEase(Ease.InCirc);
 
         yield return new WaitForSeconds(FadeDuration);
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCount)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        else
+            endScreen.enabled = true;
+
     }
 
     private void RePlacePlayer()

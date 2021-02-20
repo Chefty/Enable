@@ -6,6 +6,7 @@ TagManager:
   tags:
   - InventoryAbility
   - TileAbility
+  - Music
   layers:
   - Default
   - TransparentFX
