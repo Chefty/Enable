@@ -585,7 +585,7 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(FadeDuration);
 
-        if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCount)
+        if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1)
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         else
             endScreen.enabled = true;
