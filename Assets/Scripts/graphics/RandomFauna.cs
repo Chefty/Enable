@@ -35,6 +35,8 @@ public class RandomFauna : MonoBehaviour
             filter.sharedMesh = faunaCube.GetComponent<MeshFilter>().sharedMesh;
             var rend = fcube.GetComponent<MeshRenderer>();
             rend.sharedMaterial = Grass;
+
+            rend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
         }
 
         int rockAmount = Random.Range((int)minMaxRockAmount.x, (int)minMaxRockAmount.y);
@@ -55,6 +57,7 @@ public class RandomFauna : MonoBehaviour
             filter.sharedMesh = faunaCube.GetComponent<MeshFilter>().sharedMesh;
             var rend = fcube.GetComponent<MeshRenderer>();
             rend.sharedMaterial = Rock;
+            rend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
         }
     }
 }

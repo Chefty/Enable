@@ -56,8 +56,8 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
-    m_BakeResolution: 40
-    m_AtlasSize: 1024
+    m_BakeResolution: 10
+    m_AtlasSize: 128
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -667,6 +667,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -727,6 +752,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_IsTrigger
@@ -741,6 +771,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -800,6 +855,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -895,6 +955,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -954,6 +1039,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -1149,6 +1239,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1208,6 +1323,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -1783,6 +1903,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1842,6 +1987,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -1964,6 +2114,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2023,6 +2198,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -2215,6 +2395,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2275,6 +2480,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_IsTrigger
@@ -2289,6 +2499,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2348,6 +2583,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -2552,6 +2792,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2590,7 +2855,7 @@ PrefabInstance:
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 50
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -2611,6 +2876,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -2966,6 +3236,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3025,6 +3320,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -3217,7 +3517,6 @@ Transform:
   - {fileID: 5721034}
   - {fileID: 1264760294}
   - {fileID: 992248347}
-  - {fileID: 1773217239}
   - {fileID: 261229116}
   - {fileID: 1175197127}
   - {fileID: 661187420}
@@ -3672,6 +3971,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3731,6 +4055,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -4646,6 +4975,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4705,6 +5059,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -4810,6 +5169,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4870,6 +5254,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_IsTrigger
@@ -4884,6 +5273,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4943,6 +5357,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -5118,6 +5537,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5177,6 +5621,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -5804,6 +6253,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5863,6 +6337,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -6091,6 +6570,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6129,7 +6633,7 @@ PrefabInstance:
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 49
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -6150,6 +6654,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -6702,6 +7211,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6761,6 +7295,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -7306,6 +7845,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7366,6 +7930,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_IsTrigger
@@ -7386,6 +7955,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7446,12 +8040,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477405, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: TileOwnAbility
       value: 
-      objectReference: {fileID: 11400000, guid: 5f6d2e0b89e9ed14fb4443b59c61ba04,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_IsTrigger
@@ -8127,6 +8725,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8187,6 +8810,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_IsTrigger
@@ -8201,6 +8829,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8260,6 +8913,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -8535,6 +9193,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8594,6 +9277,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -9317,6 +10005,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9355,7 +10068,7 @@ PrefabInstance:
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 48
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -9376,6 +10089,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -9481,6 +10199,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9540,6 +10283,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -10174,6 +10922,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10233,6 +11006,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -10518,6 +11296,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10577,6 +11380,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -10688,6 +11496,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10747,6 +11580,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -11874,6 +12712,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11934,6 +12797,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_IsTrigger
@@ -11948,6 +12816,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12008,6 +12901,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_IsTrigger
@@ -12034,6 +12932,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12093,6 +13016,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -13499,6 +14427,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13558,6 +14511,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -13753,6 +14711,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13813,6 +14796,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_IsTrigger
@@ -13827,6 +14815,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13886,6 +14899,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -14061,6 +15079,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 260547129859640285, guid: 6a2d955d22ca3f0438dd2761b0de8077,
+        type: 3}
+      propertyPath: Grass
+      value: 
+      objectReference: {fileID: 2100000, guid: 20dbe877b0a43c04280ba68041d77a96, type: 2}
+    - target: {fileID: 260547129859640285, guid: 6a2d955d22ca3f0438dd2761b0de8077,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
+    - target: {fileID: 260547129859640285, guid: 6a2d955d22ca3f0438dd2761b0de8077,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 260547129859640285, guid: 6a2d955d22ca3f0438dd2761b0de8077,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 260547129859640285, guid: 6a2d955d22ca3f0438dd2761b0de8077,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 260547129859640285, guid: 6a2d955d22ca3f0438dd2761b0de8077,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 260547129859640285, guid: 6a2d955d22ca3f0438dd2761b0de8077,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3413057220569078991, guid: 6a2d955d22ca3f0438dd2761b0de8077,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094548781186325583, guid: 6a2d955d22ca3f0438dd2761b0de8077,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4694118451199980082, guid: 6a2d955d22ca3f0438dd2761b0de8077,
         type: 3}
       propertyPath: m_IsTrigger
@@ -14121,10 +15184,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4694118451199980086, guid: 6a2d955d22ca3f0438dd2761b0de8077,
+        type: 3}
+      propertyPath: grass
+      value: 
+      objectReference: {fileID: 2100000, guid: 40f0a6f8371e4634eb4386872271e802, type: 2}
     - target: {fileID: 4694118451199980087, guid: 6a2d955d22ca3f0438dd2761b0de8077,
         type: 3}
       propertyPath: m_Name
       value: TileRotateClockwise 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694118451199980087, guid: 6a2d955d22ca3f0438dd2761b0de8077,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a2d955d22ca3f0438dd2761b0de8077, type: 3}
@@ -14501,6 +15574,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14560,6 +15658,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -14665,6 +15768,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14725,6 +15853,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_IsTrigger
@@ -14739,6 +15872,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14799,6 +15957,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_IsTrigger
@@ -14813,6 +15976,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14872,6 +16060,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -15133,6 +16326,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15192,6 +16410,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -15791,7 +17014,7 @@ PrefabInstance:
     - target: {fileID: 4957036959605425792, guid: 67d0a5fc210fef548b5987fed9d38964,
         type: 3}
       propertyPath: m_RootOrder
-      value: 51
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4957036959605425792, guid: 67d0a5fc210fef548b5987fed9d38964,
         type: 3}
@@ -15823,6 +17046,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: portal001
       objectReference: {fileID: 0}
+    - target: {fileID: 6310639919163627828, guid: 67d0a5fc210fef548b5987fed9d38964,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 40f0a6f8371e4634eb4386872271e802, type: 2}
+    - target: {fileID: 6958286308084227525, guid: 67d0a5fc210fef548b5987fed9d38964,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67d0a5fc210fef548b5987fed9d38964, type: 3}
 --- !u!4 &1719686514 stripped
@@ -15831,6 +17064,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1719686513}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1719686515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6310639919163627787, guid: 67d0a5fc210fef548b5987fed9d38964,
+    type: 3}
+  m_PrefabInstance: {fileID: 1719686513}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1719686516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719686515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c99c9855b69dea34fa977d2b00186640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faunaCube: {fileID: 7399428475371519865, guid: 34a1eb52e4c2e6e4dbad08da2999fc1f,
+    type: 3}
+  Grass: {fileID: 2100000, guid: 20dbe877b0a43c04280ba68041d77a96, type: 2}
+  Rock: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
+  minObjects: 10
+  maxObjects: 35
+  minMaxGrassSize: {x: 0.05, y: 0.15}
+  minMaxRockAmount: {x: 3, y: 11}
+  minMaxRockSize: {x: 0.05, y: 0.14}
 --- !u!1001 &1727533277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16078,6 +17338,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16137,6 +17422,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -16315,86 +17605,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1770362922}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1773217238
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 307546132}
-    m_Modifications:
-    - target: {fileID: 58656386745809622, guid: 95e35b3a74f70df4fbcaf579180e11ce,
-        type: 3}
-      propertyPath: m_Name
-      value: EndOfLevelTile
-      objectReference: {fileID: 0}
-    - target: {fileID: 58656386745809623, guid: 95e35b3a74f70df4fbcaf579180e11ce,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 58656386745809623, guid: 95e35b3a74f70df4fbcaf579180e11ce,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 58656386745809623, guid: 95e35b3a74f70df4fbcaf579180e11ce,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 58656386745809623, guid: 95e35b3a74f70df4fbcaf579180e11ce,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 58656386745809623, guid: 95e35b3a74f70df4fbcaf579180e11ce,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 58656386745809623, guid: 95e35b3a74f70df4fbcaf579180e11ce,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 58656386745809623, guid: 95e35b3a74f70df4fbcaf579180e11ce,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 58656386745809623, guid: 95e35b3a74f70df4fbcaf579180e11ce,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 47
-      objectReference: {fileID: 0}
-    - target: {fileID: 58656386745809623, guid: 95e35b3a74f70df4fbcaf579180e11ce,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 58656386745809623, guid: 95e35b3a74f70df4fbcaf579180e11ce,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 58656386745809623, guid: 95e35b3a74f70df4fbcaf579180e11ce,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 58656386745809642, guid: 95e35b3a74f70df4fbcaf579180e11ce,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 95e35b3a74f70df4fbcaf579180e11ce, type: 3}
---- !u!4 &1773217239 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 58656386745809623, guid: 95e35b3a74f70df4fbcaf579180e11ce,
-    type: 3}
-  m_PrefabInstance: {fileID: 1773217238}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1778715829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16402,6 +17612,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16461,6 +17696,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -16646,6 +17886,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16705,6 +17970,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -17160,6 +18430,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17219,6 +18514,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -17847,6 +19147,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17906,6 +19231,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -18748,6 +20078,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18808,6 +20163,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477405, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: TileOwnAbility
+      value: 
+      objectReference: {fileID: 11400000, guid: 096b95044210bb34dab0c1bc745f8552,
+        type: 2}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_IsTrigger
@@ -19269,6 +20635,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19328,6 +20719,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -20139,6 +21535,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20198,6 +21619,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
@@ -20558,6 +21984,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307546132}
     m_Modifications:
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 760012428452802639, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 7323348331165477401, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20617,6 +22068,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323348331165477402, guid: 1cf1697abff6caf41b825dae80c1ff0a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
