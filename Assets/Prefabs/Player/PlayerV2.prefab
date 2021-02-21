@@ -7810,6 +7810,16 @@ PrefabInstance:
     - target: {fileID: 1966100379911973166, guid: aaccd6dba8ccfb24ebdac3c3dd505eba,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702949548607320104, guid: aaccd6dba8ccfb24ebdac3c3dd505eba,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702949548607320104, guid: aaccd6dba8ccfb24ebdac3c3dd505eba,
+        type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2741639389236855900, guid: aaccd6dba8ccfb24ebdac3c3dd505eba,
@@ -7917,7 +7927,8 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7820942605359566145, guid: aaccd6dba8ccfb24ebdac3c3dd505eba, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: aaccd6dba8ccfb24ebdac3c3dd505eba, type: 3}
 --- !u!224 &3018834559062251744 stripped
 RectTransform:

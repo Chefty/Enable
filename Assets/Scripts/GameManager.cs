@@ -425,7 +425,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator AsynReloadLevel()
     {
-        FadeBlack.DOFade(1f, FadeDuration/8f).SetEase(Ease.OutExpo);
+        FadeBlack.DOFade(1f, FadeDuration/8f).SetEase(Ease.InOutFlash);
 
         yield return new WaitForSeconds(FadeDuration);
 
@@ -441,18 +441,16 @@ public class GameManager : MonoBehaviour
             FadeBlack.color.g,
             FadeBlack.color.b,
             1f);
-        FadeBlack.DOFade(0f, FadeDuration).SetEase(Ease.InCirc);
+        FadeBlack.DOFade(0f, FadeDuration).SetEase(Ease.InOutFlash);
 
-        yield return new WaitForSeconds(FadeDuration);
-
-        FadeBlack.transform.parent.gameObject.SetActive(false);
+        yield return null;
     }
 
     IEnumerator AsyncLoadNextLevel()
     {
         FadeBlack.transform.parent.gameObject.SetActive(true);
 
-        FadeBlack.DOFade(1f, FadeDuration).SetEase(Ease.OutExpo);
+        FadeBlack.DOFade(1f, FadeDuration).SetEase(Ease.InOutFlash);
 
         yield return new WaitForSeconds(FadeDuration);
 

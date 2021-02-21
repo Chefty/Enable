@@ -147,7 +147,8 @@ public class PlayerMovement : MonoBehaviour {
 
         while (time < duration) {
             transform.localPosition = Vector3.Lerp(startPosition, targetPosition, time / duration);
-            transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.LookRotation(targetRotation, Vector3.up), rotationSmoothFactor * Time.deltaTime);
+            if (targetRotation != Vector3.zero)
+                transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.LookRotation(targetRotation, Vector3.up), rotationSmoothFactor * Time.deltaTime);
             time += Time.deltaTime;
             yield return null;
         }

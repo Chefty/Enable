@@ -16,7 +16,6 @@ public class SoundtrackManager : MonoBehaviour
     private bool isMuted;
 
     private void Awake() {
-        Debug.Log("01 Awake");
         audioSource = GetComponent<AudioSource>();
         if (SceneManager.GetActiveScene().buildIndex != previousLevel ||
             SceneManager.GetActiveScene().buildIndex == 0)
@@ -37,7 +36,6 @@ public class SoundtrackManager : MonoBehaviour
     void OnDisable() => SceneManager.sceneLoaded -= OnLevelFinishedLoading;
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode) {
-        Debug.Log(SceneManager.GetActiveScene().buildIndex + " - " + previousLevel);
         AudioMuteHandler();
         InitializeAllAudioSources();
         DisplayProperMuteIcon();
@@ -56,7 +54,6 @@ public class SoundtrackManager : MonoBehaviour
 
 
     private void OSTHandler() {
-        Debug.Log("01.1 OSTHandler");
         ostArray = Resources.LoadAll<AudioClip>("OST");
         string sceneNameLowerCase = SceneManager.GetActiveScene().name.ToLower();
         //looking for the dedicated level ost
@@ -75,7 +72,6 @@ public class SoundtrackManager : MonoBehaviour
     }
 
     private void AudioMuteHandler() {
-        Debug.Log("03 AudioHandler");
         GameObject audioMute = GameObject.FindGameObjectWithTag("AudioMute");
 
         if (audioMute) {
@@ -86,7 +82,6 @@ public class SoundtrackManager : MonoBehaviour
 
     void InitializeAllAudioSources() 
     {
-        Debug.Log("04 InitializeAllAudioSources");
         var sources = FindObjectsOfType<AudioSource>();
 
         foreach (var item in sources)
@@ -119,13 +114,11 @@ public class SoundtrackManager : MonoBehaviour
 
     void DisplayProperMuteIcon() 
     {
-        print("DisplayProperMuteIcon " + isMuted);
         AudioToggle.isOn = isMuted;
     }
 
     void MuteAudio(bool value)
     {
-        print("MuteAudio" + value);
         audioSource.volume = value ? .0f : .5f;
         isMuted = value;
         InitializeAllAudioSources();

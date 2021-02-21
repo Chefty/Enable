@@ -65,7 +65,9 @@ MonoBehaviour:
     PlayerStartPosition: {x: 0, y: 0, z: 0}
     StartAbilities: []
   FadeBlack: {fileID: 0}
-  FadeDuration: 1
+  FadeDuration: 0.5
+  deathScreen: {fileID: 0}
+  endScreen: {fileID: 0}
   isDead: 0
 --- !u!114 &2776474951608134684
 MonoBehaviour:
