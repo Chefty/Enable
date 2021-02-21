@@ -17,6 +17,8 @@ public class TutorialScript : MonoBehaviour {
 
         if (GameManager.Instance._currentTile.gameObject.GetComponent<RotationTile>() != null) {
             UpdateScriptText("This tile rotate the map and its abilities.");
+        } else if (GameManager.Instance._currentTile.gameObject.GetComponent<AddASlotTile>() != null) {
+            UpdateScriptText("This one add an extra slot to your inventory!");
         }
 
         if (GameManager.Instance._currentTile.TileOwnAbility == null)
