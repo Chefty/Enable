@@ -56,6 +56,10 @@ public class SoundtrackManager : MonoBehaviour
             {
                 item.volume = .0f;
             }
+            else
+            {
+                item.volume = .5f;
+            }
         }
     }
 
@@ -77,17 +81,17 @@ public class SoundtrackManager : MonoBehaviour
         {
             Awake();
         }
-
     }
 
     void DisplayProperMuteIcon()
     {
-        print("DisplayProperMuteIcon");
+        print("DisplayProperMuteIcon " + isMuted);
         AudioToggle.isOn = isMuted;
     }
 
     void MuteAudio(bool value)
     {
+        print("MuteAudio" + value);
         audioSource.volume = value ? .0f : .5f;
         isMuted = value;
         InitializeAllAudioSources();
