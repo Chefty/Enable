@@ -56,8 +56,8 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
-    m_BakeResolution: 40
-    m_AtlasSize: 1024
+    m_BakeResolution: 10
+    m_AtlasSize: 128
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -20172,7 +20172,7 @@ PrefabInstance:
         type: 3}
       propertyPath: TileOwnAbility
       value: 
-      objectReference: {fileID: 11400000, guid: 5f6d2e0b89e9ed14fb4443b59c61ba04,
+      objectReference: {fileID: 11400000, guid: 096b95044210bb34dab0c1bc745f8552,
         type: 2}
     - target: {fileID: 7323348331165477407, guid: 1cf1697abff6caf41b825dae80c1ff0a,
         type: 3}
