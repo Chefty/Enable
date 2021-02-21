@@ -8,32 +8,60 @@ using UnityEngine.UI;
 [RequireComponent(typeof(AudioSource))]
 public class SoundtrackManager : MonoBehaviour
 {
+    private static SoundtrackManager instance;
     private AudioSource audioSource;
     private AudioClip[] ostArray;
     private int previousLevel;
-
-    public Toggle AudioToggle;
-    bool isMuted;
+    private Toggle AudioToggle;
+    private bool isMuted;
 
     private void Awake() {
-        GameObject audioMute = GameObject.FindGameObjectWithTag("AudioMute");
-
-        if (audioMute) {
-            AudioToggle = audioMute.GetComponent<Toggle>();
-            AudioToggle.onValueChanged.AddListener(MuteAudio);
-            DisplayProperMuteIcon();
-        }
-
-        InitializeAllAudioSources();
-
-        previousLevel = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log("01 Awake");
         audioSource = GetComponent<AudioSource>();
+        if (SceneManager.GetActiveScene().buildIndex != previousLevel ||
+            SceneManager.GetActiveScene().buildIndex == 0)
+            OSTHandler();
+        previousLevel = SceneManager.GetActiveScene().buildIndex;
+
+        if (!DDOLCheck())
+            return;
+
+        if (!isMuted)
+        {
+            StartCoroutine(MusicFadeIn(2f));
+        }
+    }
+
+    void OnEnable() => SceneManager.sceneLoaded += OnLevelFinishedLoading;
+
+    void OnDisable() => SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode) {
+        Debug.Log(SceneManager.GetActiveScene().buildIndex + " - " + previousLevel);
+        AudioMuteHandler();
+        InitializeAllAudioSources();
+        DisplayProperMuteIcon();
+    }
+
+    private bool DDOLCheck() {
+        //DDOL
+        if (instance == null) {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+            return true;
+        } else if (instance != this)
+            Destroy(this.gameObject);
+        return false;
+    }
+
+
+    private void OSTHandler() {
+        Debug.Log("01.1 OSTHandler");
         ostArray = Resources.LoadAll<AudioClip>("OST");
         string sceneNameLowerCase = SceneManager.GetActiveScene().name.ToLower();
-
         //looking for the dedicated level ost
         for (int i = 0; i < ostArray.Length; i++) {
-            
+
             string ostNameLowerCase = ostArray[i].name.ToLower();
 
             if (sceneNameLowerCase.Contains(ostNameLowerCase)) {
@@ -44,16 +72,22 @@ public class SoundtrackManager : MonoBehaviour
         }
         //no dedicated ost found - load default soundtrack
         audioSource.clip = ostArray.FirstOrDefault(o => o.name.Contains("Default"));
+    }
 
-        if (!isMuted)
-        {
-            StartCoroutine(MusicFadeIn(2f));
+    private void AudioMuteHandler() {
+        Debug.Log("03 AudioHandler");
+        GameObject audioMute = GameObject.FindGameObjectWithTag("AudioMute");
+
+        if (audioMute) {
+            AudioToggle = audioMute.GetComponent<Toggle>();
+            AudioToggle.onValueChanged.AddListener(MuteAudio);
         }
     }
 
-    void InitializeAllAudioSources()
+    void InitializeAllAudioSources() 
     {
-        var sources = GameObject.FindObjectsOfType<AudioSource>();
+        Debug.Log("04 InitializeAllAudioSources");
+        var sources = FindObjectsOfType<AudioSource>();
 
         foreach (var item in sources)
         {
@@ -83,14 +117,7 @@ public class SoundtrackManager : MonoBehaviour
         yield return null;
     }
 
-    private void OnLevelWasLoaded(int level) {
-        if (SceneManager.GetActiveScene().buildIndex != previousLevel)
-        {
-            Awake();
-        }
-    }
-
-    void DisplayProperMuteIcon()
+    void DisplayProperMuteIcon() 
     {
         print("DisplayProperMuteIcon " + isMuted);
         AudioToggle.isOn = isMuted;
