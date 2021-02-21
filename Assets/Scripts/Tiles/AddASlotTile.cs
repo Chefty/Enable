@@ -1,19 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AddASlotTile : Tile
 {
+    public Material grass;
     private bool _isAlreadyUsed = false;
+    MeshRenderer rend;
+    RandomFauna fauna;
+    Transform Icon;
+
+    private void Awake()
+    {
+        Icon = transform.GetChild(0);
+        rend = GetComponent<MeshRenderer>();
+        fauna = GetComponent<RandomFauna>();
+    }
 
     public override bool CheckTileAccessibility()
     {
         return true;
-    }
-
-    public override void DebugDisplay()
-    {
-
     }
 
     public override void TileBehaviour()
@@ -24,5 +28,10 @@ public class AddASlotTile : Tile
         }
 
         _isAlreadyUsed = true;
+
+        rend.sharedMaterial = grass;
+        fauna.enabled = true;
+
+        Destroy(Icon.gameObject);
     }
 }

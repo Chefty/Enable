@@ -8877,6 +8877,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 3301501756014134193, guid: a6e553eb04a097842ba369a193a2a513,
+        type: 3}
+      propertyPath: grass
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
     - target: {fileID: 3301501756014134195, guid: a6e553eb04a097842ba369a193a2a513,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8930,6 +8935,46 @@ PrefabInstance:
     - target: {fileID: 3301501756014134195, guid: a6e553eb04a097842ba369a193a2a513,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6878939153215083489, guid: a6e553eb04a097842ba369a193a2a513,
+        type: 3}
+      propertyPath: minMaxGrassSize.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6878939153215083489, guid: a6e553eb04a097842ba369a193a2a513,
+        type: 3}
+      propertyPath: minMaxGrassSize.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6878939153215083489, guid: a6e553eb04a097842ba369a193a2a513,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6878939153215083489, guid: a6e553eb04a097842ba369a193a2a513,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6878939153215083489, guid: a6e553eb04a097842ba369a193a2a513,
+        type: 3}
+      propertyPath: minMaxRockSize.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6878939153215083489, guid: a6e553eb04a097842ba369a193a2a513,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6878939153215083489, guid: a6e553eb04a097842ba369a193a2a513,
+        type: 3}
+      propertyPath: minObjects
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6878939153215083489, guid: a6e553eb04a097842ba369a193a2a513,
+        type: 3}
+      propertyPath: maxObjects
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
