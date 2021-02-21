@@ -2076,6 +2076,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 892498300}
     m_Modifications:
+    - target: {fileID: 13854657791408985, guid: 63491fd6185205c49a9b6a3ad3de7ad3,
+        type: 3}
+      propertyPath: grass
+      value: 
+      objectReference: {fileID: 2100000, guid: 88923b5be2ad11c4d97b0350952c7cdb, type: 2}
+    - target: {fileID: 6450367264333618899, guid: 63491fd6185205c49a9b6a3ad3de7ad3,
+        type: 3}
+      propertyPath: minObjects
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450367264333618899, guid: 63491fd6185205c49a9b6a3ad3de7ad3,
+        type: 3}
+      propertyPath: maxObjects
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450367264333618899, guid: 63491fd6185205c49a9b6a3ad3de7ad3,
+        type: 3}
+      propertyPath: minMaxGrassSize.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450367264333618899, guid: 63491fd6185205c49a9b6a3ad3de7ad3,
+        type: 3}
+      propertyPath: minMaxRockAmount.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450367264333618899, guid: 63491fd6185205c49a9b6a3ad3de7ad3,
+        type: 3}
+      propertyPath: minMaxRockSize.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450367264333618899, guid: 63491fd6185205c49a9b6a3ad3de7ad3,
+        type: 3}
+      propertyPath: minMaxGrassSize.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450367264333618899, guid: 63491fd6185205c49a9b6a3ad3de7ad3,
+        type: 3}
+      propertyPath: minMaxRockAmount.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450367264333618899, guid: 63491fd6185205c49a9b6a3ad3de7ad3,
+        type: 3}
+      propertyPath: minMaxRockSize.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9012021869563452105, guid: 63491fd6185205c49a9b6a3ad3de7ad3,
         type: 3}
       propertyPath: m_LocalPosition.x
