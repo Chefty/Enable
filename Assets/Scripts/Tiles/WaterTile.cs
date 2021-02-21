@@ -1,12 +1,11 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WaterTile : Tile
 {
     public override bool CheckTileAccessibility()
     {
-        return true;//GameManager.Instance.DoesPlayerPosessAbility(typeof(Swim));
+        return true;
     }
 
     public override string CheckTileType() {

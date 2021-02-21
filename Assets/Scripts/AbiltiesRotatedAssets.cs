@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using UnityEditor;
-using UnityEngine.SceneManagement;
 
 [Serializable]
 public class DirectionToArrow
@@ -25,22 +23,18 @@ public class AbiltiesRotatedAssets : MonoBehaviour
         Instance = this;
     }
 
-    // TODO just change the sprite
     public Sprite GetWalkArrowFromRotation(Vector3 walkDirection)
     {
         return Arrows.Where(x => x.Direction == walkDirection).First().Arrow;
     }
 
-    // TODO just change the sprite
     public KeyCode GetKeycodeForDirection(Vector3 walkDirection)
     {
         return Arrows.Where(x => x.Direction == walkDirection).First().keycode;
-
     }
 
     public GameObject GetPlaceholderForDirection(Vector3 walkDirection)
     {
         return Arrows.Where(x => x.Direction == walkDirection).First().placeholder;
-
     }
 }

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -25,15 +24,13 @@ public class MultipleTargetsCamera : MonoBehaviour
     private void Start()
     {
         cam = GetComponent<Camera>();
-        //cam.orthographic = true;
-        //cam.orthographicSize = CurrentZoom;
+
         OriginalOffset = offset;
         OriginalRotation = transform.eulerAngles;
         
         // If no target, look for the player
         if (Targets == null || Targets.Count == 0) {
             var player = GameObject.FindGameObjectWithTag("Player");
-            Debug.Log("001 - " + player);
             if (player)
                 Targets.Add(player.transform);
             return;

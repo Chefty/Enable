@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DoorOpenerTile : Tile
 {
-    [SerializeField] private DoorTile _door;
+    [SerializeField] private DoorTile _door = null;
 
     public override bool CheckTileAccessibility()
     {

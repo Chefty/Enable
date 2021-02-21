@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
 
     public StartInfos _levelAwakeState;
 
-    [SerializeField] Image FadeBlack;
+    [SerializeField] Image FadeBlack = null;
     public float FadeDuration = 1f;
     public Canvas deathScreen;
     public Canvas endScreen;
@@ -94,9 +94,6 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             StartCoroutine(AsynReloadLevel());
-            // restart the level here
-            //LevelFlush();
-            //LevelReload();
         }
         if (isDead)
         {
@@ -175,7 +172,6 @@ public class GameManager : MonoBehaviour
             {
                 PlayerAbilities.Add(newAbility);
 
-                //TODO pas ouf à refacto
                 _currentTile.TileOwnAbility.AbilityTaken();
                 _currentTile.TileOwnAbility = null;
 
@@ -247,7 +243,6 @@ public class GameManager : MonoBehaviour
 
         if (Physics.Raycast(pos + (Vector3.up * 15f), Vector3.down, out m_Hit, 50f, mask))
         {
-            //print("found " + m_Hit.collider.name + " [" + m_Hit.collider.GetComponent<Tile>().GetType().ToString() + "] at " + pos);
             return m_Hit.collider.GetComponent<Tile>();
         }
 
@@ -306,12 +301,9 @@ public class GameManager : MonoBehaviour
     IEnumerator SmoothRotateMap(float axisOrientation)
     {
         float time = 0;
-        Quaternion fromAngle = mapRoot.rotation;
-        Quaternion toAngle = Quaternion.Euler(mapRoot.eulerAngles + (Vector3.up * axisOrientation * 90f));
 
         while (playerMovement.isLerping) { yield return new WaitForEndOfFrame(); }
 
-        //Player.parent = _currentTile.transform;
         Vector3 originOffset = camPlayer.offset;
 
         while (time < MapRotationSpeed)
@@ -320,7 +312,6 @@ public class GameManager : MonoBehaviour
                 originOffset,
                 new Vector3(originOffset.z * -axisOrientation, originOffset.y, originOffset.x / 2f),
                 MapRotationSpeed / time);
-            //mapRoot.RotateAround(_mapBounds.center, Vector3.up, (90f * axisOrientation) * Time.deltaTime);
 
             time += Time.deltaTime;
 
@@ -328,9 +319,6 @@ public class GameManager : MonoBehaviour
         }
 
         camUI.offset = camPlayer.offset;
-
-
-        //Player.parent = null;
 
         yield return null;
     }
@@ -348,7 +336,6 @@ public class GameManager : MonoBehaviour
             else
             {
                 newdirection = Vector3.back;
-                //((Walk)tiles[i].Ability).UpdateDirection(Vector3.forward);
             }
         }
         else if (fromDirection == Vector3.right)
@@ -356,14 +343,10 @@ public class GameManager : MonoBehaviour
             if (AxisOrientation == -1f)
             {
                 newdirection = Vector3.back;
-
-                //((Walk)tiles[i].Ability).UpdateDirection(Vector3.forward);
             }
             else
             {
                 newdirection = Vector3.forward;
-
-                //((Walk)tiles[i].Ability).UpdateDirection(Vector3.back);
             }
         }
         else if (fromDirection == Vector3.forward)
@@ -371,8 +354,6 @@ public class GameManager : MonoBehaviour
             if (AxisOrientation == -1f)
             {
                 newdirection = Vector3.right;
-
-                //((Walk)tiles[i].Ability).UpdateDirection(Vector3.left);
             }
             else
             {
@@ -398,7 +379,7 @@ public class GameManager : MonoBehaviour
     {
         var tiles = GetTilesAndTheirAbilities();
         Vector3 fromDirection;
-        Vector3 newdirection = Vector3.zero;
+        Vector3 newdirection;
 
         for (int i = 0; i < PlayerAbilities.Count; i++)
         {
@@ -407,9 +388,6 @@ public class GameManager : MonoBehaviour
                 fromDirection = ((Walk)PlayerAbilities[i]).WalkDirection;
                 newdirection = Vector3.zero;
                 newdirection = ConvertDirection(fromDirection, AxisOrientation);
-                //PlayerAbilities[i].AbilityIcon = AbiltiesRotatedAssets.Instance.GetWalkArrowFromRotation(newdirection);
-                //inventory.abilityItems[i].abilityIcon.sprite = PlayerAbilities[i].AbilityIcon;
-
                 ((Walk)PlayerAbilities[i]).WalkDirection = newdirection;
             }
         }
@@ -425,113 +403,6 @@ public class GameManager : MonoBehaviour
                 ((Walk)tiles[i].Ability).UpdateDirection(newdirection);
             }
         }
-
-        /*
-        for (int i = 0; i < tiles.Count; i++)
-        {
-            if (tiles[i].Ability.GetType() == typeof(Walk))
-            {
-                fromDirection = ((Walk)tiles[i].Ability).WalkDirection;
-                Vector3 newdirection = Vector3.zero;
-                if (fromDirection == Vector3.left)
-                {
-                    if (AxisOrientation == -1f)
-                    {
-                        newdirection = Vector3.back;
-                    }
-                    else
-                    {
-                        newdirection = Vector3.forward;
-                        //((Walk)tiles[i].Ability).UpdateDirection(Vector3.forward);
-                    }
-                }
-                else if (fromDirection == Vector3.right)
-                {
-                    if (AxisOrientation == -1f)
-                    {
-                        newdirection = Vector3.up;
-
-                        //((Walk)tiles[i].Ability).UpdateDirection(Vector3.up);
-                    }
-                    else
-                    {
-                        newdirection = Vector3.back;
-
-                        //((Walk)tiles[i].Ability).UpdateDirection(Vector3.back);
-                    }
-                }
-                else if (fromDirection == Vector3.up)
-                {
-                    if (AxisOrientation == -1f)
-                    {
-                        newdirection = Vector3.left;
-
-                        //((Walk)tiles[i].Ability).UpdateDirection(Vector3.left);
-                    }
-                    else
-                    {
-                        newdirection = Vector3.right;
-
-                        //((Walk)tiles[i].Ability).UpdateDirection(Vector3.right);
-                    }
-                }
-                else if (fromDirection == Vector3.down)
-                {
-                    if (AxisOrientation == -1f)
-                    {
-                        newdirection = Vector3.right;
-
-                        //((Walk)tiles[i].Ability).UpdateDirection(Vector3.right);
-                    }
-                    else
-                    {
-                        newdirection = Vector3.left;
-
-                        //((Walk)tiles[i].Ability).UpdateDirection(Vector3.left);
-                    }
-                }
-
-
-
-                ((Walk)tiles[i].Ability).UpdateDirection(Vector3.back);
-
-            }
-        }
-         */
-
-    }
-
-    #endregion
-
-    #region Level Flush
-
-    private void LevelFlush()
-    {
-        FlushAllTilesWithAbility();
-        FlushUI();
-        FlushPlayerAbilities();
-    }
-
-    private void FlushPlayerAbilities()
-    {
-        PlayerAbilities.Clear();
-    }
-
-    private void FlushUI()
-    {
-        inventory.FlushUI();
-    }
-
-    private void FlushAllTilesWithAbility()
-    {
-        List<Tile> TilesWithAbilities = FindObjectsOfType<Tile>().Where(x => x.TileOwnAbility != null).ToList();
-
-        TilesWithAbilities.ForEach(x =>
-        {
-            x.TileOwnAbility.AbilityTaken();
-            x.TileOwnAbility = null;
-            x.DebugDisplay();
-        });        
     }
 
     #endregion
@@ -590,26 +461,6 @@ public class GameManager : MonoBehaviour
         else
             endScreen.enabled = true;
 
-    }
-
-    private void RePlacePlayer()
-    {
-        Player.position = _levelAwakeState.PlayerStartPosition;
-        Player.gameObject.SetActive(true);
-    }
-
-    private void ReFillTilesWithAbility()
-    {
-        _levelAwakeState.StartPairs.ForEach(x =>
-        {
-            x.tileWithAbility.TileOwnAbility = x.Ability;
-            x.tileWithAbility.DisplayAbility();
-        });
-    }
-
-    private void ReFillPlayerAbilities()
-    {
-        PlayerAbilities = new List<Ability>(_levelAwakeState.StartAbilities);
     }
 
     #endregion

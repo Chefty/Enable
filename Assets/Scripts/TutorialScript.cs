@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
-using DG.Tweening;
 
 public class TutorialScript : MonoBehaviour {
-    [SerializeField] private TextMeshProUGUI textScript;
+    [SerializeField] private TextMeshProUGUI textScript = null;
 
     // Update is called once per frame
     void Start() {
@@ -35,9 +32,6 @@ public class TutorialScript : MonoBehaviour {
     }
 
     private void UpdateScriptText(string newScript) {
-        //var originalpos = transform.position.x;
-        //textScript.gameObject.transform.DOMoveX(-Screen.width, 5f).SetEase(Ease.OutBounce).SetRelative();
         textScript.text = newScript;
-        //textScript.gameObject.transform.DOMoveX(originalpos, 1f).SetEase(Ease.OutBounce).SetRelative();
     }
 }

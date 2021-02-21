@@ -5,10 +5,10 @@ using DG.Tweening;
 
 public class DoorTile : Tile
 {
-    [SerializeField] private float _rotationOffset;
+    [SerializeField] private float _rotationOffset = 1;
     [SerializeField] private float _rotationDuration;
-    [SerializeField] private Transform _leftPart;
-    [SerializeField] private Transform _rightPart;
+    [SerializeField] private Transform _leftPart = null;
+    [SerializeField] private Transform _rightPart = null;
 
     public bool canPlayerEnter = false;
 

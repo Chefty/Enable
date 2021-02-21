@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 public enum eState {
     idle,
@@ -59,7 +58,6 @@ public class PlayerMovement : MonoBehaviour {
             !animator.GetCurrentAnimatorStateInfo(0).IsName(eState.walk.ToString()) &&
             !animator.GetCurrentAnimatorStateInfo(0).IsName(eState.jump.ToString())) {
 
-            Debug.Log("001: " + currentState.ToString() + " - " + secondState.ToString());
             if (newState != eState.swim)
                 animator.SetBool(currentState.ToString(), false);
 

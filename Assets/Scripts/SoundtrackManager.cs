@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,8 +18,7 @@ public class SoundtrackManager : MonoBehaviour
     private void Awake() {
         AudioToggle = GameObject.FindGameObjectsWithTag("AudioMute")[0].GetComponent<Toggle>();
         AudioToggle.onValueChanged.AddListener(MuteAudio);
-
-        InitializeAllAudioSources();
+        MuteAudio(AudioToggle.isOn);
 
         previousLevel = SceneManager.GetActiveScene().buildIndex;
         audioSource = GetComponent<AudioSource>();
@@ -70,6 +68,8 @@ public class SoundtrackManager : MonoBehaviour
     }
 
     private void OnLevelWasLoaded(int level) {
+        InitializeAllAudioSources();
+
         if (SceneManager.GetActiveScene().buildIndex != previousLevel)
         {
             Awake();

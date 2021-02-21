@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
@@ -8,7 +6,7 @@ public class Tile : MonoBehaviour
 
     private BoxCollider TriggerCollider;
 
-    private Color _startColor;
+    private Color _startColor = Color.white;
 
     private void Start()
     {
@@ -17,7 +15,6 @@ public class Tile : MonoBehaviour
             TileOwnAbility = Instantiate(TileOwnAbility);
         }
 
-        //_startColor = GetComponent<MeshRenderer>().sharedMaterial.GetColor("_Color");
         DisplayAbility();
 
         TriggerCollider = gameObject.AddComponent<BoxCollider>();
