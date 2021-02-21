@@ -16,9 +16,14 @@ public class SoundtrackManager : MonoBehaviour
     bool isMuted;
 
     private void Awake() {
-        AudioToggle = GameObject.FindGameObjectsWithTag("AudioMute")[0].GetComponent<Toggle>();
-        AudioToggle.onValueChanged.AddListener(MuteAudio);
-        DisplayProperMuteIcon();
+        GameObject audioMute = GameObject.FindGameObjectWithTag("AudioMute");
+
+        if (audioMute) {
+            AudioToggle = audioMute.GetComponent<Toggle>();
+            AudioToggle.onValueChanged.AddListener(MuteAudio);
+            DisplayProperMuteIcon();
+        }
+
         InitializeAllAudioSources();
 
         previousLevel = SceneManager.GetActiveScene().buildIndex;
@@ -63,8 +68,10 @@ public class SoundtrackManager : MonoBehaviour
         }
     }
 
-    IEnumerator MusicFadeIn(float fadeIn) {
-        AudioToggle.isOn = isMuted;
+    IEnumerator MusicFadeIn(float fadeIn) 
+    {
+        if (AudioToggle)
+            AudioToggle.isOn = isMuted;
 
         if (!isMuted)
         {
