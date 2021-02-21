@@ -18,7 +18,8 @@ public class SoundtrackManager : MonoBehaviour
     private void Awake() {
         AudioToggle = GameObject.FindGameObjectsWithTag("AudioMute")[0].GetComponent<Toggle>();
         AudioToggle.onValueChanged.AddListener(MuteAudio);
-        MuteAudio(AudioToggle.isOn);
+        DisplayProperMuteIcon();
+        InitializeAllAudioSources();
 
         previousLevel = SceneManager.GetActiveScene().buildIndex;
         audioSource = GetComponent<AudioSource>();
@@ -37,8 +38,12 @@ public class SoundtrackManager : MonoBehaviour
             }
         }
         //no dedicated ost found - load default soundtrack
-        audioSource.clip = ostArray.FirstOrDefault(o => o.name.Contains("Default")); ;
-        StartCoroutine(MusicFadeIn(2f));
+        audioSource.clip = ostArray.FirstOrDefault(o => o.name.Contains("Default"));
+
+        if (!isMuted)
+        {
+            StartCoroutine(MusicFadeIn(2f));
+        }
     }
 
     void InitializeAllAudioSources()
@@ -68,12 +73,17 @@ public class SoundtrackManager : MonoBehaviour
     }
 
     private void OnLevelWasLoaded(int level) {
-        InitializeAllAudioSources();
-
         if (SceneManager.GetActiveScene().buildIndex != previousLevel)
         {
             Awake();
         }
+
+    }
+
+    void DisplayProperMuteIcon()
+    {
+        print("DisplayProperMuteIcon");
+        AudioToggle.isOn = isMuted;
     }
 
     void MuteAudio(bool value)
