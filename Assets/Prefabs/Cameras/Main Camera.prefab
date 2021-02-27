@@ -182,14 +182,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Death:
   - {fileID: 8300000, guid: 944545e9a68f8fc4ba415f31f6377a11, type: 3}
-  - {fileID: 8300000, guid: 06459ffcb83e6d140af64e2703f89c24, type: 3}
-  - {fileID: 8300000, guid: 6c3abf0ae18c59a419a74e0a0d661e98, type: 3}
   Pick:
-  - {fileID: 8300000, guid: e777b68b598f6d540b90511e13e7e49b, type: 3}
-  - {fileID: 8300000, guid: 73bca054612640a4f8f9f11ba80c0b82, type: 3}
   - {fileID: 8300000, guid: c9876bc275ebca349bc472395d2f18c9, type: 3}
   Win:
-  - {fileID: 8300000, guid: 6c38eeb4b4d6e6348aef48cb92cd7377, type: 3}
   - {fileID: 8300000, guid: 0e4b853f823651e41a9d765aad7b81fc, type: 3}
 --- !u!82 &6296479141235909550
 AudioSource:
