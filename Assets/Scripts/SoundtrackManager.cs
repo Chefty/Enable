@@ -17,10 +17,6 @@ public class SoundtrackManager : MonoBehaviour
 
     private void Awake() {
         audioSource = GetComponent<AudioSource>();
-        if (SceneManager.GetActiveScene().buildIndex != previousLevel ||
-            SceneManager.GetActiveScene().buildIndex == 0)
-            OSTHandler();
-        previousLevel = SceneManager.GetActiveScene().buildIndex;
 
         if (!DDOLCheck())
             return;
@@ -36,6 +32,11 @@ public class SoundtrackManager : MonoBehaviour
     void OnDisable() => SceneManager.sceneLoaded -= OnLevelFinishedLoading;
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode) {
+        if (scene.buildIndex != previousLevel) {
+            OSTHandler(scene);
+            previousLevel = SceneManager.GetActiveScene().buildIndex;
+        }
+
         AudioMuteHandler();
         InitializeAllAudioSources();
         DisplayProperMuteIcon();
@@ -53,9 +54,15 @@ public class SoundtrackManager : MonoBehaviour
     }
 
 
-    private void OSTHandler() {
+    private void OSTHandler(Scene currentScene) {
         ostArray = Resources.LoadAll<AudioClip>("OST");
-        string sceneNameLowerCase = SceneManager.GetActiveScene().name.ToLower();
+        string sceneNameLowerCase = currentScene.name.ToLower();
+
+        if (currentScene.buildIndex == 0) {
+            audioSource.clip = null;
+            return;
+        }
+
         //looking for the dedicated level ost
         for (int i = 0; i < ostArray.Length; i++) {
 
@@ -63,12 +70,13 @@ public class SoundtrackManager : MonoBehaviour
 
             if (sceneNameLowerCase.Contains(ostNameLowerCase)) {
                 audioSource.clip = ostArray[i];
-                StartCoroutine(MusicFadeIn(2f));
+                StartCoroutine(MusicFadeIn(2.5f)); 
                 return;
             }
         }
         //no dedicated ost found - load default soundtrack
         audioSource.clip = ostArray.FirstOrDefault(o => o.name.Contains("Default"));
+        StartCoroutine(MusicFadeIn(2.5f));
     }
 
     private void AudioMuteHandler() {
@@ -89,10 +97,6 @@ public class SoundtrackManager : MonoBehaviour
             if (isMuted)
             {
                 item.volume = .0f;
-            }
-            else
-            {
-                item.volume = .5f;
             }
         }
     }
