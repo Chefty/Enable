@@ -17,6 +17,7 @@ public class RandomFauna : MonoBehaviour
 
     void Start()
     {
+        return;
         int faunaAmount = Random.Range(minObjects,maxObjects);
         int i = 0;
         while (i < faunaAmount)
