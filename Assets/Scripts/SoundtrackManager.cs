@@ -38,7 +38,6 @@ public class SoundtrackManager : MonoBehaviour
         }
 
         AudioMuteHandler();
-        InitializeAllAudioSources();
         DisplayProperMuteIcon();
     }
 
@@ -98,7 +97,14 @@ public class SoundtrackManager : MonoBehaviour
             {
                 item.volume = .0f;
             }
+            else 
+            {
+                item.volume = .5f;
+            }
         }
+
+        if (!audioSource.isPlaying)
+            audioSource.Play();
     }
 
     IEnumerator MusicFadeIn(float fadeIn) 

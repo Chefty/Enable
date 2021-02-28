@@ -18,17 +18,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 2.unity
     guid: 3ccfcdf840f4151468fc4f55a523a72d
   - enabled: 1
-    path: Assets/Scenes/Level 3 Lava.unity
-    guid: 8e0a8d097174ead4f84d991c65a2a31e
-  - enabled: 1
-    path: Assets/Scenes/Level 4 Rotation.unity
+    path: Assets/Scenes/Level 3 Rotation.unity
     guid: b486d441bbec17b48b6052bb5a9c2cbb
   - enabled: 1
-    path: Assets/Scenes/Level 5 Water and Rotation.unity
-    guid: 088d41adaf418e7499656cb143fd74bb
+    path: Assets/Scenes/Level 4 Lava.unity
+    guid: 8e0a8d097174ead4f84d991c65a2a31e
   - enabled: 1
-    path: Assets/Scenes/Level 6 Double Rotation (This one should be level 5).unity
+    path: Assets/Scenes/Level 5 Double Rotation but its not.unity
     guid: 71e7455833a1c824e8a8369d2b137384
+  - enabled: 1
+    path: Assets/Scenes/Level 6 Water and Rotation.unity
+    guid: 088d41adaf418e7499656cb143fd74bb
   - enabled: 1
     path: Assets/Scenes/Level 7 Extra slot.unity
     guid: 18e7f2ee5175e7f4c9fd8a5b8193f071
