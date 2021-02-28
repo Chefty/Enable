@@ -12,7 +12,7 @@ public class Walk : Ability
     }
     public override void RunAction()
     {
-        if (Input.GetKeyUp(ActionKeycode))
+        if (Input.GetKeyDown(ActionKeycode))
         {
             ForceRun();
         }

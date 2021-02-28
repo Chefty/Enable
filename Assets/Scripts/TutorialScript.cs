@@ -3,6 +3,7 @@ using TMPro;
 
 public class TutorialScript : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI textScript = null;
+    [SerializeField] GameObject dropTileInfo;
 
     // Update is called once per frame
     void Start() {
@@ -14,6 +15,7 @@ public class TutorialScript : MonoBehaviour {
 
         if (GameManager.Instance._currentTile.gameObject.GetComponent<RotationTile>() != null) {
             UpdateScriptText("This tile rotate the map and its abilities.");
+            if (dropTileInfo) dropTileInfo.SetActive(false);
         } else if (GameManager.Instance._currentTile.gameObject.GetComponent<AddASlotTile>() != null) {
             UpdateScriptText("This one add an extra slot to your inventory!");
         }
